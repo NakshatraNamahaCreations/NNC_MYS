@@ -1,0 +1,299 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+  .floating-action-container {
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+      font-family: 'Lato', sans-serif;
+  }
+
+  /* Callback */
+  .floating-callback {
+    background-color: #26a8e1;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    cursor: pointer;
+    transform-origin: right bottom;
+    position: absolute;
+    /* right: -60px; */
+    bottom: 300px;
+    writing-mode: vertical-lr;
+    font-weight: 500;
+  }
+
+  /* WhatsApp */
+  /* .floating-whatsapp {
+    background-color: #25d366;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  } */
+
+  .floating-whatsapp img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .chat-label {
+    position: absolute;
+    bottom: -20px;
+    background: #26a8e1;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+
+  /* Call Now */
+  .floating-call {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #007aff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .floating-call img {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  /* Floating button container */
+  .floating-action-container {
+    position: fixed;
+    bottom: 20px;
+    right: 5px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Callback Button */
+  .floating-callback {
+    /* background: #f1002d; */
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* WhatsApp Button */
+  .floating-whatsapp img {
+    width: 50px;
+    height: 50px;
+      margin-bottom: 50px;
+  }
+
+  /* Modal Overlay */
+  .callback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+  }
+
+  /* Modal Box */
+  .callback-box {
+    background: #fff;
+    margin-top: 120px;
+    width: 360px;
+    max-width: 95%;
+    height: 100%;
+    padding: 30px 25px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideIn 0.3s ease forwards;
+      font-family: 'Lato', sans-serif;
+  }
+
+  /* Slide-in Animation */
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  .callback-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .callback-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Form Styling */
+  .callback-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0 4px;
+  }
+
+  .callback-form input,
+  .callback-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    margin-top: 20px;
+    width: 100%;
+    background: white;
+    color: black;
+    font-weight: 600;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .submit-btn:hover {
+    background: #26abe1;
+    color: #fff;
+    border-color: #26abe1;
+  }
+
+  /* Responsive Fixes for 14" Laptops & Mobile */
+@media (max-width: 1440px) {
+  .floating-callback {
+    font-size: 13px;
+    padding: 8px 12px;
+    bottom: 250px;
+  }
+
+  .floating-call,
+  .floating-whatsapp img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-call img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .chat-label {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .callback-box {
+    width: 320px;
+    padding: 25px 20px;
+  }
+
+  .callback-box h3 {
+    font-size: 18px;
+  }
+
+  .callback-box p,
+  .callback-form label,
+  .callback-form input,
+  .callback-form textarea {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+  }
+}
+
+/* Mobile Optimization: <768px */
+@media (max-width: 767px) {
+  .floating-action-container {
+    bottom: 15px;
+    right: 10px;
+    gap: 10px;
+  }
+
+  .floating-callback {
+    font-size: 12px;
+    padding: 6px 10px;
+    bottom: 220px;
+  }
+
+  .floating-call,
+  .floating-whatsapp img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .floating-call img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .callback-box {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .callback-box h3 {
+    font-size: 18px;
+  }
+
+  .callback-box p {
+    font-size: 13px;
+  }
+
+  .close-btn {
+    font-size: 20px;
+    top: 10px;
+    right: 14px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}

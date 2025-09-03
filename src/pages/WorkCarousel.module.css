@@ -1,0 +1,30 @@
+.work-carousel {
+    margin: 40px;
+    padding: 20px;
+  }
+  
+  .slide-card {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #333;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #888;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
+  

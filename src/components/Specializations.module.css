@@ -1,0 +1,126 @@
+.section {
+  position: relative;
+  background: radial-gradient(
+      1200px 600px at 70% 10%,
+      rgba(0, 0, 0, 0.04),
+      transparent 60%
+    )
+    #ffffff; /* White base */
+  color: #0a0d12; /* Dark text for white background */
+  padding: clamp(40px, 8vw, 90px) 0;
+  overflow: hidden;
+}
+
+.kicker {
+  margin: 0 0 8px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: clamp(26px, 3.2vw, 44px);
+  color: #ff6f47; /* Accent color stays */
+}
+
+.heading {
+  margin: 0 0 16px;
+  font-weight: 900;
+  line-height: 1.05;
+  font-size: clamp(34px, 5vw, 68px);
+  color: #0a0d12;
+}
+
+.heading span {
+  color: #ff6f47;
+}
+
+.lead {
+  color: #333b45; /* Dark gray for better readability */
+  font-size: clamp(15px, 1.6vw, 18px);
+  line-height: 1.7;
+  margin: 10px 0 26px;
+  max-width: 52ch;
+}
+
+/* Framed card */
+.frame {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: clamp(12px, 1.8vw, 22px);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.02),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.card {
+  position: relative;
+}
+
+.imgBox {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.imgBox img {
+  width: 100%;
+  height: clamp(280px, 46vw, 440px);
+  object-fit: cover;
+  opacity: 0.95;
+  filter: saturate(105%);
+}
+
+.copy {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: clamp(16px, 3vw, 28px);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.6) 60%,
+    transparent 100%
+  );
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #0a0d12;
+}
+
+.blurb {
+  color: #333b45;
+  line-height: 1.7;
+  margin: 0 0 18px;
+  font-size: clamp(14px, 1.6vw, 17px);
+}
+
+/* Pager links */
+.pagerLink {
+  color: #0a0d12;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pagerLink span {
+  position: relative;
+}
+
+.pagerLink span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: #0a0d12;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.pagerLink:hover span::after {
+  transform: scaleX(1);
+}

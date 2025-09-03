@@ -1,0 +1,47 @@
+.client-slider-section {
+  padding: 3rem 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.client-slider-heading h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.client-slider-wrapper {
+
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px 20px;
+  position: relative;
+}
+
+.client-slide {
+  margin-top: 50px;
+  padding: 50px 20px;           /* Increase padding inside each box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;                /* Increase the height of the box */
+  background-color: #f9f9f9;    /* Optional: add background for visibility */
+  border-radius: 8px;           /* Optional: round corners */
+  transition: transform 0.3s ease;
+}
+
+.client-slide img {
+  max-height: 100px;            /* Increase image height to fit new box */
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(50%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.client-slide img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}

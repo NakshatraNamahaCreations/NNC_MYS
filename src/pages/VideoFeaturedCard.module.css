@@ -1,0 +1,118 @@
+.wpfeature-header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 10px;
+}
+
+.wpfeature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 2rem 1rem;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.wpfeature-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.wpfeature-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9f9;
+  transform: translateY(-4px);
+}
+
+.wpfeature-icon-wrap .section-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #22abe2;
+}
+
+.wpfeature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.75rem;
+}
+
+.wpfeature-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  flex-grow: 1;
+}
+
+.wpfeature-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 10px;
+  background-color: #e60023;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wpfeature-card:hover::after {
+  opacity: 1;
+}
+
+/* Hover Variants */
+.color-blue:hover {
+  background-color: #0a3e61;
+  color: #fff;
+}
+.color-blue:hover h3,
+.color-blue:hover .wpfeature-desc,
+.color-blue:hover .section-icon {
+  color: #fff;
+}
+
+.color-red:hover {
+  background-color: #802020;
+  color: #fff;
+}
+.color-red:hover h3,
+.color-red:hover .wpfeature-desc,
+.color-red:hover .section-icon {
+  color: #fff;
+}
+
+.color-green:hover {
+  background-color: #2d6b52;
+  color: #fff;
+}
+.color-green:hover h3,
+.color-green:hover .wpfeature-desc,
+.color-green:hover .section-icon {
+  color: #fff;
+}
+
+.color-yellow:hover {
+  background-color: #7a47a6;
+  color: #fff;
+}
+.color-yellow:hover h3,
+.color-yellow:hover .wpfeature-desc,
+.color-yellow:hover .section-icon {
+  color: #fff;
+}

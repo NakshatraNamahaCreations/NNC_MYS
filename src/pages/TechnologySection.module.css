@@ -1,0 +1,89 @@
+.technology {
+  padding: 60px 0;
+}
+
+.space {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+/* ✅ use a local class instead of `p` */
+.desc {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.techCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120px; /* adjust for consistency */
+}
+
+.techCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.techimg {
+  max-width: 50px;
+  height: auto;
+}
+
+.techName {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+
+.phpimg { max-width: 90px; }
+
+/* Marquee */
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+.marqueeContent {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+  font-size: 18px;
+  color: #fff;
+}
+.marqueeContent span {
+  margin: 0 30px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title { font-size: 28px; }
+  .desc { font-size: 14px; }
+
+  .marqueeContent { font-size: 16px; }
+}

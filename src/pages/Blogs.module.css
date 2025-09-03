@@ -1,0 +1,33 @@
+.blogs-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/images/ttt.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+.blogs-overlay {
+  background-color: rgba(0, 0, 0, 0.692);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.blogs-content {
+  color: #fff;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+.blogs-content h5{
+ font-size: 2rem;
+}

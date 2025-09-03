@@ -1,0 +1,89 @@
+/* FAQ Wrapper */
+.rajanna {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #f9fbff;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Container */
+.container55 {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Section Title */
+.sec_title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  margin-bottom: 2.5rem;
+  border-bottom: 4px solid #1c9cd2;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+/* Accordion Base */
+.accordion-item {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.accordion-button {
+  background-color: #f5f8fc;
+  color: #1c1c1c;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 1rem 1.25rem;
+  border: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.accordion-button:hover {
+  background-color: #e8f1ff;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #dbefff;
+  color: #1c9cd2;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+.accordion-button::after {
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+/* Accordion Body */
+.accordion-body {
+  background-color: #fdfdfd;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sec_title {
+    font-size: 1.75rem;
+  }
+
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-body {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,7 @@
+User-agent:*
+Disallow:
+Sitemap: https://nakshatranamahacreations.in/sitemap.xml
+
+
+Disallow: /?_gl
+Noindex: /?_gl

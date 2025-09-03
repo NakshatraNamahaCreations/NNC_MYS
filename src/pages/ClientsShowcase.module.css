@@ -1,0 +1,106 @@
+.section {
+  position: relative;
+  background:
+    radial-gradient(1200px 600px at 70% 0%, rgba(15, 76, 201, 0.06), transparent 62%),
+    #ffffff;
+  overflow: hidden;
+}
+
+/* Heading */
+.kicker {
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #0b2141;
+  margin: 0;
+}
+
+.heading {
+  font-weight: 900;
+  letter-spacing: .01em;
+  color: #0b2141;
+  font-size: clamp(28px, 4.6vw, 44px);
+  margin: 0;
+}
+
+.hr {
+  width: 108px;
+  height: 4px;
+  margin: 8px auto 0;
+  background: linear-gradient(90deg, #222, #0b2141);
+  border-radius: 999px;
+}
+
+/* Belts */
+.belt {
+  position: relative;
+  margin-bottom: 42px;
+  mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+}
+
+.belt::before,
+.belt::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 40px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.belt::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(243,244,246,1), rgba(243,244,246,0));
+}
+
+.belt::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(243,244,246,1), rgba(243,244,246,0));
+}
+
+/* One continuous scrolling row */
+.track {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  /* Smooth infinite scroll */
+  animation: scroll var(--duration, 34s) linear infinite;
+  animation-direction: var(--direction, normal);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* because content is duplicated */
+}
+
+/* Individual logo card (marquee) */
+.logoCard {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 110px;
+  border-radius: 16px;
+  background: #fff;
+  display: grid;
+  place-items: center;
+box-shadow:
+  0 2px 0 rgba(0, 0, 0, 0.05) inset,
+  0 18px 40px rgba(13, 71, 161, 0.12);
+
+  transition: transform .18s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.logoCard:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .6) inset,
+    0 18px 44px rgba(13, 71, 161, .16);
+  filter: saturate(1.08);
+}
+
+.logoImg {
+  width: auto;
+  height: auto;
+  max-width: 82%;
+  max-height: 70%;
+  object-fit: contain;
+}

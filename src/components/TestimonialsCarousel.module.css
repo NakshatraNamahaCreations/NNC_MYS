@@ -1,0 +1,164 @@
+/* Section */
+.testimonialsCarousel {
+  background: #fff;
+  font-feature-settings: "ss01" on, "liga" on;
+}
+
+/* Header */
+.testimonialsCarouselHead {
+  padding: 12px 0 36px;
+  text-align: left;
+}
+
+.testimonialsCarouselEyebrow {
+  position: relative;
+  display: inline-block;
+  padding: 0 18px;
+  color: #D64A21;                 /* accent text (warmer) */
+  font-weight: 800;               /* bolder for consistency */
+  font-size: 14.5px;              /* slightly tighter */
+  line-height: 1;
+  letter-spacing: 0.28em;         /* wide tracking */
+  text-transform: uppercase;
+}
+
+.testimonialsCarouselEyebrow::before,
+.testimonialsCarouselEyebrow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 2px;
+  height: 14px;
+  background: #FFAF00;            /* gold bars */
+  transform: translateY(-50%);
+  border-radius: 1px;
+}
+.testimonialsCarouselEyebrow::before { left: 0; }
+.testimonialsCarouselEyebrow::after  { right: 0; }
+
+/* Title — heavier + navy */
+.testimonialsCarouselTitle {
+  margin: 12px 0 0;
+  color: #090909;                 /* deep navy like your other sections */
+  font-weight: 900;               /* strong headline weight */
+  line-height: 1.12;
+  font-size: clamp(28px, 4.6vw, 46px);  /* slightly smaller, more refined */
+  letter-spacing: -0.015em;       /* gentle tighten */
+}
+
+/* Slides */
+.testimonialsCarouselSlide {
+  padding: 0 14px;
+}
+
+/* Card */
+.testimonialsCarouselCard {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.02) inset,
+    0 12px 30px rgba(13,71,161,.08);   /* matches your “increased” shadow vibe */
+  padding: 26px;
+  min-height: 360px;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.testimonialsCarouselCard:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 2px 0 rgba(0,0,0,.02) inset,
+    0 18px 42px rgba(13,71,161,.12);
+}
+
+/* Header layout */
+.testimonialsCarouselHeader {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Avatar */
+.testimonialsCarouselAvatarWrap {
+  width: 96px;
+  height: 96px;
+  border: 2px dashed #B31217;     /* darker red ring */
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+}
+
+.testimonialsCarouselAvatar {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Meta */
+.testimonialsCarouselMeta {
+  display: grid;
+  gap: 4px;
+}
+
+.testimonialsCarouselStars {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #D64A21;                 /* accent stars */
+  margin-bottom: 4px;
+}
+.testimonialsCarouselMuted { color: #E6E6E6; }
+
+.testimonialsCarouselName {
+  font-size: 18.5px;              /* slightly leaner */
+  font-weight: 800;               /* stronger name weight */
+  margin: 0;
+  color: #0C0A25;                 /* navy */
+}
+
+.testimonialsCarouselRole {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #9AA3AE;
+  text-transform: uppercase;
+}
+
+/* Divider */
+.testimonialsCarouselDivider {
+  position: relative;
+  margin: 18px 0 14px;
+  height: 1px;
+  background: #EFEFF2;
+}
+.testimonialsCarouselTick {
+  position: absolute;
+  top: -9px;
+  left: 88px;
+  width: 24px;
+  height: 18px;
+  background: #fff;
+  border-left: 1px solid #EFEFF2;
+  border-right: 1px solid #EFEFF2;
+  transform: skewX(-18deg);
+}
+
+/* Body text */
+.testimonialsCarouselText {
+  color: #2C2C2C;                 /* darker body for contrast */
+  line-height: 1.8;
+  margin: 0;
+  font-size: 15.5px;
+}
+
+/* Responsive title sizing aligns with the rest of your site */
+@media (max-width: 1200px) {
+  .testimonialsCarouselTitle { font-size: clamp(26px, 5vw, 40px); }
+}
+@media (max-width: 768px) {
+  .testimonialsCarouselTitle { font-size: 32px; }
+}
+@media (max-width: 480px) {
+  .testimonialsCarouselTitle { font-size: 28px; }
+}

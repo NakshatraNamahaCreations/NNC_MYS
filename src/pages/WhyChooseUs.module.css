@@ -1,0 +1,43 @@
+.feature-box {
+    padding: 20px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .feature-box:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-box h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .feature-box p {
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .feature-list {
+    padding-left: 1rem;
+    list-style-type: none;
+    color: #333;
+  }
+  
+  .feature-list li {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .feature-list li::before {
+    content: "✓";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+  }
+  

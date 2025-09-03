@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.ecom-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/images/ttt.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+.ecom-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.ecom-content {
+  color: white;
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.ecom-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.ecom-content p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.ecom-section {
+  padding: 0px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 50px;
+}
+
+.ecom-title-wrapper {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.ecom-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.ecom-section-wrapper {
+  text-align: justify;
+  /* padding: 0 20px; */
+}
+
+.ecom-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  /* max-width: 950px; */
+  margin: 0 auto;
+}
+
+  .talk-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .talk-btn .icon {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .talk-btn:hover .icon {
+    transform: translateX(4px);
+  }
+
+  .talk-btn:hover {
+    color: #fff;
+    border-color: #aaa;
+  }
+
+/* Services Grid */
+.ecom-service-wrapper {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ecom-service-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.ecom-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+      /* gap: 50px; */
+}
+
+.ecom-service-card {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 40px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.ecom-service-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-rotate(167deg) brightness(95%) contrast(91%);
+}
+
+.ecom-service-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.ecom-service-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ecommerce-process-wrapper {
+  padding: 50px 20px;
+  /* background-color: #f7f7f7; */
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ecommerce-process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+  
+}
+
+.ecommerce-process-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0ea5e9;
+  margin-bottom: 30px;
+}
+
+.ecommerce-process-desc {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  padding: 0 10px;
+}
+
+.ecommerce-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 150px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.ecommerce-section-left {
+  flex: 1;
+  max-width: 100%;
+  padding-left: 150px;
+}
+
+.ecommerce-section-left h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.ecommerce-section-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.ecommerce-section-list {
+  display: flex;
+  gap: 40px;
+}
+
+.ecommerce-section-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ecommerce-section-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.ecommerce-section-list li:hover {
+  color: #0056b3;
+}
+
+.ecommerce-section-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.ecommerce-section-right img {
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Wrapper for eCommerce feature cards */
+.ecommerce-feature-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each card */
+.ecommerce-feature-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Icon circle */
+.ecommerce-feature-icon {
+  width: 60px;
+  height: 60px;
+  /* background: #ffe6e0; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.ecommerce-feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+/* Description */
+.ecommerce-feature-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.wp-intro-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.wp-intro-left {
+  flex: 1 1 55%;
+}
+
+.wp-intro-left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.wp-intro-left h2 span {
+  color: #dd0031;
+}
+
+.wp-version-text {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.wp-version-text .highlight {
+  color: #dd0031;
+}
+
+.wp-feature-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.wp-feature-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.wp-feature-list li svg {
+  color: #444;
+  min-width: 16px;
+  margin-top: 4px;
+}
+
+.wp-cta-box {
+  background: #f8f2f2;
+  border-left: 4px solid #dd0031;
+  padding: 20px 25px;
+  margin-top: 30px;
+  border-radius: 6px;
+  max-width: 95%;
+}
+
+.wp-cta-button {
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: #dd0031;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wp-cta-button:hover {
+  background: #c8002c;
+}
+
+.wp-intro-right {
+  flex: 1 1 40%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.wp-feature-box {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.wp-feature-icon {
+  background: #dd0031;
+  color: white;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-feature-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+/* Tablet - 1024px and below */
+@media (max-width: 1022px) {
+  .ecommerce-section-wrapper {
+    padding: 60px 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ecommerce-section-left {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .ecommerce-section-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .wp-intro-wrapper {
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .wp-intro-right {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+/* Tablet/Mobile - 768px and below */
+@media (max-width: 768px) {
+  .ecom-hero {
+    height: 300px;
+  }
+   .ecom-title {
+    font-size: 2rem;
+  }
+
+.ecom-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.ecom-content {
+  color: white;
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.ecom-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.ecom-content p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+  .ecom-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  .ecom-section {
+    padding: 60px 15px;
+  }
+
+  .talk-btn {
+    display: none;
+  }
+
+  .ecom-content h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .ecom-content p {
+    font-size: 1rem;
+    /* text-align: center; */
+  }
+
+  .ecom-section,
+  .ecom-service-wrapper,
+  .ecommerce-process-wrapper,
+  .ecommerce-feature-wrapper {
+    padding: 50px 15px;
+  }
+.ecom-service-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+  .ecom-title {
+    font-size: 2rem;
+  }
+
+  .ecom-service-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ecommerce-feature-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .ecommerce-section-left h2 {
+    font-size: 28px;
+  }
+
+  .ecommerce-section-left p,
+  .ecommerce-section-list li {
+    font-size: 15px;
+  }
+
+  .wp-intro-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .wp-feature-list {
+    font-size: 16px;
+  }
+
+  .wp-intro-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+ 
+}
+
+/* Mobile - 425px and below */
+@media (max-width: 425px) {
+  .ecom-hero {
+    height: 220px;
+  }
+ .ecom-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .ecom-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .ecom-section {
+    padding: 40px 10px;
+  }
+  .ecom-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .ecom-content p {
+    font-size: 0.95rem;
+  }
+
+  .ecom-title {
+    font-size: 1.5rem;
+  }
+
+  .ecommerce-process-title {
+    font-size: 1.8rem;
+  }
+
+  .ecommerce-process-subtitle {
+    font-size: 1rem;
+  }
+
+  .ecommerce-section-left h2 {
+    font-size: 22px;
+  }
+
+  .ecommerce-section-left p {
+    font-size: 14px;
+  }
+
+  .ecommerce-section-right img {
+    max-width: 100%;
+  }
+
+  .ecom-service-card {
+    padding: 20px;
+  }
+
+  .ecommerce-feature-card {
+    padding: 20px;
+  }
+
+  .wp-intro-left h2 {
+    font-size: 1.3rem;
+  }
+
+  .wp-feature-list {
+    font-size: 14px;
+  }
+
+  .wp-cta-box {
+    padding: 15px;
+  }
+
+  .wp-intro-right {
+    grid-template-columns: 1fr;
+  }
+
+
+  .talk-btn {
+    display: none;
+  }
+}

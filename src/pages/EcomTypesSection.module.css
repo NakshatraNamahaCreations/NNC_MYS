@@ -1,0 +1,134 @@
+.ecommerce-types-wrapper {
+  padding: 60px 80px;
+  background-color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ecommerce-types-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.ecommerce-types-grid {
+  display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 90%;
+  margin: 0 auto;
+  background: #f2f2f2;
+}
+
+.ecommerce-types-card {
+  padding: 50px 40px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc !important;
+  border-bottom: 1px solid #ccc !important;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  background: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.ecommerce-types-card:nth-child(4n) {
+  border-right: none;
+}
+
+.ecommerce-types-card:last-child,
+.ecommerce-types-card:nth-last-child(2),
+.ecommerce-types-card:nth-last-child(3) {
+  border-bottom: none;
+}
+
+.ecommerce-types-icon {
+  color: #0098db;
+  margin-bottom: 15px;
+}
+
+.ecommerce-types-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.ecommerce-types-description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+/* Tablet - 1024px and below */
+@media (max-width: 1024px) {
+  .ecommerce-types-wrapper {
+    padding: 50px 30px;
+  }
+
+  .ecommerce-types-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .ecommerce-types-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .ecommerce-types-card {
+    padding: 40px 30px;
+  }
+}
+
+/* Tablet/Mobile - 768px and below */
+@media (max-width: 768px) {
+  .ecommerce-types-wrapper {
+    padding: 40px 20px;
+  }
+
+  .ecommerce-types-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .ecommerce-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ecommerce-types-card {
+    border-right: none !important;
+    border-left: none;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 20px;
+  }
+
+  .ecommerce-types-card:last-child {
+    border-bottom: none;
+  }
+
+  .ecommerce-types-heading {
+    font-size: 16px;
+  }
+
+  .ecommerce-types-description {
+    font-size: 13.5px;
+  }
+}
+
+/* Mobile - 425px and below */
+@media (max-width: 425px) {
+  .ecommerce-types-title {
+    font-size: 20px;
+  }
+
+  .ecommerce-types-card {
+    padding: 25px 15px;
+  }
+
+  .ecommerce-types-heading {
+    font-size: 15px;
+  }
+
+  .ecommerce-types-description {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,224 @@
+
+.hero {
+  position: relative;
+  width: 100%;
+  /* Responsive height: 60vh mobile → 78vh desktop */
+  height: 100vh; 
+  overflow: hidden;
+  border-radius: 0; /* set >0 if you want soft corners */
+}
+.trackWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  /* your existing slide styles already work; these are just safe hints */
+  will-change: opacity, transform;
+}
+
+.track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(6, 6, 6, 0.75) 0%,
+    rgba(6, 6, 6, 0.55) 40%,
+    rgba(6, 6, 6, 0.25) 100%
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(16px, 3.5vw, 40px);
+  display: grid;
+  align-content: center; /* vertically center text */
+  gap: 18px;
+  color: #fff;
+}
+
+.eyebrow {
+  font: 600 clamp(10px, 1.6vw, 14px) "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin: 0 0 6px 0;
+  line-height: 1.1;
+}
+
+.title {
+  font-family: Georgia, "Times New Roman", serif;
+  /* AECOM-like bold serif sizing; responsive via clamp */
+  font-weight: 900;
+  font-size: clamp(28px, 4.2vw, 64px);
+  line-height: 1.05;
+  margin: 0 0 8px 0;
+}
+
+.copy {
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 600;
+  color: #e9eef3;
+  max-width: 760px;
+  font-size: clamp(14px, 1.4vw, 18px);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  border-radius: 10px;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #ff5a5a 0%, #ff4040 100%);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(255, 64, 64, .25);
+}
+.btnPrimary:hover { transform: translateY(-1px); box-shadow: 0 14px 32px rgba(255, 64, 64, .32); }
+
+.btnGhost {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.22);
+}
+.btnGhost:hover { background: rgba(255,255,255,.14); }
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.dot {
+  width: 34px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.35);
+  border: 0;
+  cursor: pointer;
+}
+.dotActive {
+  background: #ff5252;
+}
+
+
+
+
+/* Bottom navigation bar */
+.bottomNav {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0;
+   background: rgba(255,255,255,.08);
+  color: #fff;  
+  padding: 14px 8px;
+  z-index: 6;
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.navItem {
+  position: relative;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 8px 22px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: .05em;
+  color: #0b3c33;                  /* deep green */
+  opacity: .9;
+}
+
+.navItem:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 22px;
+  background: #fff;   
+}
+
+.activeNav {
+  color: #000;
+  opacity: 1;
+}
+
+.navLabel {
+  white-space: nowrap;
+  color: #fff;
+}
+
+/* Mobile stacking for nav if space is tight */
+@media (max-width: 900px) {
+  .bottomNav {
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding: 12px 8px 16px;
+  }
+  .navItem {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  .navItem:not(:last-child)::after { display: none; }
+}
+
+
+/* Mobile refinements */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 64px;   /* give space for sticky headers if any */
+    padding-bottom: 64px;
+  }
+  .copy { max-width: 100%; }
+}

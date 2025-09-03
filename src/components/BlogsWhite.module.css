@@ -1,0 +1,85 @@
+.section {
+  background: #dddcdc;
+  position: relative;
+}
+
+/* dotted backdrop, subtle */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#ddd 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Featured card */
+.featureCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 12px;
+  background: linear-gradient(180deg, transparent, rgba(0,0,0,.72));
+  color: #fff;
+}
+
+/* List cards */
+.listCard {
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.listCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+/* External controls (bottom-right of right column) */
+.controlsWrap {
+  position: absolute;
+  right: 10px;
+  bottom: -8px;        /* place slightly under cards like screenshot */
+  display: flex;
+  gap: 18px;
+  z-index: 5;
+}
+
+.ctrlBtn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 2px !important; /* bolder ring like your UI */
+  background: #fff;
+}
+
+/* BlogsWhite.module.css */
+.slick-slide {
+  padding: 0 10px; /* horizontal gap */
+}
+
+.slick-list {
+  margin: 0 -10px; /* counteract padding for proper alignment */
+}
+
+/* keep them inside on mobile */
+@media (max-width: 576px) {
+  .controlsWrap {
+    right: 6px;
+    bottom: 6px;
+  }
+  .ctrlBtn {
+    width: 48px;
+    height: 48px;
+  }
+}

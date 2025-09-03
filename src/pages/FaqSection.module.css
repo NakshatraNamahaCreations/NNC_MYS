@@ -1,0 +1,130 @@
+.faqSection2 {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto;
+   width: 75%;
+  padding: 0 2  20px;
+  flex-direction: column;
+
+}
+/* .faqSection{
+    
+
+} */
+.faqSection1{
+     display: flex;
+  justify-content: center; 
+ 
+}
+.faqSection1 h3{
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.faqRight {
+  width: 100%;
+}
+
+.faqItem {
+  border-bottom: 1px solid #aeaeae; /* darker border for contrast */
+  padding: 22px 0;
+  cursor: pointer;
+}
+
+.faqHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+}
+
+.faqHeader h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+  flex: 1;
+  
+}
+
+.icon {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+}
+
+.faqAnswer {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.5;
+  padding-left: 49px; 
+  padding-top: 13px;
+}
+
+.number{
+    margin-right: 15px;
+}
+
+.searchQueriesSection {
+  /* background: #fff5f8; */
+  padding: 40px 16px;
+}
+
+.searchQueriesContainer {
+  max-width: 1150px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchQueriesHeading {
+  margin: 0 0 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #111827;
+  font-size: clamp(18px, 2.8vw, 28px);
+}
+
+.searchQueriesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  line-height: 2.1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 8px 16px;
+}
+
+.searchQueriesItem {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #2f2f2f;
+  white-space: nowrap;
+  font-size: clamp(12px, 1.8vw, 16px);
+}
+
+.searchQueriesItem:not(:last-child)::after {
+  content: " |";
+  color: #2f2f2f;
+  opacity: 0.9;
+  margin-left: 12px;
+}
+
+.searchQueriesLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* .searchQueriesLink:hover {
+  text-decoration: underline;
+} */
+
+@media (max-width: 640px) {
+  .searchQueriesList { gap: 6px 10px; }
+  .searchQueriesItem:not(:last-child)::after { margin-left: 8px; }
+}

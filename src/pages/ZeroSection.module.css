@@ -1,0 +1,48 @@
+.collaborateSection {
+  background: #0f2b45; /* Same dark blue */
+  padding: 60px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.blankColumn {
+  position: relative;
+}
+
+.imgMaxHeight {
+  min-height: 250px; /* adjust based on your image */
+}
+
+.dotImg {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  opacity: 0.7;
+  max-width: 100px;
+}
+
+.collabImg {
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.circleImg {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 300px;
+  opacity: 0.8;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .collaborateSection {
+    text-align: center;
+  }
+
+  .dotImg {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

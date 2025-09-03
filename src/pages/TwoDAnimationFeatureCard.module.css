@@ -1,0 +1,154 @@
+.twoD-section-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+.twoD-section-title p{
+  padding-top: 5px;
+  width: 990px;
+}
+.twoD-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.twoD-feature-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.twoD-feature-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9f9;
+  transform: translateY(-4px);
+}
+
+.twoD-section-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #22abe2;
+}
+
+.twoD-feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.75rem;
+}
+
+.twoD-card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  flex-grow: 1;
+}
+
+.twoD-feature-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 10px;
+  background-color: #e60023;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.twoD-feature-card:hover::after {
+  opacity: 1;
+}
+
+.color-blue:hover {
+  background-color: #0a3e61;
+  color: #fff;
+}
+.color-blue:hover h3,
+.color-blue:hover .twoD-card-text,
+.color-blue:hover .twoD-section-icon {
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .twoD-section-title {
+    padding: 0 1rem;
+    margin-top: 10px;
+  }
+
+  .twoD-section-title p {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .twoD-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 3rem 1rem;
+  }
+
+  .twoD-feature-card {
+    padding: 1.8rem 1.5rem;
+    min-height: auto;
+  }
+
+  .twoD-feature-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .twoD-card-text {
+    font-size: 0.95rem;
+  }
+
+  .twoD-section-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .twoD-section-title p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .twoD-feature-card {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .twoD-feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .twoD-card-text {
+    font-size: 0.9rem;
+  }
+
+  .twoD-section-icon {
+    font-size: 1.8rem;
+  }
+
+  .twoD-feature-card::after {
+    display: none;
+  }
+}

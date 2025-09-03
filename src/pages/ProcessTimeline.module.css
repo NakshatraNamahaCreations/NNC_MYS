@@ -1,0 +1,245 @@
+
+.timeline-root {
+  --box_size: 606px;
+}
+
+.process-section {
+  height: 130vh; /* Viewport height for perfect centering */
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+}
+
+.process-section h2 {
+ font-size: 50px;
+
+}
+
+
+.process-scroll-container {
+
+  
+  position: sticky;
+  top: 0;
+  height: var(--box_size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+}
+
+.container44 {
+  max-width: 100%;
+  margin-top: 400px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.process-outer-container {
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  overflow: visible;
+  /* width: 50%; */
+  height: var(--box_size);
+  padding: 0 0 500px;
+  margin: 0 auto;
+  padding-top: 350px;
+}
+
+.process-wrap {
+  display: flex;
+  gap: 100px;
+  padding: 2rem 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+.process-box {
+  width: 180px;
+  height: 360px; /* fixed height for uniform boxes */
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding-top: 0;
+}
+
+
+
+.process-circle {
+  width: var(--box_size, 180px);
+  height: var(--box_size, 180px);
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Color & size variations */
+.circle-style-0 { width: 180px; height: 180px; font-size: 1.4rem; } /* Discussion */
+.circle-style-1 { width: 160px; height: 160px; font-size: 1.4rem; } /* Sketch */
+.circle-style-2 { width: 180px; height: 180px; font-size: 1.4rem; } /* Approval */
+.circle-style-3 { width: 160px; height: 160px; font-size: 1.4rem; } /* Web Design */
+.circle-style-4 { width: 180px; height: 180px; font-size: 1.4rem; } /* Graphic Design */
+.circle-style-5 { width: 165px; height: 165px; font-size: 1.4rem; } /* Optimization */
+.circle-style-6 { width: 160px; height: 160px; font-size: 1.4rem; } /* Testing */
+.circle-style-7 { width: 170px; height: 170px; font-size: 1.4rem; } /* Hosting */
+
+.process-desc {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  max-width: 300px;
+  margin: 0 auto;
+
+}
+
+/* Horizontal line connector */
+.process-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  width: 110px;     
+  height: 2px;   
+  background-color: #000;
+}
+.process-circle::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 30px;
+  background-color: #333;
+}
+
+.process-box:last-child .process-circle::after {
+  display: none;
+}
+
+.process-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.4;
+  max-width: 180px;
+  margin-top: 30px; /* enough space below the line */
+  min-height: 60px;  /* ensures equal block height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ Responsive: 2-row layout for 1024px and below */
+@media (max-width: 1024px) {
+  .process-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Reduced spacing for tighter layout */
+  }
+
+  .process-box {
+    width: 180px;
+    height: auto;
+  }
+
+  .process-circle::after {
+    display: none; /* Remove horizontal line in mobile view */
+  }
+
+  .process-circle::before {
+    display: none; /* Remove vertical line in mobile view */
+  }
+/* 
+  .process-desc {
+    margin-top: 20px;
+    max-width: 100%;
+    text-align: center;
+  } */
+
+  .process-outer-container {
+    padding: 0;
+    margin-top: 60px;
+    height: auto !important;
+  }
+
+  .process-scroll-container {
+    height: auto !important;
+    overflow-x: visible;
+    width: 100%;
+  
+  }
+  .process-desc {
+    margin-top: 50px; /* equal to the height of the line */
+    font-size: 0.95rem;
+    color: #333;
+    text-align: center;
+    max-width: 180px;
+  }
+
+  .process-section {
+    height: auto;
+    padding: 60px 20px;
+  }
+  .process-box {
+    width: 180px;
+    height: auto;
+    position: relative;
+  }
+
+  .process-circle {
+    width: 160px !important;
+    height: 160px !important;
+    font-size: 1.3rem !important;
+    margin: 0 auto;
+  }
+
+  /* ✅ Show only vertical line */
+  .process-circle::after {
+    display: none !important; /* remove horizontal line */
+  }
+
+  .process-circle::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    background-color: #000;
+    transform: translateX(-50%);
+  }
+
+
+
+  .process-desc {
+    max-width: 100%;
+    margin-top: 60px;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+}

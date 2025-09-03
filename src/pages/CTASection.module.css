@@ -1,0 +1,138 @@
+/* ✅ Put the font in layout with next/font (recommended), or see note below */
+
+/* Local container */
+.container17 {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #eeeeee;
+  padding-right: 15%;
+  padding-left: 15%;
+  border-radius: 12px;
+}
+
+/* Local section wrapper */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: transparent;
+  /* font-family set via next/font or global */
+}
+
+/* If you need to tweak Bootstrap's .form-control globally, do it explicitly */
+.cta-section :global(.form-control)  {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #666;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Replace #potentialForm … with a local wrapper class */
+.form input:hover,
+.form textarea:hover {
+  border-color: #ccc;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: 1px solid #ccc;
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+/* Target Bootstrap grid image but scope it under your local container */
+.container17 :global(.col-lg-6) img {
+  width: 450px;
+}
+
+/* Local “cards” */
+.contactCard {
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 1.75rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  gap: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.contactCard:hover {
+  transform: translateY(-4px);
+}
+.contactCardIcon {
+  font-size: 2.2rem;
+  color: #26abe1;
+}
+.contactCard h5 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+.contactCard p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* CTA panel */
+.ctaContent {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.05);
+}
+.ctaContent h4 {
+  font-weight: 700;
+  color: #222;
+  font-size: 1.5rem;
+}
+.ctaContent p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+/* ✅ Forms: always scope to a local class from this module */
+.form input,
+.form textarea {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.8rem 1.1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+.form input:focus,
+.form textarea:focus {
+  border-color: #26abe1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(235, 0, 87, 0.15);
+}
+
+/* Override Bootstrap button but scope within your form */
+.form :global(.btn) {
+  background: #26abe1;
+  border: none;
+  padding: 0.75rem 1.4rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  color: white;
+  transition: all 0.3s ease;
+}
+.form :global(.btn:hover) {
+  background: #26abe1;
+}
+
+/* Local SVG icon */
+.iconArrow {
+  margin-left: 0.5rem;
+}

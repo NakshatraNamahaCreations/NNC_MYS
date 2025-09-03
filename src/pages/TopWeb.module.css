@@ -1,0 +1,154 @@
+.cta-section {
+  background-color: #032a3a;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cta-subtext {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.cta-button13 {
+
+ background: #0098db; 
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.cta-button13:hover {
+  transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(0, 152, 219, 0.4);
+
+}
+
+
+.projects-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.projects-section .subtext {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.image-wrapper {
+  height: 160px;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card h4 {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+
+@media (max-width: 1024px) {
+  .cta-section {
+    padding: 40px 15px;
+  }
+
+  .cta-heading {
+    font-size: 1.5rem;
+  }
+
+  .cta-subtext {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    padding: 0 10px;
+  }
+
+  .cta-button {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .projects-section {
+    padding: 40px 15px;
+  }
+
+  .projects-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .projects-section .subtext {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    height: 180px;
+  }
+
+  .project-card h4 {
+    font-size: 1rem;
+    margin: 12px 0;
+  }
+}

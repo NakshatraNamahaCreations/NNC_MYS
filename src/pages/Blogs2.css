@@ -1,0 +1,175 @@
+.wdwb-blog-section {
+  padding: 60px 0;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wdwb-blog-container {
+  padding: 60px 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+.wdwb-blog-banner-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.wdwb-blog-title1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.wdwb-blog-intro {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.wdwb-blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.wdwb-blog-meta div {
+  min-width: 130px;
+}
+
+.wdwb-author-name {
+  color: #d51c29;
+  font-weight: 600;
+}
+
+.wdwb-blog-body-text {
+  font-size: 1.05rem;
+  color: #222;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.wdwb-highlight {
+  color: #d51c29;
+  font-weight: 600;
+}
+
+.wdwb-custom-container {
+  max-width: 90%;
+  padding: 50px 30px;
+  margin: 0 auto;
+}
+
+.wdwb-blog-featured-image {
+  padding: 50px 0;
+  margin-bottom: 10px;
+}
+
+.wdwb-blog-main-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.wdwb-blog-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.wdwb-blog-article-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.wdwb-blog-subheading {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.wdwb-blog-list {
+  padding-left: 10px;
+  list-style-type: none;
+}
+
+.wdwb-blog-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.wdwb-blog-contact-form {
+  background-color: #f8f9fa;
+}
+
+.wdwb-meta-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #444;
+  gap: 6px;
+}
+
+.wdwb-meta-icon {
+  color: #666;
+  font-size: 16px;
+}
+
+.wdwb-meta-label {
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.wdwb-meta-value {
+  color: #222;
+}
+
+.wdwb-well-designed-section {
+  background-color: #fff;
+}
+
+.wdwb-section-title11 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.wdwb-section-description11 {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.wdwb-styled-tips {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.wdwb-styled-tips li {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007BFF;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.wdwb-styled-tips li strong {
+  color: #000;
+}

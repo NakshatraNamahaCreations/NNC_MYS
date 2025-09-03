@@ -1,0 +1,165 @@
+/* WordPressFeaturedCard.css */
+
+/* Section Title */
+.wordpress-expect {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 50px;
+}
+
+/* Grid Layout */
+.wordpress-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.wordpress-feature-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 18px;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+.wordpress-feature-card:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background-color: #f9f9f9;
+  transform: translateY(-4px);
+}
+
+/* Icon */
+.wordpress-section-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  color: #e60023;
+}
+
+/* Title */
+.wordpress-feature-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 0.75rem;
+}
+
+/* Paragraph */
+.wordpress-card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  flex-grow: 1;
+}
+
+/* Accent Line */
+.wordpress-feature-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 10px;
+  background-color: #e60023;
+  border-radius: 0 10px 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wordpress-feature-card:hover::after {
+  opacity: 1;
+}
+
+/* Hover Color Variants */
+.color-blue:hover {
+  background-color: #0a3e61;
+  color: #fff;
+}
+.color-blue:hover h3,
+.color-blue:hover .wordpress-card-text,
+.color-blue:hover .wordpress-section-icon {
+  color: #fff;
+}
+
+.color-red:hover {
+  background-color: #802020;
+  color: #fff;
+}
+.color-red:hover h3,
+.color-red:hover .wordpress-card-text,
+.color-red:hover .wordpress-section-icon {
+  color: #fff;
+}
+
+.color-green:hover {
+  background-color: #2d6b52;
+  color: #fff;
+}
+.color-green:hover h3,
+.color-green:hover .wordpress-card-text,
+.color-green:hover .wordpress-section-icon {
+  color: #fff;
+}
+
+.color-yellow:hover {
+  background-color: #7a47a6;
+  color: #fff;
+}
+.color-yellow:hover h3,
+.color-yellow:hover .wordpress-card-text,
+.color-yellow:hover .wordpress-section-icon {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .wordpress-expect {
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .wordpress-feature-grid {
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+ grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  }
+
+  .wordpress-feature-card {
+    padding: 1.5rem 1.2rem;
+    min-height: auto;
+  }
+
+  .wordpress-section-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .wordpress-feature-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .wordpress-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .wordpress-feature-card::after {
+    display: none; /* Hide side accent line for narrow screens */
+  }
+}

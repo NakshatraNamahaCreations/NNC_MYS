@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+.website-hero {
+  position: relative;
+  width: 100%;
+  min-height: clamp(520px, 75vh, 760px); /* responsive height */
+  background-image: url('/images/ttt.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: stretch; /* lets the overlay fill height */
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden; /* keeps rounded corners on overlay too */
+}
+
+/* keep the overlay as the only dark layer */
+.website-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between; /* content left, form right */
+  align-items: center;            /* vertical center */
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+/* optional wrapper for the form card */
+.form-wrapper { width: 360px; max-width: 92vw; }
+
+.website-content {
+  color: #fff;
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.website-content h2 {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.website-content p {
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+
+.website-section {
+  padding: 0 30px;
+  width: 100%;
+  max-width: 79%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; 
+  padding-top: 40px;
+}
+
+.website-section1 {
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 79%;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; 
+
+}
+
+
+.website-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.website-description {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.website-line {
+  width: 250px;
+  height: 2px;
+  background-color: #000;
+  margin-right: 30px;
+  margin-bottom: 100px;
+}
+
+.website-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  max-width: 100%;
+  display: inline-block;
+  text-align: left; /* ✅ Ensures paragraph text is centered */
+}
+
+.talk-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.talk-btn .icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.talk-btn:hover .icon {
+  transform: translateX(4px);
+}
+
+.talk-btn:hover {
+  color: #fff;
+  border-color: #aaa;
+}
+
+.app-dev-wrapper {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-dev-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  /* border-bottom: 2px solid #000; */
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.app-dev-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* gap: 30px; */
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.app-dev-card {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 40px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.app-dev-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  color: #007bff; /* Your desired color */
+  fill: currentColor;
+ /* Red color tint */
+filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-rotate(167deg) brightness(95%) contrast(91%);
+
+}
+
+.app-dev-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.app-dev-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.industries-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 150px;
+    background-color: #fff;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 90%;
+}
+
+.industries-left {
+  flex: 1;
+  max-width: 650px;
+  padding-left: 200px;
+}
+
+.industries-left h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.industries-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.industries-list {
+  display: flex;
+  gap: 40px;
+}
+
+.industries-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.industries-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.industries-list li:hover {
+  color: #0056b3;
+}
+
+.industries-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.industries-right img {
+  max-width:500px;
+  height: auto;
+  object-fit: contain;
+}
+@media screen and (max-width: 768px) {
+
+
+.website-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between; /* content left, form right */
+  align-items: center;            /* vertical center */
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+
+  .website-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .website-title {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+
+  .website-line {
+    width: 180px;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .website-description {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .talk-btn {
+    font-size: 1rem;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .talk-btn .icon {
+    font-size: 16px;
+  }
+}
+
+
+/* 🌐 Mobile Optimization (325px – 768px) */
+@media (max-width: 768px) {
+
+
+
+  .website-section {
+    padding: 40px 15px;
+  }
+
+  .website-title {
+    font-size: 1.8rem;
+  }
+
+  .website-line {
+    width: 100px;
+    margin: 20px auto 30px;
+  }
+
+  .website-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .app-dev-wrapper {
+    padding: 40px 15px;
+  }
+
+  .app-dev-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .app-dev-card {
+    padding: 20px;
+  }
+
+  .app-dev-heading {
+    font-size: 1.1rem;
+  }
+
+  .app-dev-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+
+  .industries-wrapper {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .industries-left {
+    padding-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .industries-left h2 {
+    font-size: 1.6rem;
+  }
+
+  .industries-left p {
+    font-size: 1rem;
+  }
+
+  .industries-list {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .industries-list ul {
+    padding-left: 0;
+  }
+
+  .industries-list li {
+    font-size: 0.95rem;
+  }
+
+  .industries-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .industries-right img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .talk-btn {
+    font-size: 0.95rem;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+
+  .website-section {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  .website-title {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+
+  .website-line {
+    width: 120px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .website-description {
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .talk-btn {
+    font-size: 0.95rem;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .talk-btn .icon {
+    font-size: 14px;
+  }
+}

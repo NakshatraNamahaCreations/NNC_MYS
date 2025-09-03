@@ -1,0 +1,199 @@
+.clients-container {
+  max-width: 1300px;
+  margin: 3.5rem auto 0 auto;
+  /* padding: 0 1rem; */
+  background: #ffffffd5;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+}
+
+.ourclientsh1{
+  text-align: center;
+ margin-top: 70px;
+ 
+}
+
+.ourclientsh1 h2{
+  font-size: 40px;
+  font-weight: 700;
+  color: #26abe1;
+  font-family: 'Lato sans-serif';
+}
+.clients-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+  justify-content: center;
+  /* gap: 0.5rem 1rem;
+  padding: 1rem 0; */
+}
+
+.client-col {
+  flex: 1 1 13%; /* about 6 items fitting in a row with gaps */
+  max-width: 16.6667%;
+  /* padding: 0 0.25rem; */
+  box-sizing: border-box;
+  min-width: 120px;
+}
+
+.flipper-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 130px;
+  /* border-radius: 0.75rem; */
+  overflow: hidden;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  background: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+}
+
+.flip {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flipper-container:hover .flip,
+.flipper-container:focus .flip {
+  transform: rotateY(180deg);
+}
+
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  padding: 10px; 
+}
+
+.front img,
+.back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.back {
+  display: block; /* Added display: block; */
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+}
+
+.face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+/* For normal images (without flip container) */
+.client-image {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  user-select: none;
+  pointer-events: none;
+  display: block;
+  margin: 0 auto;
+  background: #f9f9f9;
+}
+@media (max-width: 1024px) {
+  .clients-container {
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+  }
+
+  .ourclientsh1 h2 {
+    font-size: 32px;
+  }
+
+  .client-col {
+    flex: 1 1 25%;
+    max-width: 25%;
+    padding: 0.25rem;
+  }
+
+  .flipper-container {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+ .client-col {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .flipper-container {
+    height: 90px;
+  }
+  .clients-container {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .ourclientsh1 h2 {
+    font-size: 28px;
+  }
+
+  .clients-row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .client-col {
+    flex: 1 1 33.3333%;
+    max-width: 33.3333%;
+    padding: 0.3rem;
+  }
+
+  .flipper-container {
+    height: 90px;
+  }
+
+  .front img,
+  .back img {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourclientsh1 {
+    margin-top: 50px;
+  }
+
+  .ourclientsh1 h2 {
+    font-size: 24px;
+  }
+
+  .client-col {
+    flex: 1 1 48%;
+    max-width: 48%;
+    padding: 0.25rem;
+  }
+
+  .flipper-container {
+    height: 70px;
+  }
+
+  .front img,
+  .back img {
+    padding: 4px;
+  }
+}

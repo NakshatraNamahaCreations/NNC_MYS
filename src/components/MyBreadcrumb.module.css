@@ -1,0 +1,132 @@
+/* Container that centers breadcrumb content and limits its max width */
+.container53 {
+  /* max-width: 1349px; */
+  width: 100%;
+  /* padding: 6px 16px; */
+  padding-left: 50px;
+  margin-top: 140px !important;
+  box-sizing: border-box;
+}
+/* Custom breadcrumb container */
+/* .breadcrumb-wrapper {
+  width: 47%;                
+    
+  box-sizing: border-box;
+} */
+
+/* Breadcrumb styling */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Individual item styles */
+.breadcrumb-item {
+  color: #1e1e1e;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+/* Separator arrow */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  color: #888;
+  padding: 0 8px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .container53 {
+    padding: 8px 16px;
+    margin-top: 100px;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb-item {
+    line-height: 1.4;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 6px;
+  }
+}
+
+/* 📱 Mobile Optimization */
+@media screen and (max-width: 1024px) {
+  .breadcrumb-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1044px) {
+  .breadcrumb-wrapper {
+    width: 70%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container53 {
+    margin-top: 100px;
+    padding: 8px 12px;
+  }
+
+  .breadcrumb-wrapper {
+    width: 95%;
+  }
+
+  .breadcrumb {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    line-height: 1.5;
+  }
+
+  .breadcrumb-item {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    padding: 0 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .breadcrumb-wrapper {
+    width: 100%;
+  }
+
+  .breadcrumb {
+    justify-content: flex-start;
+    font-size: 0.85rem;
+  }
+}

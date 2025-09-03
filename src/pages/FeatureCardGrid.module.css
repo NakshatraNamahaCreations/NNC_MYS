@@ -1,0 +1,189 @@
+/* Container Grid Layout */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card Styles */
+.feature-card {
+  background-color: #fff;
+  border: 1.5px solid #d8d8d8;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  min-height: 320px;
+  padding: 2rem;
+}
+
+.feature-card:hover {
+  /* border-color: #e60023; */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  background-color: #fef6f7;
+}
+
+/* Highlighted red version */
+.feature-card.red-highlight {
+  background-color: #e60023;
+  color: #fff;
+  border: none;
+}
+
+.feature-card.red-highlight .card-text {
+  color: #fff;
+      font-size: 18px;
+}
+
+.card-text{
+
+      font-size: 18px;
+}
+
+.feature-card.red-highlight:hover {
+  background-color: #cf001f;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+      font-size: 18px;
+}
+
+/* Title and Icon Layout */
+.feature-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+
+
+/* Icon Style */
+.section-icon {
+  font-size: 2rem;
+  color: #e60023;
+}
+
+.red-highlight .section-icon {
+  color: #fff;
+}
+
+/* Title */
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.red-highlight h3 {
+  color: #fff;
+}
+
+/* Paragraph Text */
+.card-text {
+  /* font-size: 0.95rem; */
+  line-height: 1.8;
+  color: #333;
+  margin-top: auto;
+      font-size: 17px;
+}
+
+/* Rounded side accent (optional like in screenshot) */
+.feature-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  height: 50px;
+  width: 12px;
+  background-color: #e60023;
+  border-radius: 0 8px 8px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feature-card:hover::after {
+  opacity: 1;
+}
+
+.red-highlight::after {
+  background-color: #fff;
+  opacity: 1;
+}
+
+ /*=== Dynamic Hover Colors Based on Card === */
+
+.color-blue:hover {
+  background-color: #083d4f;
+  color: white;
+  
+}
+
+.color-blue:hover h3,
+.color-blue:hover .card-text {
+  color: white;
+      font-size: 17px;
+}
+
+.color-blue:hover .section-icon {
+  color: white;
+}
+
+.color-red:hover {
+  background-color: #1f3e7b;
+  border-color: #1f3e7b;
+}
+
+.color-red:hover h3,
+.color-red:hover .card-text {
+  color: white;
+}
+
+
+.color-red:hover .section-icon {
+  color: white;
+}
+
+/* .color-red:hover .section-icon {
+  color: #e60023;
+} */
+
+.color-green:hover {
+  background-color: #357d55;
+  border-color: #357d55;
+}
+
+.color-green:hover h3,
+.color-green:hover .card-text {
+  color: white;
+}
+
+.color-green:hover .section-icon {
+  color: white;
+}
+
+.color-yellow:hover {
+  background-color: #a354b5;
+  border-color: #a354b5;
+}
+
+.color-yellow:hover h3,
+.color-yellow:hover .card-text {
+  color: white;
+    font-size: 17px;
+}
+
+.color-yellow:hover .section-icon {
+  color: white;
+
+}
+

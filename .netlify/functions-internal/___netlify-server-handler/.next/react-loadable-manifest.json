@@ -1,0 +1,39 @@
+{
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 57,
+    "files": [
+      "static/chunks/57.bde486dc361d15f1.js"
+    ]
+  },
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 4100,
+    "files": [
+      "static/chunks/4100.f5b270b131266ebe.js"
+    ]
+  },
+  "components\\CounterWithLottie.tsx -> @lottiefiles/react-lottie-player": {
+    "id": 5586,
+    "files": [
+      "static/chunks/4d022aba.9c8d6a69b24f88f7.js"
+    ]
+  },
+  "pages\\ClientSlider.tsx -> react-slick": {
+    "id": 9357,
+    "files": [
+      "static/chunks/9357.90b2c962981e74fd.js"
+    ]
+  },
+  "pages\\_app.tsx -> bootstrap/dist/js/bootstrap.bundle.min.js": {
+    "id": 1585,
+    "files": [
+      "static/chunks/3966.ae35dec603701ff4.js"
+    ]
+  },
+  "pages\\about-us.tsx -> @/components/CounterWithLottie": {
+    "id": 1013,
+    "files": [
+      "static/css/7028a294b6188cb1.css",
+      "static/chunks/1013.85966f5b59208685.js"
+    ]
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/apply/[job]",
+      "regex": "^/apply/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPjob": "nxtPjob"
+      },
+      "namedRegex": "^/apply/(?<nxtPjob>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/jobs/[slug]",
+      "regex": "^/jobs/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/jobs/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/AllServices",
+      "regex": "^/AllServices(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/AllServices(?:/)?$"
+    },
+    {
+      "page": "/B2BDesignPhases",
+      "regex": "^/B2BDesignPhases(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/B2BDesignPhases(?:/)?$"
+    },
+    {
+      "page": "/B2BFeatureGrid",
+      "regex": "^/B2BFeatureGrid(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/B2BFeatureGrid(?:/)?$"
+    },
+    {
+      "page": "/BlogCard",
+      "regex": "^/BlogCard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/BlogCard(?:/)?$"
+    },
+    {
+      "page": "/Buissness",
+      "regex": "^/Buissness(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Buissness(?:/)?$"
+    },
+    {
+      "page": "/CTASection",
+      "regex": "^/CTASection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/CTASection(?:/)?$"
+    },
+    {
+      "page": "/ClientSlider",
+      "regex": "^/ClientSlider(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ClientSlider(?:/)?$"
+    },
+    {
+      "page": "/ClientsSay",
+      "regex": "^/ClientsSay(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ClientsSay(?:/)?$"
+    },
+    {
+      "page": "/ContactUs",
+      "regex": "^/ContactUs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContactUs(?:/)?$"
+    },
+    {
+      "page": "/DesignTypesSection",
+      "regex": "^/DesignTypesSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/DesignTypesSection(?:/)?$"
+    },
+    {
+      "page": "/DesignVideoSection",
+      "regex": "^/DesignVideoSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/DesignVideoSection(?:/)?$"
+    },
+    {
+      "page": "/ECommerceScroll",
+      "regex": "^/ECommerceScroll(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ECommerceScroll(?:/)?$"
+    },
+    {
+      "page": "/EcomTypesSection",
+      "regex": "^/EcomTypesSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/EcomTypesSection(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion",
+      "regex": "^/FaqAccordion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion1",
+      "regex": "^/FaqAccordion1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion1(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion2",
+      "regex": "^/FaqAccordion2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion2(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion3",
+      "regex": "^/FaqAccordion3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion3(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion4",
+      "regex": "^/FaqAccordion4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion4(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion5",
+      "regex": "^/FaqAccordion5(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion5(?:/)?$"
+    },
+    {
+      "page": "/FaqAccordion6",
+      "regex": "^/FaqAccordion6(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqAccordion6(?:/)?$"
+    },
+    {
+      "page": "/FeatureCardGrid",
+      "regex": "^/FeatureCardGrid(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FeatureCardGrid(?:/)?$"
+    },
+    {
+      "page": "/FloatingActions",
+      "regex": "^/FloatingActions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FloatingActions(?:/)?$"
+    },
+    {
+      "page": "/Home",
+      "regex": "^/Home(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Home(?:/)?$"
+    },
+    {
+      "page": "/MobileBottomBar",
+      "regex": "^/MobileBottomBar(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/MobileBottomBar(?:/)?$"
+    },
+    {
+      "page": "/MobileFeaturedCard",
+      "regex": "^/MobileFeaturedCard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/MobileFeaturedCard(?:/)?$"
+    },
+    {
+      "page": "/MobileProcessTimeline",
+      "regex": "^/MobileProcessTimeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/MobileProcessTimeline(?:/)?$"
+    },
+    {
+      "page": "/OurClients",
+      "regex": "^/OurClients(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurClients(?:/)?$"
+    },
+    {
+      "page": "/OurClientsSays",
+      "regex": "^/OurClientsSays(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurClientsSays(?:/)?$"
+    },
+    {
+      "page": "/OurProcess",
+      "regex": "^/OurProcess(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurProcess(?:/)?$"
+    },
+    {
+      "page": "/OurProcessScroll",
+      "regex": "^/OurProcessScroll(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurProcessScroll(?:/)?$"
+    },
+    {
+      "page": "/OurTeam",
+      "regex": "^/OurTeam(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurTeam(?:/)?$"
+    },
+    {
+      "page": "/OurWorkGallery",
+      "regex": "^/OurWorkGallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/OurWorkGallery(?:/)?$"
+    },
+    {
+      "page": "/PortFolio",
+      "regex": "^/PortFolio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/PortFolio(?:/)?$"
+    },
+    {
+      "page": "/ProcessTimeline",
+      "regex": "^/ProcessTimeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ProcessTimeline(?:/)?$"
+    },
+    {
+      "page": "/ReasonsToChooseSoftware",
+      "regex": "^/ReasonsToChooseSoftware(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ReasonsToChooseSoftware(?:/)?$"
+    },
+    {
+      "page": "/ReasonsToChooseWordPress",
+      "regex": "^/ReasonsToChooseWordPress(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ReasonsToChooseWordPress(?:/)?$"
+    },
+    {
+      "page": "/ScrollToTop",
+      "regex": "^/ScrollToTop(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ScrollToTop(?:/)?$"
+    },
+    {
+      "page": "/SeoFeatureCardGrid",
+      "regex": "^/SeoFeatureCardGrid(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/SeoFeatureCardGrid(?:/)?$"
+    },
+    {
+      "page": "/SeoRoleSection",
+      "regex": "^/SeoRoleSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/SeoRoleSection(?:/)?$"
+    },
+    {
+      "page": "/SeoTypesSection",
+      "regex": "^/SeoTypesSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/SeoTypesSection(?:/)?$"
+    },
+    {
+      "page": "/ServicesImages",
+      "regex": "^/ServicesImages(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ServicesImages(?:/)?$"
+    },
+    {
+      "page": "/SoftwareProcessTimeline",
+      "regex": "^/SoftwareProcessTimeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/SoftwareProcessTimeline(?:/)?$"
+    },
+    {
+      "page": "/StickyServices",
+      "regex": "^/StickyServices(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/StickyServices(?:/)?$"
+    },
+    {
+      "page": "/TopWeb",
+      "regex": "^/TopWeb(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/TopWeb(?:/)?$"
+    },
+    {
+      "page": "/TwoDAnimationFeatureCard",
+      "regex": "^/TwoDAnimationFeatureCard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/TwoDAnimationFeatureCard(?:/)?$"
+    },
+    {
+      "page": "/UIUXProcessTimeline",
+      "regex": "^/UIUXProcessTimeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/UIUXProcessTimeline(?:/)?$"
+    },
+    {
+      "page": "/VideoFeaturedCard",
+      "regex": "^/VideoFeaturedCard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/VideoFeaturedCard(?:/)?$"
+    },
+    {
+      "page": "/VideoTimeline",
+      "regex": "^/VideoTimeline(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/VideoTimeline(?:/)?$"
+    },
+    {
+      "page": "/WebDesign",
+      "regex": "^/WebDesign(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WebDesign(?:/)?$"
+    },
+    {
+      "page": "/WebDesignService",
+      "regex": "^/WebDesignService(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WebDesignService(?:/)?$"
+    },
+    {
+      "page": "/WebsiteDevelopment",
+      "regex": "^/WebsiteDevelopment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WebsiteDevelopment(?:/)?$"
+    },
+    {
+      "page": "/WhyChooseUs",
+      "regex": "^/WhyChooseUs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WhyChooseUs(?:/)?$"
+    },
+    {
+      "page": "/WordPressFeaturedCard",
+      "regex": "^/WordPressFeaturedCard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WordPressFeaturedCard(?:/)?$"
+    },
+    {
+      "page": "/WorkCarousel",
+      "regex": "^/WorkCarousel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/WorkCarousel(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/apply",
+      "regex": "^/apply(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/apply(?:/)?$"
+    },
+    {
+      "page": "/blogs",
+      "regex": "^/blogs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs(?:/)?$"
+    },
+    {
+      "page": "/blogs/2d-animation-sales-communication",
+      "regex": "^/blogs/2d\\-animation\\-sales\\-communication(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/2d\\-animation\\-sales\\-communication(?:/)?$"
+    },
+    {
+      "page": "/blogs/custom-website-development-growth",
+      "regex": "^/blogs/custom\\-website\\-development\\-growth(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/custom\\-website\\-development\\-growth(?:/)?$"
+    },
+    {
+      "page": "/blogs/how-website-speed-optimization-impacts-conversion",
+      "regex": "^/blogs/how\\-website\\-speed\\-optimization\\-impacts\\-conversion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/how\\-website\\-speed\\-optimization\\-impacts\\-conversion(?:/)?$"
+    },
+    {
+      "page": "/blogs/role-of-mobile-apps-in-business",
+      "regex": "^/blogs/role\\-of\\-mobile\\-apps\\-in\\-business(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/role\\-of\\-mobile\\-apps\\-in\\-business(?:/)?$"
+    },
+    {
+      "page": "/blogs/well-designed-website-benefits",
+      "regex": "^/blogs/well\\-designed\\-website\\-benefits(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/well\\-designed\\-website\\-benefits(?:/)?$"
+    },
+    {
+      "page": "/blogs/why-mobile-optimized-websites-are-crucial",
+      "regex": "^/blogs/why\\-mobile\\-optimized\\-websites\\-are\\-crucial(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blogs/why\\-mobile\\-optimized\\-websites\\-are\\-crucial(?:/)?$"
+    },
+    {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/contact-us",
+      "regex": "^/contact\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact\\-us(?:/)?$"
+    },
+    {
+      "page": "/our-work",
+      "regex": "^/our\\-work(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/our\\-work(?:/)?$"
+    },
+    {
+      "page": "/service",
+      "regex": "^/service(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service(?:/)?$"
+    },
+    {
+      "page": "/service/2d-animation-company-in-mysore",
+      "regex": "^/service/2d\\-animation\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/2d\\-animation\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/b2b-marketing-service-in-mysore",
+      "regex": "^/service/b2b\\-marketing\\-service\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/b2b\\-marketing\\-service\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/corporate-video-production-in-mysore",
+      "regex": "^/service/corporate\\-video\\-production\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/corporate\\-video\\-production\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/ecommerce-website-development-company-in-mysore",
+      "regex": "^/service/ecommerce\\-website\\-development\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/ecommerce\\-website\\-development\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/mobile-app-development-company-in-mysore",
+      "regex": "^/service/mobile\\-app\\-development\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/mobile\\-app\\-development\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/seo-service-company-in-mysore",
+      "regex": "^/service/seo\\-service\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/seo\\-service\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/social-media-marketing-company-in-mysore",
+      "regex": "^/service/social\\-media\\-marketing\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/social\\-media\\-marketing\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/software-development-company-in-mysore",
+      "regex": "^/service/software\\-development\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/software\\-development\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/ui-ux-design-company-in-mysore",
+      "regex": "^/service/ui\\-ux\\-design\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/ui\\-ux\\-design\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/service/wordpress-website-development-company-in-mysore",
+      "regex": "^/service/wordpress\\-website\\-development\\-company\\-in\\-mysore(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/wordpress\\-website\\-development\\-company\\-in\\-mysore(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/jobs/[slug]",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "dataRouteRegex": "^/_next/data/eGVxryQPLMNbGaKsdrjVp/jobs/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/eGVxryQPLMNbGaKsdrjVp/jobs/(?<nxtPslug>[^/]+?)\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

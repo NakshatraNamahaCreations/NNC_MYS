@@ -1,0 +1,109 @@
+/* Section background: deep navy with subtle pattern */
+.section {
+  position: relative;
+  background:
+    radial-gradient(1200px 560px at 70% -10%, rgba(255,255,255,0.06), transparent 60%),
+    #0e2a44; /* dark blue/teal */
+  color: #e9f1fb;
+  overflow: hidden;
+}
+
+/* Decorative dotted line */
+.section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 44%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.22) 30%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-size: 18px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Headline + lead copy */
+.title {
+  font-size: clamp(28px, 4.6vw, 42px);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.lead {
+  color: #d6e4f7;
+  line-height: 1.7;
+  font-size: clamp(14px, 1.15vw, 17px);
+}
+
+/* Service card */
+.card {
+  height: 100%;
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 10px 30px rgba(0, 0, 0, 0.16);
+  transition: transform 0.18s ease, box-shadow 0.22s ease, background 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 18px 44px rgba(0, 0, 0, 0.26);
+}
+
+/* Icon bubble */
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Card text */
+.cardTitle {
+  margin: 6px 0 4px;
+  color: #0b2141;
+  font-size: clamp(15px, 1.2vw, 18px);
+  font-weight: 800;
+}
+
+.cardCopy {
+  margin: 0;
+  color: #1b2d4b;
+  font-size: clamp(13px, 1.05vw, 15px);
+  line-height: 1.6;
+}
+
+/* Reveal animation (IntersectionObserver toggles .show) */
+/* Use :global to allow attribute selectors with CSS Modules */
+
+
+.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive tweak */
+@media (max-width: 991.98px) {
+  .section::after {
+    display: none;
+  }
+  .card {
+    padding: 16px;
+  }
+}

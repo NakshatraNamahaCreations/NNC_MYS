@@ -1,0 +1,984 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+  .scroll-wrapper {
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .scroll-container11 {
+    display: flex;
+    width: fit-content;
+    height: 100vh;
+  }
+
+  .scroll-panel {
+    width: 100vw;
+    padding: 60px;
+    flex-shrink: 0;
+  }
+
+  .our-process-wrapper {
+    max-width: 100%;
+    margin: auto;
+  }
+
+
+  .stats-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+    padding: 2rem 3rem;
+    justify-items: start;
+    align-items: start;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+
+  .stat-item:hover {
+    transform: translateY(-4px);
+  }
+
+  .icon-box {
+    min-width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #0ea5e9;
+    color: #0ea5e9;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+
+  .stat-item strong {
+    font-size: 1.3rem;
+    color: #111827;
+  }
+
+  .stat-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #374151;
+  }
+
+  /*  1st */
+
+  .panel-whyChoose {
+    background-color: #ffffff;
+    padding: 60px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .panel-content-split {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .panel-left {
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+  }
+
+  .panel-left h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .mission-vision-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .mission,
+  .vision {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .mission h3,
+  .vision h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .mission p,
+  .vision p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Right Panel (Stats) */
+  .panel-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+  }
+
+  .stat-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .circle12 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .stat-box h4 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .stat-box p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* 2nd one*/
+
+  .company-highlight-panel {
+    background-color: #fff9f7;
+    padding: 130px 40px;
+    color: #1e1e1e;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: left;
+  }
+
+  .panel-inner-layout {
+    max-width: 1400px;
+    padding: 0px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .panel-text-content {
+    flex: 1;
+    min-width: 320px;
+  }
+
+  .panel-text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .panel-text-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .panel-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .responsive-panel-image {
+    /* max-width: 100%;
+    height: auto; */
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  /* 3rd*/
+
+  .scroll-panel.why-choose-wrapper {
+    background-color: #f0eef0;
+    padding: 130px 20px;
+    flex-direction: column;
+    justify-content: center;
+    /* ✅ Vertical center */
+    align-items: center;
+    /* ✅ Horizontal center */
+    text-align: center;
+  }
+
+  .why-choose-heading {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 50px;
+    color: #222;
+    /* padding-top: 70px; */
+  }
+
+  .why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .why-choose-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+  }
+
+
+  .why-choose-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .why-choose-item .icon {
+    font-size: 28px;
+    color: #26abe1;
+    margin-bottom: 12px;
+    border: 2px solid #0ea5e9;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+  }
+
+  .why-choose-item h4 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+  }
+
+  .why-choose-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* 4th */
+
+  /* Outer section container */
+  .scroll-panel.panel-ourProcess {
+    padding: 0px 20px;
+    background-color: #f3f4f6;
+    /* light gray background */
+  }
+
+  /* Inner content box */
+  .panel-ourProcess .panel-content {
+    max-width: 100%;
+    margin: 0 auto;
+    /* background: #ffffff; */
+    padding: 130px 0px;
+    /* border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); */
+  }
+
+  /* Title styling */
+  .panel-ourProcess h2.section-title1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    /* margin-bottom: 40px; */
+    color: #222;
+  }
+
+  /* Grid layout */
+  .process-grid11 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    padding-top: 50px;
+  }
+
+  /* Card box */
+  .process-card11 {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    align-items: center;
+    /* ⟵ centers the icon + text horizontally */
+    text-align: center;
+    /* optional: center the headings/paragraphs */
+    gap: 0.5rem;
+  }
+
+  /* Hover effect */
+  .process-card11:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Icon styling */
+  .process-card11 .icon {
+    font-size: 28px;
+    color: #0ea5e9;
+    margin-bottom: 12px;
+  }
+
+  /* Title inside card */
+  .process-card11 h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111;
+  }
+
+  /* Description inside card */
+  .process-card11 p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+
+
+  /* 5th */
+  .scroll-panel.panel-cta {
+
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .panel-cta .cta-content11 {
+    /* max-width: 850px; */
+    margin: 0 auto;
+  }
+
+  .cta-subtitle11 {
+    color: #26abe1;
+    /* red-600 */
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 150px;
+  }
+
+  .cta-heading11 {
+    font-size: 100px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.2;
+    margin-bottom: 60px;
+
+  }
+
+  .cta-button11 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #111827;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button11:hover {
+    background-color: #032a3a;
+    color: #fff;
+  }
+
+  .cta-button11 .icon {
+    margin-left: 6px;
+    font-size: 12px;
+  }
+
+  /* 1st */
+
+  .scroll-panel.standout-panel {
+    background-color: #f2f2f2;
+    padding: 120px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .standout-title {
+    font-size: 90px;
+    font-weight: 700;
+    color: #111;
+    text-align: center;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+
+
+  @media (max-width: 768px) {
+    .scroll-container11 {
+      flex-direction: column !important;
+      height: auto;
+      width: 100%;
+      transform: translate(0px, 0px) !important;
+    }
+
+    .scroll-panel {
+      width: 100%;
+      padding: 40px 20px;
+    }
+
+    .panel-left,
+    .panel-right,
+    .panel-text-content,
+    .panel-image-wrapper {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    .mission-vision-wrapper,
+    .panel-inner-layout {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .why-choose-grid {
+      /* grid-template-columns: 1fr; */
+      gap: 30px;
+    }
+
+    .process-grid11 {
+      /* grid-template-columns: 1fr; */
+      gap: 20px;
+    }
+
+    .standout-title {
+      font-size: 38px;
+      line-height: 1.3;
+    }
+
+    .cta-heading11 {
+      font-size: 40px;
+    }
+
+    .cta-button11 {
+      width: 90px;
+      height: 90px;
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .scroll-container11 {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      transform: translate(0px, 0px) !important;
+    }
+
+    .scroll-panel {
+      width: 100%;
+      padding: 30px 15px;
+    }
+
+    .panel-left h2,
+    .section-title1 {
+      font-size: 1.3rem;
+    }
+
+    /* .why-choose-grid {
+      grid-template-columns: 1fr;
+    }
+    .process-grid11 {
+      grid-template-columns: 1fr;
+    } */
+
+    .intro-text {
+      font-size: 0.9rem;
+    }
+
+    .process-card11 h4 {
+      font-size: 1rem;
+    }
+
+    .process-card11 p {
+      font-size: 0.85rem;
+    }
+
+    .cta-heading11 {
+      font-size: 28px;
+    }
+
+    .cta-button11 {
+      width: 70px;
+      height: 70px;
+      font-size: 12px;
+    }
+
+    .panel-inner-layout {
+      gap: 30px;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    .scroll-container11 {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      transform: translate(0px, 0px) !important;
+
+    }
+
+    .scroll-panel.standout-panel {
+      margin-bottom: 200px;
+    }
+
+    .panel-whyChoose {
+      background-color: #ffffff;
+      padding: 20px 15px;
+      /* reduced padding */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #222;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .panel-content-split {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      /* reduced gap */
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .panel-left {
+      flex: 1;
+      min-width: 250px;
+      text-align: left;
+    }
+
+    .panel-left h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .panel-left p {
+      text-align: left;
+    }
+
+    .intro-text {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .mission-vision-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .mission,
+    .vision {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .mission h3,
+    .vision h3 {
+      font-size: 1.13rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .mission p,
+    .vision p {
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
+
+    /* Right Panel (Stats) */
+    .panel-right {
+      flex: 1;
+      min-width: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .stat-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .circle12 {
+      width: 60px;
+      height: 60px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 1px solid #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .stat-box h4 {
+      font-size: 1rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .stat-box p {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .panel-whyChoose {
+      padding: 60px 20px 100px;
+      /* top: 60, bottom: 100 for spacing */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .panel-content-split {
+      /* flex-direction: column; */
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 200px;
+      width: 100%;
+      gap: 40px;
+    }
+
+    .panel-left {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .mission-vision-wrapper {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .mission,
+    .vision {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .panel-text-content h2 {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+
+    .panel-left h2,
+
+    .why-choose-heading,
+    .panel-ourProcess h2.section-title1 {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+
+    .intro-text,
+    .panel-text-content p,
+    .mission p,
+    .vision p {
+      font-size: 1rem;
+      text-align: justify;
+      padding: 0 10px;
+    }
+
+    /* Stats and icon boxes */
+    .stats-list {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+
+    .stat-item {
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .icon-box {
+      margin-bottom: 10px;
+    }
+
+    .company-highlight-panel {
+      background-color: #fff9f7;
+      /* padding: 50px 40px; */
+      color: #1e1e1e;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: left;
+    }
+
+    .panel-text-content p {
+      margin-bottom: 0px;
+    }
+
+    /* Why Choose Grid */
+    .why-choose-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0;
+    }
+
+    .why-choose-item h4 {
+      font-size: 16px;
+    }
+
+    .scroll-panel.why-choose-wrapper {
+      background-color: #f0eef0;
+      /* padding: 80px 20px; */
+    }
+
+    .panel-inner-layout {
+      display: flex;
+      align-items: center;
+     
+      gap: 10px;
+
+    }
+
+    .why-choose-item {
+      text-align: center;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s ease;
+    }
+
+    /* Process Cards */
+    .process-grid11 {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      padding-top: 10px;
+    }
+
+    .process-card11 {
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 20px 10px 10px !important;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .process-card11 h4 {
+      font-size: 1rem;
+    }
+
+    .process-card11 p {
+      font-size: 0.9rem;
+    }
+
+    /* Standout Title */
+    .standout-title {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+
+    /* CTA Section */
+    .cta-heading11 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      margin-bottom: 40px;
+    }
+
+    .cta-button11 {
+      width: 90px;
+      height: 90px;
+      font-size: 13px;
+    }
+
+    .cta-subtitle11 {
+      padding-top: 80px;
+      font-size: 13px;
+    }
+
+    /* Image responsiveness */
+    .responsive-panel-image {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    .scroll-panel.standout-panel {
+      background-color: #f2f2f2;
+      padding: 120px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+
+    .panel-inner-layout {
+      max-width: 1400px;
+      padding: 0px;
+      margin: 0 auto;
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .scroll-container11 {
+      height: auto;
+      width: 100%;
+    }
+
+    .scroll-panel {
+      padding: 80px 50px;
+    }
+
+    .panel-left h2,
+    .panel-text-content h2,
+    .why-choose-heading,
+    .section-title1,
+    .standout-title,
+    .cta-heading11 {
+      font-size: 2.5rem;
+    }
+
+    .intro-text,
+    .panel-text-content p,
+    .mission p,
+    .vision p,
+    .stat-box p,
+    .why-choose-item p,
+    .process-card11 p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .panel-left,
+    .panel-right,
+    .panel-text-content,
+    .panel-image-wrapper {
+      flex: 1;
+      max-width: 48%;
+    }
+
+    .stats-list {
+      gap: 2rem 2rem;
+      padding: 2rem;
+    }
+
+    .icon-box {
+      min-width: 48px;
+      height: 48px;
+      font-size: 1.25rem;
+    }
+
+    .circle12 {
+      width: 90px;
+      height: 90px;
+      font-size: 1.4rem;
+    }
+
+    .why-choose-grid,
+    .process-grid11 {
+      gap: 32px;
+    }
+
+    .why-choose-item h4,
+    .process-card11 h4 {
+      font-size: 1.15rem;
+    }
+
+    .cta-heading11 {
+      font-size: 4.5rem;
+    }
+
+    .cta-button11 {
+      width: 120px;
+      height: 120px;
+      font-size: 1.05rem;
+    }
+
+    .responsive-panel-image {
+      height: 420px;
+      object-fit: cover;
+    }
+  }

@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.uiux-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/images/ttt.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+.uiux-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.uiux-content {
+  color: white;
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.uiux-content h1 {
+  font-size: 3rem;
+  text-align: left;
+}
+
+.uiux-content p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+
+.uiux-talk-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.uiux-talk-btn .icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.uiux-talk-btn:hover .icon {
+  transform: translateX(4px);
+}
+
+.uiux-talk-btn:hover {
+  color: #fff;
+  border-color: #aaa;
+}
+
+.uiux-section {
+  padding: 60px 30px;
+  width: 85%;
+ 
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+}
+
+.uiux-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.uiux-wrapper {
+  margin-top: 30px;
+}
+
+.uiux-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  display: inline-block;
+  text-align: left;
+}
+
+.uiux-services {
+  padding: 0px 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.uiux-services-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.uiux-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.uiux-services-card {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.uiux-services-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  filter: brightness(0) saturate(100%) invert(56%) sepia(50%) saturate(678%) hue-rotate(172deg) brightness(97%) contrast(89%);
+}
+
+.uiux-services-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.uiux-services-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+.uiux-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.uiux-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.uiux-card-icon {
+  width: 60px;
+  height: 60px;
+  /* background: #ffe6e0; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.uiux-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.uiux-card-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.uiux-industry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.uiux-industry-left {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.uiux-industry-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.uiux-industry-left p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.uiux-industry-right {
+  flex: 1;
+  text-align: center;
+}
+
+.uiux-industry-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  /* HERO */
+  .uiux-hero {
+    height: 300px;
+  }
+
+  .uiux-overlay {
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .uiux-content {
+    text-align: center;
+  }
+
+  .uiux-content h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .uiux-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .uiux-talk-btn {
+    font-size: 15px;
+  }
+
+  /* SECTION */
+  .uiux-title {
+    font-size: 2rem;
+  }
+
+  .uiux-description {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .uiux-services-title {
+    font-size: 1.8rem;
+  }
+
+  .uiux-services-heading {
+    font-size: 1.1rem;
+  }
+
+  .uiux-services-list {
+    font-size: 0.95rem;
+  }
+
+  /* INDUSTRY */
+  .uiux-industry {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .uiux-industry-left {
+    padding-right: 0;
+  }
+
+  .uiux-industry-left h2 {
+    font-size: 1.7rem;
+  }
+
+  .uiux-industry-left p {
+    font-size: 0.95rem;
+  }
+
+  .uiux-industry-right img {
+    max-width: 100%;
+  }
+
+  /* CARD */
+  .uiux-card-title {
+    font-size: 1.1rem;
+  }
+
+  .uiux-card-desc {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .uiux-hero {
+    height: 220px;
+  }
+
+  .uiux-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .uiux-content p {
+    font-size: 0.95rem;
+  }
+
+  .uiux-talk-btn {
+    font-size: 14px;
+    padding-bottom: 3px;
+  }
+
+  .uiux-title {
+    font-size: 1.6rem;
+  }
+
+  .uiux-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .uiux-services-title {
+    font-size: 1.6rem;
+  }
+
+  .uiux-services-card {
+    padding: 20px 15px;
+  }
+
+  .uiux-services-heading {
+    font-size: 1rem;
+  }
+
+  .uiux-services-list {
+    font-size: 0.9rem;
+  }
+
+  .uiux-card {
+    padding: 25px 15px;
+  }
+
+  .uiux-card-title {
+    font-size: 1rem;
+  }
+
+  .uiux-card-desc {
+    font-size: 0.9rem;
+  }
+
+  .uiux-industry-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .uiux-industry-left p {
+    font-size: 0.9rem;
+  }
+}

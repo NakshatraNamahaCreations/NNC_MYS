@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.wordpressapp-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/images/ttt.jpg'); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
+}
+
+.wordpressapp-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.wordpressapp-content {
+  color: white;
+  text-align: left;
+  max-width: 800px;
+  width: 100%;
+}
+
+.wordpressapp-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.wordpressapp-content p {
+  font-size: 1.12rem;
+  line-height: 1.8;
+}
+.wordpressapp-section {
+  padding: 40px 53px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  /* text-align: center;  */
+}
+
+.wordpressapp-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  /* margin-bottom: 20px; */
+}
+
+.wordpressapp-line,
+.wordpressapp-description {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.wordpressapp-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  max-width: 96%;
+  display: inline-block;
+  /* text-align: left;  */
+}
+
+.talk-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.talk-btn .icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.talk-btn:hover .icon {
+  transform: translateX(4px);
+}
+
+.talk-btn:hover {
+  color: #fff;
+  border-color: #aaa;
+}
+
+.wordpressservices-wrapper {
+  padding: 0px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wordpressservices-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.wordpressservices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+.wordpressservices-card {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 40px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.wordpressservices-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  color: #007bff;
+  fill: currentColor;
+  filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-rotate(167deg) brightness(95%) contrast(91%);
+}
+
+.wordpressservices-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.wordpressservices-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.wpcard-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 60px 20px;
+}
+
+.wpcard {
+  background: #fff;
+  border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  padding: 30px 25px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.wpcard-icon-bg {
+  width: 60px;
+  height: 60px;
+  /* background: #ffe6e0; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  
+}
+
+.wpcard-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.wpcard-desc {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.industry-section-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 60px;
+  background-color: #fff;
+  flex-wrap: wrap;
+  width: 80%;
+ margin: 0 auto;
+}
+
+.industry-section-left {
+  flex: 1;
+  /* max-width: 650px;
+  padding-left: 150px; */
+}
+
+.industry-section-left h2 {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.industry-section-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.industry-section-list {
+  display: flex;
+  gap: 40px;
+}
+
+.industry-section-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.industry-section-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #4a4a4a;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.industry-section-list li:hover {
+  color: #0056b3;
+}
+
+.industry-section-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.industry-section-right img {
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .wordpressapp-hero {
+    height: 320px;
+    border-radius: 0;
+  }
+
+  .wordpressapp-overlay {
+    padding: 0 15px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .wordpressapp-content {
+    max-width: 95%;
+    text-align: center;
+  }
+
+  .wordpressapp-content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .wordpressapp-content p {
+    font-size: 1rem;
+    padding: 0 10px;
+    line-height: 1.6;
+  }
+
+  .wordpressapp-section {
+    padding: 60px 20px;
+  }
+
+  .wordpressapp-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .wordpressapp-description {
+    font-size: 1rem;
+    /* text-align: center; */
+  }
+
+  .wordpressservices-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .wordpressservices-card {
+    padding: 25px;
+  }
+
+.wpcard-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;    
+  gap: 2rem;
+  padding: 60px 20px;
+  text-align: center; 
+}
+
+.wpcard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;               /* ✅ ensures responsiveness */
+  padding: 30px 25px;
+  text-align: center;        /* ✅ centers content inside card */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+  .wpcard-icon-bg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+
+  .wpcard-title {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .wpcard-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .industry-section-wrapper {
+    padding: 60px 30px;
+    flex-direction: column-reverse;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .industry-section-left {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .industry-section-left h2 {
+    font-size: 28px;
+  }
+
+  .industry-section-list {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .industry-section-right img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wordpressapp-hero {
+    height: 280px;
+    border-radius: 0;
+  }
+
+  .wordpressapp-overlay {
+    padding: 0 10px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .wordpressapp-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wordpressapp-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .wordpressapp-content p {
+    font-size: 0.95rem;
+    padding: 0 8px;
+    line-height: 1.5;
+  }
+
+  .wordpressapp-section {
+    padding: 40px 15px;
+  }
+
+  .wordpressapp-title {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .wordpressapp-description {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .wordpressservices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wordpressservices-card {
+    padding: 20px;
+  }
+
+  .wpcard-wrapper {
+    gap: 1.2rem;
+    padding: 30px 10px;
+    flex-direction: column;
+  }
+
+  .wpcard {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .industry-section-wrapper {
+    padding: 40px 15px;
+    flex-direction: column-reverse;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .industry-section-left {
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .industry-section-left h2 {
+    font-size: 24px;
+  }
+
+  .industry-section-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .industry-section-right img {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wordpressservices-wrapper {
+    padding: 40px 15px;
+  }
+
+  .wordpressservices-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+
+  .wordpressservices-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: none;
+    border-left: none;
+  }
+
+  .wordpressservices-card {
+    border: 1px solid #ccc;
+    padding: 20px 20px;
+    text-align: left;
+  }
+
+  .wordpressservices-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+
+  .wordpressservices-heading {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .wordpressservices-list {
+    padding-left: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wordpressapp-hero {
+    height: 240px;
+    border-radius: 0;
+  }
+
+  .wordpressapp-overlay {
+    padding: 0 8px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .wordpressapp-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wordpressapp-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .wordpressapp-content p {
+    font-size: 0.9rem;
+    padding: 0 6px;
+    line-height: 1.5;
+  }
+
+  .wordpressapp-section {
+    padding: 30px 12px;
+  }
+
+  .wordpressapp-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .wordpressapp-description {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .wordpressservices-wrapper {
+    padding: 30px 12px;
+  }
+
+  .wordpressservices-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    line-height: 1.3;
+  }
+
+  .wordpressservices-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .wordpressservices-card {
+    padding: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  .wordpressservices-heading {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .wordpressservices-list {
+    padding-left: 16px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .wpcard-wrapper {
+    flex-direction: column;
+    padding: 20px 12px;
+    gap: 1rem;
+  }
+
+  .wpcard {
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .industry-section-wrapper {
+    flex-direction: column-reverse;
+    padding: 30px 12px;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .industry-section-left h2 {
+    font-size: 22px;
+  }
+
+  .industry-section-left p,
+  .industry-section-list li {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  .industry-section-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .industry-section-right img {
+    max-width: 100%;
+  }
+}
