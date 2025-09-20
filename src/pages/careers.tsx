@@ -4,14 +4,16 @@ import Script from "next/script";
 import styles from "@/pages/Careers.module.css";
 import Link from "next/link";
 import React from "react";
-// Adjust these imports to where your components actually live
+
+import Image from "next/image";
 import InfoSection from "@/components/InfoSection";
 import ClientSlider from "@/pages/ClientSlider";
-import MyBreadcrumb from "@/components/MyBreadcrumb";
+import CareeresFaq from "./CareeresFaq";
 import FloatingActions from "@/pages/FloatingActions";
 import MobileBottomBar from "@/pages/MobileBottomBar";
 import ApplyModal from "@/components/ApplyModal"; 
-
+import styles1 from "./AboutUs.module.css";
+import ClientsShowcase from "./ClientsShowcase";
 const faqs = [
   {
     id: 1,
@@ -52,6 +54,10 @@ const faqs = [
       "Absolutely. We offer internships in design, development, marketing, and content, with the possibility of full-time placement after successful completion.",
   },
 ];
+const HERO_TITLE = "JOIN THE NNC TEAM";
+const HERO_SUBTITLE =
+  "Be part of a creative tech studio that’s building next-generation digital experiences. At Nakshatra Namaha Creations, we’re always looking for passionate designers, developers, marketers, and creators who thrive on innovation and teamwork. Explore career opportunities and grow with us in a culture of learning, collaboration, and impact.";
+
 
 export default function Careers() {
    const crumbs = [
@@ -202,17 +208,35 @@ export default function Careers() {
         {JSON.stringify(localBusinessJsonLd)}
       </Script>
 
-      <MyBreadcrumb crumbs={crumbs} />
+      {/* <MyBreadcrumb crumbs={crumbs} /> */}
 
       {/* Hero */}
-      <div className={styles["careers-hero"]}>
-        <div className={styles["careers-overlay"]}>
-          <div className={styles["careers-content"]}>
-            <h1>Careers</h1>
-            <p>Be Part of Something Bigger – Explore Exciting Career Opportunities!</p>
-          </div>
+     <section className={styles1.heroBannerWrapper} id="about-hero">
+        <Image
+           src="/images/background.jpg"
+          alt="Banner"
+          width={1920}
+          height={1080}
+          priority
+          className={styles1.carouselBgImage}
+        />
+        <div className={styles1.blackOverlay} />
+        <div className={styles1.carouselBannerLeft}>
+          <nav className={styles1.breadcrumbs} aria-label="Breadcrumb">
+            <ol>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li aria-current="page">
+                <span className={styles1.breadcrumbsCurrent}>Careers</span>
+              </li>
+            </ol>
+          </nav>
+          <h1 className={styles1.title}>{HERO_TITLE}</h1>
+          <p className={styles1.subtitle}>{HERO_SUBTITLE}</p>
         </div>
-      </div>
+        <div className={styles1.scrollExplore}>SCROLL TO EXPLORE</div>
+      </section>
 
       {/* Jobs */}
      <div className={`${styles["careers-list"]} container py-5`}>
@@ -251,51 +275,17 @@ export default function Careers() {
 
       <FloatingActions />
       <MobileBottomBar />
-      <ClientSlider />
+      <ClientsShowcase/>
 
-      {/* FAQ – keep using your global classes; load FaqAccordion.css in _app.tsx */}
-      <div className="rajanna" style={{width:"69%", margin:"0 auto"}}>
-        <div className="container55 my-5">
-          <div className="text-center mb-4">
-            <h2 className="sec_title">Frequently Asked Questions (FAQ)</h2>
-          </div>
-
-          <div className="accordion accordion-flush" id="faqAccordion">
-            {faqs.map((faq) => (
-              <div className="accordion-item" key={faq.id}>
-                <h2 className="accordion-header" id={`flush-heading-${faq.id}`}>
-                  <button
-                    className={`accordion-button ${faq.id !== 1 ? "collapsed" : ""}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#flush-collapse-${faq.id}`}
-                    aria-expanded={faq.id === 1}
-                    aria-controls={`flush-collapse-${faq.id}`}
-                  >
-                    {faq.question}
-                  </button>
-                </h2>
-                <div
-                  id={`flush-collapse-${faq.id}`}
-                  className={`accordion-collapse collapse ${
-                    faq.id === 1 ? "show" : ""
-                  }`}
-                  aria-labelledby={`flush-heading-${faq.id}`}
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">{faq.answer}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     <CareeresFaq/>
     <ApplyModal
         isOpen={isApplyOpen}
         onClose={closeApply}
         jobTitle={selectedJob}
       />
       <InfoSection />
+
+      
     </>
   );
 }

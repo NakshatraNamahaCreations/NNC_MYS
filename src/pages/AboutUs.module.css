@@ -34,6 +34,7 @@
 }
 
 
+
 .content55 h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -269,3 +270,219 @@
     line-height: 1.6;
   }
 }
+
+
+/* css */
+
+/* ============ HERO (matches your Services banner, no form) ============ */
+.heroBannerWrapper {
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 90vh, 840px);
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  isolation: isolate;
+  
+}
+
+/* background image with subtle ken-burns */
+.carouselBgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  animation: abt-kenburns 18s ease-in-out infinite alternate;
+  filter: saturate(108%);
+  
+}
+@keyframes abt-kenburns {
+  0%   { transform: scale(1) translateZ(0); }
+  100% { transform: scale(1.08) translateZ(0); }
+}
+
+/* black gradient overlay like your screenshot */
+.blackOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.25),  /* top: 0.25 instead of 0.45 */
+    rgba(0,0,0,0.35) 32%, /* middle: 0.35 instead of 0.55 */
+    rgba(0,0,0,0.5)      /* bottom: 0.5 instead of 0.68 */
+  );
+  z-index: 1;
+}
+
+/* left content container */
+.carouselBannerLeft {
+  position: relative;
+  z-index: 2;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 28px) clamp(14px, 3vw, 24px);
+  min-height: inherit;
+  display: grid;
+  align-content: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  animation: abt-fade .6s ease-out forwards;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  color: #cfd6df;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: .02em;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: abt-slideUp .5s .15s ease-out forwards;
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex; gap: 8px; flex-wrap: wrap;
+}
+.breadcrumbs li a {
+  color: #eaf1f9;
+  text-decoration: none;
+}
+.breadcrumbs li::after {
+  content: "›";
+  margin: 0 6px;
+  opacity: .6;
+}
+.breadcrumbs li:last-child::after { content: ""; margin: 0; }
+.breadcrumbsCurrent { color: #ffffff; opacity: .92; }
+
+/* hero title + subcopy */
+.title {
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: .01em;
+  text-transform: none;
+  font-size: clamp(28px, 6vw, 56px); /* big and bold like screenshot */
+  max-width: 980px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: abt-slideUp .55s .25s ease-out forwards;
+}
+.subtitle {
+  margin: 4px 0 8px;
+  color: #e9eef6;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.55;
+  max-width: 820px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: abt-slideUp .55s .35s ease-out forwards;
+}
+
+/* buttons row */
+.bannerButtons {
+  display: flex; align-items: center; gap: 14px;
+  margin-top: 8px;
+  opacity: 0; transform: translateY(12px);
+  animation: abt-slideUp .55s .45s ease-out forwards;
+}
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  height: 48px; padding: 0 20px;
+  border-radius: 12px;
+  font-weight: 800; letter-spacing: .02em;
+  text-decoration: none; user-select: none;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.primaryBtn {
+  background: #ff4c4c; color: #fff;
+  box-shadow: 0 12px 26px rgba(255, 76, 76, .28);
+  border: 1px solid transparent;
+}
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(255,76,76,.34);
+}
+.secondaryBtn {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.28);
+}
+.secondaryBtn:hover {
+  background: rgba(255,255,255,.18);
+  transform: translateY(-1px);
+}
+
+/* scroll hint at bottom center */
+.scrollExplore {
+  position: absolute;
+  bottom: 18px; left: 50%;
+  transform: translateX(-50%);
+  color: #e8edf6;
+  font-weight: 800;
+  letter-spacing: .24em;
+  font-size: 12px;
+  z-index: 2;
+  opacity: 0;
+  animation: abt-fade .6s .6s ease forwards, abt-floaty 3s 1.2s ease-in-out infinite;
+}
+@keyframes abt-floaty {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -4px); }
+}
+
+/* small animations */
+@keyframes abt-fade {
+  from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes abt-slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* responsive tweaks */
+@media (max-width: 992px){
+  .carouselBannerLeft { padding-top: 48px; padding-bottom: 48px; }
+  .bannerButtons { flex-wrap: wrap; }
+}
+@media (max-width: 576px){
+  .scrollExplore { bottom: 12px; font-size: 11px; }
+}
+
+/* ============ SECTION: “design-section” ============ */
+
+/* responsive for design section */
+@media (max-width: 992px){
+  .design-container {
+    grid-template-columns: 1fr;
+  }
+  .visual-left { order: 2; }
+  .content-right { order: 1; }
+  .floating-text-box {
+    position: static;
+    width: 100%;
+    margin-top: 12px;
+  }
+}
+
+/* ============ SECTION: about-nnc ============ */
+/* responsive about-nnc */
+@media (max-width: 992px){
+  .about-nnc-container {
+    grid-template-columns: 1fr;
+  }
+  .about-divider { display: none; }
+}
+
+/* ============ FAQ heading helpers (used in your page) ============ */
+.sec_title {
+  font-size: clamp(24px, 3.4vw, 34px);
+  font-weight: 900;
+  color: #0a0e13;
+  margin: 0;
+}
+.container55 { width: 100%; }

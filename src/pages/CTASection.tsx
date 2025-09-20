@@ -1,185 +1,201 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import axios from "axios";
+import React from "react";
+import axios, { AxiosError } from "axios";
 import Modal from "react-modal";
+import { motion } from "framer-motion";
 import styles from "./CTASection.module.css";
 
-type FormData = {
-  name: string;
-  phoneNo: string;
-  email: string;
-  service: string;
-  message: string;
-  referenceFrom: string;
-  city: string;
-};
-
 export default function CTASection() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = React.useState({
     name: "",
-    phoneNo: "",
     email: "",
+    phoneNo: "",
     service: "",
     message: "",
-    referenceFrom: "Website",
+    referenceFrom: "contactus",
     city: "Mysore",
   });
+  const [submitting, setSubmitting] = React.useState(false);
+  const [modalIsOpen, setModalIsOpen] = React.useState(false);
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  // In Next.js App Router, the app mounts on <body>, not #__next
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      Modal.setAppElement(document.body);
-    }
+  React.useEffect(() => {
+    if (typeof window !== "undefined") Modal.setAppElement(document.body);
   }, []);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
+  // ✅ Properly typed change handler (fixes “e implicitly any”)
+  const handleChange: React.ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  > = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((p) => ({ ...p, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  // ✅ Properly typed submit handler (fixes “e implicitly any”)
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
-    // minimal client validation (tweak as needed)
-    if (!formData.name.trim()) {
-      alert("Please enter your name.");
-      return;
-    }
-    if (!formData.email.trim() && !formData.phoneNo.trim()) {
-      alert("Please provide at least an email or phone number.");
+    if (!formData.name || !formData.email || !formData.phoneNo || !formData.message) {
+      alert("Please fill all required fields.");
       return;
     }
 
     try {
       setSubmitting(true);
-      const res = await axios.post(
-        "https://api.nakshatranamahacreations.in/api/enquiries",
-        formData
-      );
+      const res = await axios.post("/api/enquiries", formData, {
+        headers: { "Content-Type": "application/json" },
+      });
 
       if (res.status === 200 || res.status === 201) {
         setModalIsOpen(true);
         setFormData({
           name: "",
-          phoneNo: "",
           email: "",
+          phoneNo: "",
           service: "",
           message: "",
-          referenceFrom: "Website",
+          referenceFrom: "contactus",
           city: "Mysore",
         });
       } else {
-        alert("Failed to send. Try again.");
+        alert(`Failed to send. Server returned ${res.status}.`);
       }
-    } catch (err) {
-      console.error("Error submitting form:", err);
-      alert("An error occurred. Please try again.");
+    } catch (err: unknown) {
+      // ✅ Safely narrow the error to AxiosError and surface a clear message
+      let msg = "Unknown error";
+      if (axios.isAxiosError(err)) {
+        const ax = err as AxiosError<{ error?: string }>;
+        msg = ax.response?.data?.error || ax.response?.statusText || ax.message || msg;
+      } else if (err instanceof Error) {
+        msg = err.message;
+      }
+      // Show a proper message
+      alert(`An error occurred: ${msg}`);
+      console.error("Contact submit error:", err);
     } finally {
       setSubmitting(false);
     }
   };
 
   return (
-    <div className={styles["container17"]}>
-      <div className="row align-items-center gx-5">
-        <div className="col-lg-6 mb-4 mb-lg-0">
-          <img
-            src="/images/rji.png"
-            alt="Get in Touch"
-            className="img-fluid rounded shadow"
-          />
-        </div>
+    <section className={styles.contactConsultHero} style={{ padding: "50px 0" }}>
+      {/* Intro copy above card */}
+      <div className={styles.contactConsultHeroIntro}>
+        <h2 className={styles.contactConsultHeroTitle}>Consult with our professionals</h2>
+        <p className={styles.contactConsultHeroSub}>
+          Tell us about your project—our team will get back within 24 hours with the next steps.
+        </p>
+        <ul className={styles.contactConsultHeroBadges} aria-label="Highlights">
+          <li>Free consultation</li>
+          <li>NDA on request</li>
+          <li>Response in 24 hrs</li>
+        </ul>
+      </div>
 
-        <div className="col-lg-6">
-          <div className={styles["ctaContent"]}>
-            <h4 className="sec_title1 mb-3">
-              Here&apos;s how you can connect with the NNC team:
-            </h4>
-            <p className="py-1">
-              We help businesses of all sizes achieve their goals. We believe every brand, big or small, deserves to shine.
-            </p>
+      {/* Glass card with form */}
+      <motion.div
+        className={styles.contactConsultHeroCard}
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <h3 className={styles.contactConsultHeroFormTitle}>Start your project</h3>
 
-            <form className="mt-3" onSubmit={handleSubmit} noValidate>
+        <form className={styles.contactConsultHeroForm} onSubmit={handleSubmit} noValidate>
+          <div className={styles.contactConsultHeroRow}>
+            <label className={styles.contactConsultHeroField}>
+              <span>Name *</span>
               <input
                 type="text"
                 name="name"
-                placeholder="Enter name"
-                className="form-control mb-2"
+                required
+                placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
-                required
+                autoComplete="name"
               />
+            </label>
+
+            <label className={styles.contactConsultHeroField}>
+              <span>Phone *</span>
               <input
                 type="tel"
                 name="phoneNo"
-                placeholder="Enter phone number"
-                className="form-control mb-2"
+                required
+                placeholder="Phone No"
                 value={formData.phoneNo}
                 onChange={handleChange}
+                autoComplete="tel"
               />
-              <input
-                type="email"
-                name="email"
-                placeholder="Please enter your work email"
-                className="form-control mb-2"
-                value={formData.email}
-                onChange={handleChange}
-              />
-              <select
-                name="service"
-                className="form-control mb-2"
-                value={formData.service}
-                onChange={handleChange}
-              >
-                <option value="">Select a Service</option>
-                <option value="Web Development">Web Development</option>
-                <option value="App Development">App Development</option>
-                <option value="Corporate Video Production">Corporate Video Production</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Graphic Designing">Graphic Designing</option>
-                <option value="2D Animations">2D Animations</option>
-                <option value="B2B Marketing Service">B2B Marketing Service</option>
-              </select>
-              <textarea
-                name="message"
-                rows={4}
-                maxLength={150}
-                placeholder="Enter your message"
-                className="form-control mb-2"
-                value={formData.message}
-                onChange={handleChange}
-              />
-
-              <button
-                type="submit"
-                disabled={submitting}
-                className="btn btn-primary d-flex align-items-center gap-2"
-              >
-                {submitting ? "Sending..." : "Talk to our experts"}
-                <svg
-                  viewBox="0 0 12 10"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className={styles["iconArrow"]}
-                  width={16}
-                  height={16}
-                >
-                  <path
-                    d="M0 5.65612V4.30388L8.41874 4.31842L5.05997 0.95965L5.99054 0L10.9923 4.97273L6.00508 9.96L5.07451 9.00035L8.43328 5.64158L0 5.65612Z"
-                    fill="#fff"
-                  />
-                </svg>
-              </button>
-            </form>
+            </label>
           </div>
-        </div>
-      </div>
 
+          <label className={styles.contactConsultHeroField}>
+            <span>Email *</span>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="you@company.com"
+              value={formData.email}
+              onChange={handleChange}
+              autoComplete="email"
+            />
+          </label>
+
+          <label className={styles.contactConsultHeroField}>
+            <span>Service</span>
+            <select name="service" value={formData.service} onChange={handleChange}>
+              <option value="">Select a Service</option>
+              <option value="Web Development">Web Development</option>
+              <option value="App Development">App Development</option>
+              <option value="Corporate Video Production">Corporate Video Production</option>
+              <option value="Digital Marketing">Digital Marketing</option>
+              <option value="Graphic Designing">Graphic Designing</option>
+              <option value="2D Animations">2D Animations</option>
+              <option value="B2B Marketing Service">B2B Marketing Service</option>
+            </select>
+          </label>
+
+          <label className={styles.contactConsultHeroField}>
+            <span>Your Message *</span>
+            <textarea
+              name="message"
+              required
+              rows={4}
+              placeholder="Tell us about your project…"
+              value={formData.message}
+              onChange={handleChange}
+            />
+          </label>
+
+          <motion.button
+            type="submit"
+            className={styles.contactConsultHeroCta}
+            whileHover={{
+              x: submitting ? 0 : 2,
+              boxShadow: submitting ? "none" : "0 10px 28px rgba(0,0,0,.25)",
+            }}
+            whileTap={{ scale: submitting ? 1 : 0.98 }}
+            disabled={submitting}
+          >
+            {submitting ? "Sending…" : "Get free consultation"}
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden>
+              <path
+                d="M4 10h10M10 4l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.button>
+        </form>
+      </motion.div>
+
+      {/* Success modal */}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
@@ -193,20 +209,15 @@ export default function CTASection() {
             borderRadius: "12px",
             textAlign: "center",
           },
-          overlay: {
-            backgroundColor: "rgba(0, 0, 0, 0.4)",
-          },
+          overlay: { backgroundColor: "rgba(0, 0, 0, 0.4)" },
         }}
       >
         <h2>Thank you!</h2>
-        <p>Your message has been sent. We&apos;ll contact you soon.</p>
-        <button
-          onClick={() => setModalIsOpen(false)}
-          className="btn btn-secondary mt-3"
-        >
+        <p>Your message has been sent. We’ll contact you soon.</p>
+        <button onClick={() => setModalIsOpen(false)} className="btn btn-secondary mt-3">
           Close
         </button>
       </Modal>
-    </div>
+    </section>
   );
 }

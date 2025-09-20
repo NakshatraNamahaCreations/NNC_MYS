@@ -27,12 +27,12 @@ export default function Navbar() {
     <header className="realtive-top bg" style={{ backgroundColor: "#f2f2f2" }}>
       <nav
         className="navbar navbar-expand-lg navbar-light bg-light w-100"
-        style={{ height: "120px" }}
+        
       >
         <div className="container navbar-container d-flex justify-content-between align-items-center">
           {/* Brand */}
           <Link href="/" className="navbar-brand" onClick={closeAll}>
-            <img src="/images/image.png" alt="Logo" />
+             <img src="/images/nnclogo.png" alt="Logo" />
           </Link>
 
           {/* Mobile toggle */}

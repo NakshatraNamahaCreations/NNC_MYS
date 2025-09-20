@@ -58,10 +58,9 @@ export default function ContactUs() {
     }
 
     try {
-      const response = await axios.post(
-        "https://api.nakshatranamahacreations.in/api/enquiries",
-        formData
-      );
+      const response = await axios.post("/api/enquiries", formData, {
+        headers: { "Content-Type": "application/json" },
+        });
 
       if (response.status === 201 || response.status === 200) {
         setModalIsOpen(true);

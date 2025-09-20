@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* globals.css */
+
+p {
+  font-size: 18px;        /* Clean readable size */
+  line-height: 1.7;       /* Comfortable spacing between lines */
+  color: #333;            /* Neutral text color */
+  margin-bottom: 1rem;    /* Consistent spacing below paragraphs */
+}

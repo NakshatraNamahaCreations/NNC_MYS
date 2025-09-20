@@ -30,6 +30,15 @@ const faqs: Faq[] = [
     question: "Can app development companies in Bangalore integrate advanced features like AI and IoT?",
     answer: "Yes, leading companies specialize in implementing AI, IoT, AR/VR, and other emerging technologies.",
   },
+  {
+  question: "How much does it cost to develop a mobile app in Bangalore?",
+  answer: "The cost varies depending on features, design complexity, platform (iOS, Android, or both), and development time. Most companies offer customized quotes based on project needs.",
+},
+{
+  question: "How long does it take to build a mobile app?",
+  answer: "A basic app can take 2–3 months, while feature-rich apps with advanced integrations may require 6 months or more, depending on scope and revisions.",
+},
+
 ];
 
 

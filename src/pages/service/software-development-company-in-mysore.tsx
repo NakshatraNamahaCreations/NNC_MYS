@@ -8,10 +8,11 @@ import axios from "axios";
 import InfoSection from "@/components/InfoSection";
 import SoftwareProcessTimeline from "@/pages/SoftwareProcessTimeline";
 import ReasonsToChooseSoftware from "@/pages/ReasonsToChooseSoftware";
-import MyBreadcrumb from "@/components/MyBreadcrumb";
+import SoftwareFaq from "./SoftwareFaq";
 import FloatingActions from "@/pages/FloatingActions";
 import MobileBottomBar from "@/pages/MobileBottomBar";
-
+import Link from "next/link";
+import Image from "next/image";
 import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 import { FaUserCheck } from "react-icons/fa6";
 import { RiExpandDiagonalFill } from "react-icons/ri";
@@ -357,159 +358,122 @@ export default function SoftwareDevelopmentPage() {
         {JSON.stringify(crumbLd)}
       </Script>
 
-      <MyBreadcrumb crumbs={breadcrumbs} />
+      {/* <MyBreadcrumb crumbs={breadcrumbs} /> */}
+   <section className={styles.heroBannerWrapper} id="contact-hero">
+      <Image
+        src="/images/background.jpg"
+        alt="Banner"
+        width={1920}
+        height={1080}
+        priority
+        className={styles.carouselBgImage}
+      />
+      <div className={styles.blackOverlay} />
 
- <div className={`${styles2["website-hero"]}`}>
-  <div className={`${styles2["website-overlay"]}`}>
-    <div className="container">
-   <div className="row align-items-center justify-content-center g-4">
-        {/* === Left Content === */}
-        <div className="col-12 col-lg-7">
-          <div className={styles2["website-content"]}>
-            <h2>
-               A trusted software development company in Mysore, specializing in
-              creating custom solutions tailored to your needs.
-            </h2>
-            <p>
-              Maximize your digital potential with our software development
-              expertise. We empower businesses across industries with
-              cutting-edge UI/UX design, IoT integration, and AI-driven
-              solutions, delivering versatile software tailored to any
-              challenge.
-            </p>
+      <div className={`container position-relative ${styles.inner}`}>
+        <div className="row h-100 align-items-center">
+          {/* Left Text */}
+          <div className="col-12 col-lg-8">
+            <div className={styles.carouselBannerLeft}>
+            <nav className={styles1.breadcrumbs} aria-label="Breadcrumb">
+  <ol>
+    <li>
+      <Link href="/">Home</Link>
+    </li>
+    <li>
+      <Link href="/service">Services</Link>
+    </li>
+    <li aria-current="page">
+      <span className={styles1.breadcrumbsCurrent}>Software Development</span>
+    </li>
+  </ol>
+</nav>
 
-            <motion.a
-              href="/contact-us"
-              className={styles2["talk-btn"]}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <span className={styles2["text"]}>Talk to our expert</span>
-              <svg
-                width="20px"
-                xmlns="http://www.w3.org/2000/svg"
-                className={styles2["icon"]}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </motion.a>
+<h1 className={styles1.title}>SOFTWARE DEVELOPMENT COMPANY IN MYSORE</h1>
+<p className={styles1.subtitle}>
+  At Nakshatra Namaha Creations, we deliver powerful, scalable, and secure software solutions 
+  designed to meet your business goals. Whether you need custom software development, automation 
+  tools, or enterprise-grade applications, our expert team blends creativity and technology to 
+  build solutions that drive efficiency, productivity, and growth. We focus on user-friendly 
+  designs, cutting-edge technology, and seamless integrations to give your business a competitive edge.
+</p>
+
+            </div>
           </div>
-        </div>
 
-        {/* === Right Form === */}
-        <div className="col-12 col-lg-4">
-          <div
-            style={{
-              background: "#fff",
-              border: "1px solid rgba(255,255,255,0.15)",
-              borderRadius: 18,
-              padding: "22px 22px 18px",
-              boxShadow: "0 20px 60px rgba(0,0,0,.35)",
-              color: "rgba(20,20,20,0.85)",
-              backdropFilter: "blur(6px)",
-              WebkitBackdropFilter: "blur(6px)",
-              zIndex: 2,
-            }}
-          >
-            <h3
-              style={{
-                margin: "0 0 14px",
-                fontWeight: 800,
-                letterSpacing: "0.2px",
-                fontSize: 24,
-                textAlign: "center",
-              }}
-            >
-              Let’s Connect
-            </h3>
-
-            <form onSubmit={handleSubmit} noValidate>
-      {/* Name */}
-      <input
-        name="name"
-        type="text"
-        placeholder="Your Name *"
-        required
-        value={formData.name}
-        onChange={handleChange}
-        className="form-control mb-3"
-      />
-
-      {/* Phone */}
-      <input
-        name="phoneNo"
-        type="tel"
-        placeholder="Phone Number *"
-        required
-        pattern="[0-9+\s()-]{7,}"
-        value={formData.phoneNo}
-        onChange={handleChange}
-        className="form-control mb-3"
-      />
-
-      {/* Email */}
-      <input
-        name="email"
-        type="email"
-        placeholder="Email *"
-        required
-        value={formData.email}
-        onChange={handleChange}
-        className="form-control mb-3"
-      />
-
-      {/* Service */}
-      <select
-        name="service"
-        required
-        value={formData.service}
-        onChange={handleChange}
-        className="form-select mb-3"
-      >
-        <option value="" disabled>
-          Select Service *
-        </option>
-        <option>Website Development</option>
-        <option>Mobile App Development</option>
-        <option>Digital Marketing</option>
-        <option>UI/UX Design</option>
-        <option>Ecommerce</option>
-        <option>Other</option>
-      </select>
-
-      {/* Submit */}
-      <button
-        type="submit"
-        className="btn w-100"
-        style={{
-          height: 46,
-          borderRadius: 12,
-          fontWeight: 700,
-          background:
-            "linear-gradient(135deg, rgba(255,90,90,1) 0%, rgba(255,64,64,1) 100%)",
-          color: "#fff",
-          boxShadow: "0 8px 18px rgba(255,64,64,.35)",
-        }}
-      >
-        Submit
-      </button>
-    </form>
+          {/* Right Contact Form */}
+          <div className="col-12 col-lg-4 mt-4 mt-lg-0 mb-3">
+            <div className={styles.contactCard}>
+              <h3 className={styles.contactHeading}>Let’s Connect</h3>
+              <form onSubmit={handleSubmit} noValidate>
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Your Name *"
+                  required
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-control mb-3"
+                />
+                <input
+                  name="phoneNo"
+                  type="tel"
+                  placeholder="Phone Number *"
+                  required
+                  pattern="[0-9+\s()-]{7,}"
+                  value={formData.phoneNo}
+                  onChange={handleChange}
+                  className="form-control mb-3"
+                />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email *"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-control mb-3"
+                />
+                <select
+                  name="service"
+                  required
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="form-select mb-3"
+                >
+                  <option value="" disabled>
+                    Select Service *
+                  </option>
+                  <option>Website Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Digital Marketing</option>
+                  <option>UI/UX Design</option>
+                  <option>Ecommerce</option>
+                  <option>Other</option>
+                </select>
+                <button
+                  type="submit"
+                  className="btn w-100"
+                  style={{
+                    height: 46,
+                    borderRadius: 12,
+                    fontWeight: 700,
+                    background:
+                      "linear-gradient(135deg, rgba(255,90,90,1), rgba(255,64,64,1))",
+                    color: "#fff",
+                    boxShadow: "0 8px 18px rgba(255,64,64,.35)",
+                  }}
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+
+      <div className={styles.scrollExplore}>SCROLL TO EXPLORE</div>
+    </section>
 
       <div className={styles["software-develop-section"]}>
         <motion.div
@@ -622,44 +586,7 @@ export default function SoftwareDevelopmentPage() {
 
       <ReasonsToChooseSoftware />
 
-      <div className={styles["rajanna"]} style={{width:"69%", margin:"0 auto"}}>
-        <div className={`${styles["container55"]} my-5`}>
-          <div className="text-center mb-4">
-            <h2 className={styles["sec_title"]}>Frequently Asked Questions (FAQ)</h2>
-          </div>
-
-          <div className="accordion accordion-flush" id="faqAccordion">
-            {faqs.map((faq) => (
-              <div className="accordion-item" key={faq.id}>
-                <h2 className="accordion-header" id={`flush-heading-${faq.id}`}>
-                  <button
-                    className={`accordion-button ${
-                      faq.id !== 1 ? "collapsed" : ""
-                    }`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#flush-collapse-${faq.id}`}
-                    aria-expanded={faq.id === 1}
-                    aria-controls={`flush-collapse-${faq.id}`}
-                  >
-                    {faq.question}
-                  </button>
-                </h2>
-                <div
-                  id={`flush-collapse-${faq.id}`}
-                  className={`accordion-collapse collapse ${
-                    faq.id === 1 ? "show" : ""
-                  }`}
-                  aria-labelledby={`flush-heading-${faq.id}`}
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">{faq.answer}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+     <SoftwareFaq/>
 
       <InfoSection />
     </>

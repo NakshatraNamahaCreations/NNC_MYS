@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
 import styles from "@/pages/Blogs.module.css";
-
+import Link from "next/link";
+import Image from "next/image";
 // move these files into src/components/** and fix their exports if needed
 import MyBreadcrumb from "@/components/MyBreadcrumb";
 import BlogCard from "@/pages/BlogCard";
@@ -9,6 +10,8 @@ import ClientSlider from "@/pages/ClientSlider";
 import InfoSection from "@/components/InfoSection";
 import FloatingActions from "@/pages/FloatingActions";
 import MobileBottomBar from "@/pages/MobileBottomBar";
+import BlogsFaq from "./BlogsFaq";
+import styles1 from "./AboutUs.module.css";
 
 const faqs = [
   { id: 1, question: "What topics does the Nakshatra Namaha Creations blog cover?",
@@ -24,6 +27,8 @@ const faqs = [
   { id: 6, question: "How can I stay updated with your latest blog posts?",
     answer: "You can bookmark our blog page or follow us on Instagram and LinkedIn where we share new article updates and insights." },
 ];
+
+
 
 export default function Blogs() {
   const crumbs = [
@@ -57,6 +62,9 @@ export default function Blogs() {
       "@id": "https://nakshatranamahacreations.in/blogs",
     },
   };
+const HERO_TITLE = "EXPLORE THE NNC BLOG";
+const HERO_SUBTITLE =
+  "Stay ahead with insights, strategies, and stories from Nakshatra Namaha Creations. Discover expert tips on web development, mobile apps, UI/UX, marketing, and the latest trends shaping the digital world.";
 
   return (
     <>
@@ -94,17 +102,35 @@ export default function Blogs() {
         {JSON.stringify(jsonLd)}
       </Script>
 
-      <MyBreadcrumb crumbs={crumbs} />
+      {/* <MyBreadcrumb crumbs={crumbs} /> */}
 
       {/* HERO (scoped with CSS module) */}
-      <div className={styles["blogs-hero"]}>
-        <div className={styles["blogs-overlay"]}>
-          <div className={styles["blogs-content"]}>
-            <h1>Our Blogs</h1>
-            <p>Follow us and get updated on latest technologies and tools</p>
-          </div>
+      <section className={styles1.heroBannerWrapper} id="about-hero">
+        <Image
+           src="/images/background.jpg"
+          alt="Banner"
+          width={1920}
+          height={1080}
+          priority
+          className={styles1.carouselBgImage}
+        />
+        <div className={styles1.blackOverlay} />
+        <div className={styles1.carouselBannerLeft}>
+          <nav className={styles1.breadcrumbs} aria-label="Breadcrumb">
+            <ol>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li aria-current="page">
+                <span className={styles1.breadcrumbsCurrent}>Blogs</span>
+              </li>
+            </ol>
+          </nav>
+          <h1 className={styles1.title}>{HERO_TITLE}</h1>
+          <p className={styles1.subtitle}>{HERO_SUBTITLE}</p>
         </div>
-      </div>
+        <div className={styles1.scrollExplore}>SCROLL TO EXPLORE</div>
+      </section>
 
       <FloatingActions />
       <MobileBottomBar />
@@ -112,40 +138,7 @@ export default function Blogs() {
       <ClientSlider />
 
       {/* FAQ (scoped) */}
-      <div className={styles["faq"]} style={{width:"69%", margin:"0 auto"}}>
-        <div className="container55 my-5">
-          <div className="text-center mb-4">
-            <h2 className={styles["sec_title"]}>Frequently Asked Questions (FAQ)</h2>
-          </div>
-
-          <div className="accordion accordion-flush" id="faqAccordion">
-            {faqs.map((faq) => (
-              <div className="accordion-item" key={faq.id}>
-                <h2 className="accordion-header" id={`flush-heading-${faq.id}`}>
-                  <button
-                    className={`accordion-button ${faq.id !== 1 ? "collapsed" : ""}`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#flush-collapse-${faq.id}`}
-                    aria-expanded={faq.id === 1}
-                    aria-controls={`flush-collapse-${faq.id}`}
-                  >
-                    {faq.question}
-                  </button>
-                </h2>
-                <div
-                  id={`flush-collapse-${faq.id}`}
-                  className={`accordion-collapse collapse ${faq.id === 1 ? "show" : ""}`}
-                  aria-labelledby={`flush-heading-${faq.id}`}
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">{faq.answer}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <BlogsFaq/>
 
       <InfoSection />
     </>

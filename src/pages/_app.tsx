@@ -28,7 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       {/* <Navbar /> */}
-      <Header/>
+      <Header />
       <Component {...pageProps} />
     </>
   );

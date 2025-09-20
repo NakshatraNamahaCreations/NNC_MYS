@@ -626,3 +626,336 @@
     display: none;
   }
 }
+
+/* banner contact */
+.heroBannerWrapper {
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 90vh, 840px);
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Full-height inner wrapper */
+.inner {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  height: 100%;
+  display: flex;
+}
+.inner > .row {
+  flex: 1 1 auto;
+  min-height: inherit;
+}
+
+/* Background Image Animation */
+.carouselBgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+  animation: abt-kenburns 18s ease-in-out infinite alternate;
+  filter: saturate(108%);
+}
+@keyframes abt-kenburns {
+  0% {
+    transform: scale(1) translateZ(0);
+  }
+  100% {
+    transform: scale(1.08) translateZ(0);
+  }
+}
+
+/* Overlay */
+.blackOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.55) 32%,
+    rgba(0, 0, 0, 0.68)
+  );
+  z-index: 1;
+}
+
+/* Left content */
+.carouselBannerLeft {
+  position: relative;
+  z-index: 2;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(18px, 3vw, 28px) clamp(14px, 3vw, 24px);
+  min-height: inherit;
+  display: grid;
+  align-content: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  animation: abt-fade 0.6s ease-out forwards;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  color: #cfd6df;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: abt-slideUp 0.5s 0.15s ease-out forwards;
+}
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.breadcrumbs li a {
+  color: #eaf1f9;
+  text-decoration: none;
+}
+.breadcrumbs li::after {
+  content: "›";
+  margin: 0 6px;
+  opacity: 0.6;
+}
+.breadcrumbs li:last-child::after {
+  content: "";
+  margin: 0;
+}
+.breadcrumbsCurrent {
+  color: #ffffff;
+  opacity: 0.92;
+}
+
+/* Title and Subtitle */
+.title {
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  font-size: clamp(28px, 6vw, 56px);
+  max-width: 980px;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: abt-slideUp 0.55s 0.25s ease-out forwards;
+}
+.subtitle {
+  margin: 4px 0 8px;
+  color: #e9eef6;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.55;
+  max-width: 820px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: abt-slideUp 0.55s 0.35s ease-out forwards;
+}
+
+/* Contact Card */
+.contactCard {
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  color: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2;
+}
+.contactHeading {
+  margin: 0 0 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Scroll Explore */
+.scrollExplore {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e8edf6;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  font-size: 12px;
+  z-index: 2;
+  opacity: 0;
+  animation: abt-fade 0.6s 0.6s ease forwards,
+    abt-floaty 3s 1.2s ease-in-out infinite;
+}
+@keyframes abt-floaty {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -4px);
+  }
+}
+
+/* Animations */
+@keyframes abt-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes abt-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .carouselBannerLeft {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+@media (max-width: 576px) {
+  .scrollExplore {
+    bottom: 12px;
+    font-size: 11px;
+  }
+}
+
+/* ===============================
+   Mobile polish: hero + breadcrumbs
+   =============================== */
+
+/* Tablet and down */
+@media (max-width: 992px) {
+  /* shrink overall height and add breathing room */
+  .heroBannerWrapper {
+    min-height: 72vh;
+  }
+
+  /* center the left column content on smaller screens */
+  .carouselBannerLeft {
+    padding-top: 120px;
+    padding-bottom: 32px;
+    text-align: center;
+    align-content: start;
+  }
+
+  /* breadcrumbs: smaller, centered, wrap nicely */
+  .breadcrumbs {
+    font-size: 15px;                 /* keep readable */
+    justify-content: center;
+  }
+  .breadcrumbs ol {
+    justify-content: center;
+    gap: 6px;
+  }
+  .breadcrumbs li::after {
+    margin: 0 4px;
+  }
+
+  /* headline + subcopy */
+  .title {
+    font-size: clamp(26px, 7vw, 42px);
+    line-height: 1.08;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 92%;
+  }
+  .subtitle {
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 92%;
+  }
+
+  /* if you render a right-column form in the hero, add some spacing above it */
+.contactCard {
+  background: #fff; /* white background */
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 18px;
+  padding: 22px 22px 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  color: rgba(20,20,20,0.85);
+  backdrop-filter: blur(6px); /* causes background to show through */
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+
+  /* soften overlay on small screens so text pops */
+  .blackOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.52) 28%,
+      rgba(0,0,0,.62)
+    );
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  .heroBannerWrapper {
+    min-height: 64vh; /* a bit shorter on small phones */
+  }
+
+  .breadcrumbs {
+    font-size: 14px;
+  }
+  /* prevent long crumbs from overflowing: ellipsis on middle item */
+  .breadcrumbs ol {
+    max-width: 92vw;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .breadcrumbs li:nth-child(2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 52vw;
+  }
+
+  .title {
+    font-size: clamp(24px, 8vw, 36px);
+    letter-spacing: 0;
+  }
+  .subtitle {
+    font-size: 15px;
+    opacity: .96;
+  }
+
+  /* optionally hide the scroll hint on tiny screens */
+  .scrollExplore {
+    display: none;
+  }
+}
+
+/* If you show a form on the right inside the hero, make it truly mobile-friendly */
+@media (max-width: 768px) {
+  .contactCard {
+    border-radius: 14px;
+    padding: 18px 16px;
+    box-shadow: 0 14px 38px rgba(0,0,0,.32);
+  }
+  .contactHeading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}

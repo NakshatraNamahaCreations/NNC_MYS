@@ -15,11 +15,11 @@
   position: absolute;
   left: 0; right: 0; top: 46%;
   height: 1px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.2) 30%,
     rgba(0, 0, 0, 0) 0%
-  );
+  ); */
   background-size: 18px 1px;
   background-repeat: repeat-x;
   pointer-events: none;

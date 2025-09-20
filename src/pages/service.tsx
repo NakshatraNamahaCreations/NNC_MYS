@@ -3,14 +3,16 @@ import Head from "next/head";
 import Script from "next/script";
 import { motion } from "framer-motion";
 import styles from "./service.module.css";
-
+import Link from "next/link";
+import Image from "next/image";
 // keep these paths as you have them (adjust if you moved files)
 import FeatureCardGrid from "@/pages/FeatureCardGrid";
 import ClientSlider from "@/pages/ClientSlider";
 import InfoSection from "@/components/InfoSection";
-import MyBreadcrumb from "@/components/MyBreadcrumb";
+import ServicesFaq from "./ServicesFaq";
 import FloatingActions from "@/pages/FloatingActions";
 import MobileBottomBar from "@/pages/MobileBottomBar";
+import styles1 from "./AboutUs.module.css";
 
 const faqs = [
   {
@@ -174,6 +176,11 @@ export default function Services() {
     ],
   };
 
+const HERO_TITLE = "OUR SERVICES";
+const HERO_SUBTITLE =
+  "Discover a complete suite of digital solutions designed to help your business thrive. From web and mobile app development to UI/UX design, branding, and digital marketing, Nakshatra Namaha Creations delivers innovative, scalable, and results-driven services tailored to your goals.";
+
+
   return (
     <>
       <Head>
@@ -224,100 +231,112 @@ export default function Services() {
         {JSON.stringify(ld)}
       </Script>
 
-      <MyBreadcrumb crumbs={ServiceBreadcrumbs} />
+      {/* <MyBreadcrumb crumbs={ServiceBreadcrumbs} /> */}
 
-      <div className={styles["services-hero"]}>
-        <div className={styles["services-overlay"]}>
-          <div className={styles["services-content"]}>
-            <h2>Our Services</h2>
+      <section className={styles1.heroBannerWrapper} id="about-hero">
+        <Image
+           src="/images/background.jpg"
+          alt="Banner"
+          width={1920}
+          height={1080}
+          priority
+          className={styles1.carouselBgImage}
+        />
+        <div className={styles1.blackOverlay} />
+        <div className={styles1.carouselBannerLeft}>
+          <nav className={styles1.breadcrumbs} aria-label="Breadcrumb">
+            <ol>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li aria-current="page">
+                <span className={styles1.breadcrumbsCurrent}>Our Services</span>
+              </li>
+            </ol>
+          </nav>
+          <h1 className={styles1.title}>{HERO_TITLE}</h1>
+          <p className={styles1.subtitle}>{HERO_SUBTITLE}</p>
+        </div>
+        <div className={styles1.scrollExplore}>SCROLL TO EXPLORE</div>
+      </section>
+
+      <section className="why-section container my-5">
+        <div className="row align-items-start justify-content-center">
+          <motion.div
+            className="col-md-6"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="why-heading">
+              Our work reflects innovation and expertise, delivering strategies that drive real results
+            </h1>
+          </motion.div>
+
+          <motion.div
+            className="col-md-6"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <h5 className="sub-heading">Take a closer look at our excellence</h5>
             <p>
-              We offer a wide range of creative services to help businesses of
-              all sizes achieve their goals.
+              Discover the stories behind our success. Our portfolio contains a variety of projects that were researched, designed and delivered to meet specific measurable objectives of our clients. Whether we&apos;ve developed a custom mobile app or a compelling corporate ad film or an SEO friendly website, our case studies present strategic thinking and creative execution that delivers our clients success. Browse through our work to see how we have turned ideas into tangible, impactful solutions to strengthen brands and businesses.
             </p>
-          </div>
+          </motion.div>
+        </div>
+      </section>
+
+ 
+     <section className="py-5 ">
+      <div className="container">
+        <div className="row justify-content-start">
+          {/* <div className="col-lg-8 col-md-10"> */}
+            {/* Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="fw-bold mb-4">
+                Amplify Your Brand with Professional Digital Solutions
+              </h1>
+            </motion.div>
+
+            {/* Paragraph */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <p>
+                At Nakshatra Namaha Creations, we specialize in helping brands
+                reach new heights with cutting-edge digital solutions. Whether
+                you’re looking to build a strong online presence, engage your
+                audience, or drive business growth, our team of experts is here
+                to create tailored strategies that align with your vision. From
+                web development and app design to digital marketing and branding,
+                we offer a comprehensive range of services to amplify your brand
+                and connect with your customers effectively.
+              </p>
+            </motion.div>
+          {/* </div> */}
         </div>
       </div>
+    </section>
 
-      <div className={styles["software-section"]}>
-        
-        <motion.div
-          initial={{ opacity: 0, y: -30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className={styles["software-section__title"]}>
-            Amplify Your Brand with Professional Digital Solutions
-          </h1>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className={styles["software-section__content"]}>
-            <p className={styles["software-section__description"]}>
-              At Nakshatra Namaha Creations, we specialize in helping brands
-              reach new heights with cutting-edge digital solutions. Whether
-              you’re looking to build a strong online presence, engage your
-              audience, or drive business growth, our team of experts is here
-              to create tailored strategies that align with your vision. From
-              web development and app design to digital marketing and branding,
-              we offer a comprehensive range of services to amplify your brand
-              and connect with your customers effectively.
-            </p>
-          </div>
-        </motion.div>
-      </div>
 
       <FloatingActions />
       <MobileBottomBar />
 
       <FeatureCardGrid />
       <ClientSlider />
-
-      <div className={styles["rajanna"]} style={{width:"69%", margin:"0 auto"}}>
-        <div className={`${styles["container55"]} my-5`}>
-          <div className="text-center mb-4">
-            <h2 className={styles["sec_title"]}>
-              Frequently Asked Questions (FAQ)
-            </h2>
-          </div>
-
-          <div className="accordion accordion-flush" id="faqAccordion">
-            {faqs.map((faq) => (
-              <div className="accordion-item" key={faq.id}>
-                <h2 className="accordion-header" id={`flush-heading-${faq.id}`}>
-                  <button
-                    className={`accordion-button ${
-                      faq.id !== 1 ? "collapsed" : ""
-                    }`}
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target={`#flush-collapse-${faq.id}`}
-                    aria-expanded={faq.id === 1}
-                    aria-controls={`flush-collapse-${faq.id}`}
-                  >
-                    {faq.question}
-                  </button>
-                </h2>
-                <div
-                  id={`flush-collapse-${faq.id}`}
-                  className={`accordion-collapse collapse ${
-                    faq.id === 1 ? "show" : ""
-                  }`}
-                  aria-labelledby={`flush-heading-${faq.id}`}
-                  data-bs-parent="#faqAccordion"
-                >
-                  <div className="accordion-body">{faq.answer}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <ServicesFaq/>
 
       <InfoSection />
     </>

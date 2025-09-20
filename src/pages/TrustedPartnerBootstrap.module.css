@@ -1,0 +1,116 @@
+/* components/TrustedPartnerBootstrap.module.css */
+
+/* Section shell + colors */
+.trustedPartner {
+  background: #ffffff;
+  color: #0f0f14;
+}
+
+/* Soft glow using your colors (#22abe2 and #ff0000) */
+.trustedPartner__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* background:
+    radial-gradient(600px 220px at 15% 22%, rgba(34, 171, 226, 0.25), transparent 60%),
+    radial-gradient(600px 260px at 95% 42%, rgba(255, 0, 0, 0.22), transparent 60%); */
+  opacity: 0.9;
+}
+
+/* Headings & copy (no font-family set) */
+.trustedPartner__heading {
+   letter-spacing: 0.01em;
+  color: #fff;
+  margin: 0;
+  font-size: clamp(28px, 4.6vw, 42px);
+  font-weight: 800;
+}
+
+.trustedPartner__em {
+  /* font-style: italic; */
+  font-weight: 400;
+  
+}
+
+.trustedPartner__br {
+  display: inline-block;
+  width: 0.28em; /* tiny break without line-wrap */
+}
+
+.trustedPartner__sub {
+  font-size: clamp(16px, 1.3vw, 17px);
+  line-height: 1.6;
+  color: #5a5a66;
+}
+
+/* Right side: two columns of vertical marquee */
+.trustedPartner__marqueeWrap {
+  grid-template-columns: 1fr 1fr;
+}
+
+.trustedPartner__marquee {
+  height: 520px;       /* adjust as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+.trustedPartner__stack {
+  display: grid;
+  gap: 16px;
+}
+
+/* Card design */
+.trustedPartner__card {
+  background: linear-gradient(180deg, rgba(34, 171, 226, 0.10), rgba(255, 0, 0, 0.10));
+  border: 1px solid rgba(15, 15, 20, 0.08);
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.trustedPartner__cardTitle {
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 700;
+  color: #0f0f14;
+  margin-bottom: 6px;
+}
+
+.trustedPartner__cardCopy {
+  font-size: clamp(16px, 1.3vw, 17px);
+  color: #0f0f14;
+  opacity: 0.85;
+}
+
+/* Marquee animations */
+@keyframes trustedPartner__marqueeUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); } /* duplicates => 50% loop */
+}
+
+@keyframes trustedPartner__marqueeDown {
+  from { transform: translateY(-50%); }
+  to   { transform: translateY(0); }
+}
+
+.trustedPartner__marqueeUp .trustedPartner__stack {
+  animation: trustedPartner__marqueeUp 18s linear infinite;
+}
+
+.trustedPartner__marqueeDown .trustedPartner__stack {
+  animation: trustedPartner__marqueeDown 18s linear infinite;
+}
+
+/* Pause on hover */
+.trustedPartner__marquee:hover .trustedPartner__stack {
+  animation-play-state: paused;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .trustedPartner__marquee { height: 460px; }
+}
+
+@media (max-width: 576px) {
+  .trustedPartner__marquee { height: 420px; }
+  .trustedPartner__card { padding: 18px; border-radius: 14px; }
+}

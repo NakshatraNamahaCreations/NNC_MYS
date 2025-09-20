@@ -1,189 +1,146 @@
-/* Container Grid Layout */
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  padding: 3rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
+/* Section Background */
+.section {
+  /* background:
+    radial-gradient(900px 420px at 15% 15%, rgba(34, 171, 226, 0.12), transparent 60%),
+    radial-gradient(900px 420px at 85% 85%, rgba(255, 73, 73, 0.10), transparent 60%),
+    #0b0f14; */
+    background: #0e2a44;
+  color: #ffffff;
+  padding: 60px 0;
 }
 
-/* Card Styles */
-.feature-card {
-  background-color: #fff;
-  border: 1.5px solid #d8d8d8;
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
+/* Heading */
+.heading {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: clamp(24px, 3.2vw, 38px);
+  margin-bottom: 6px;
+}
+
+.sub {
+  max-width: 740px;
+  color: #e6edf7;
+  opacity: 0.9;
+  font-size: clamp(14px, 1.4vw, 18px);
+  margin-bottom: 0;
+}
+
+/* Card Container */
+.card {
   position: relative;
+  border-radius: 20px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 320px;
-  min-height: 320px;
-  padding: 2rem;
+  isolation: isolate;
+  transition: transform .22s ease, box-shadow .25s ease;
 }
 
-.feature-card:hover {
-  /* border-color: #e60023; */
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-  background-color: #fef6f7;
+.card:hover {
+  transform: translateY(-4px);
 }
 
-/* Highlighted red version */
-.feature-card.red-highlight {
-  background-color: #e60023;
-  color: #fff;
-  border: none;
-}
-
-.feature-card.red-highlight .card-text {
-  color: #fff;
-      font-size: 18px;
-}
-
-.card-text{
-
-      font-size: 18px;
-}
-
-.feature-card.red-highlight:hover {
-  background-color: #cf001f;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-      font-size: 18px;
-}
-
-/* Title and Icon Layout */
-.feature-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.25rem;
-}
-
-
-
-/* Icon Style */
-.section-icon {
-  font-size: 2rem;
-  color: #e60023;
-}
-
-.red-highlight .section-icon {
-  color: #fff;
-}
-
-/* Title */
-.feature-card h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #222;
-}
-
-.red-highlight h3 {
-  color: #fff;
-}
-
-/* Paragraph Text */
-.card-text {
-  /* font-size: 0.95rem; */
-  line-height: 1.8;
-  color: #333;
-  margin-top: auto;
-      font-size: 17px;
-}
-
-/* Rounded side accent (optional like in screenshot) */
-.feature-card::after {
-  content: "";
+/* Gradient Border */
+.borderGlow {
   position: absolute;
-  top: 50%;
-  right: -6px;
-  transform: translateY(-50%);
-  height: 50px;
-  width: 12px;
-  background-color: #e60023;
-  border-radius: 0 8px 8px 0;
-  opacity: 0;
-  transition: opacity 0.3s;
+  inset: 0;
+  border-radius: 22px;
+  padding: 1px;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
 }
 
-.feature-card:hover::after {
-  opacity: 1;
+.borderGlow--blue {
+  background: linear-gradient(135deg, rgba(34,171,226,0.6), rgba(255,255,255,0.08));
 }
 
-.red-highlight::after {
-  background-color: #fff;
-  opacity: 1;
+.borderGlow--red {
+  background: linear-gradient(135deg, rgba(255,73,73,0.55), rgba(255,255,255,0.08));
 }
 
- /*=== Dynamic Hover Colors Based on Card === */
-
-.color-blue:hover {
-  background-color: #083d4f;
-  color: white;
-  
+.borderGlow--green {
+  background: linear-gradient(135deg, rgba(31,214,128,0.55), rgba(255,255,255,0.08));
 }
 
-.color-blue:hover h3,
-.color-blue:hover .card-text {
-  color: white;
-      font-size: 17px;
+.borderGlow--yellow {
+  background: linear-gradient(135deg, rgba(241,182,10,0.55), rgba(255,255,255,0.08));
 }
 
-.color-blue:hover .section-icon {
-  color: white;
+/* Card Inner */
+.cardInner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 22px 20px 18px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.color-red:hover {
-  background-color: #1f3e7b;
-  border-color: #1f3e7b;
+/* Icon Styles */
+.iconBadge {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.color-red:hover h3,
-.color-red:hover .card-text {
-  color: white;
+.iconBadge--blue {
+  background: linear-gradient(180deg, #39b9ee, #22abe2);
+  color: #001018;
 }
 
-
-.color-red:hover .section-icon {
-  color: white;
+.iconBadge--red {
+  background: linear-gradient(180deg, #ff6a6a, #ff4949);
+  color: #190001;
 }
 
-/* .color-red:hover .section-icon {
-  color: #e60023;
-} */
-
-.color-green:hover {
-  background-color: #357d55;
-  border-color: #357d55;
+.iconBadge--green {
+  background: linear-gradient(180deg, #36e89e, #1fd680);
+  color: #00140b;
 }
 
-.color-green:hover h3,
-.color-green:hover .card-text {
-  color: white;
+.iconBadge--yellow {
+  background: linear-gradient(180deg, #ffd86a, #f1b60a);
+  color: #171000;
 }
 
-.color-green:hover .section-icon {
-  color: white;
+/* Text */
+.title {
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  font-size: 20px;
+  margin: 2px 0 8px;
+  color: #ffffff;
 }
 
-.color-yellow:hover {
-  background-color: #a354b5;
-  border-color: #a354b5;
+.text {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #cfd7e3;
+  margin: 0 0 14px;
 }
 
-.color-yellow:hover h3,
-.color-yellow:hover .card-text {
-  color: white;
-    font-size: 17px;
+/* CTA link */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 13px;
+  color: #ffffff;
+  opacity: 0.92;
+  cursor: pointer;
 }
 
-.color-yellow:hover .section-icon {
-  color: white;
-
+.cta svg {
+  transform: translateY(1px);
 }
-

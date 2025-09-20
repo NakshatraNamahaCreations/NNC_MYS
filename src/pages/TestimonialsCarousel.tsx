@@ -1,10 +1,18 @@
 "use client";
 
 import Image from "next/image";
-import Slider from "react-slick";
+import { useMemo } from "react";
 import styles from "./TestimonialsCarousel.module.css";
 
-const testimonials = [
+type Testimonial = {
+  name: string;
+  role: string;
+  rating: number;
+  text: string;
+  avatar: string;
+};
+
+const testimonials: Testimonial[] = [
   {
     name: "Ramesh Gowda",
     role: "Founder, Mysore AgroTech",
@@ -71,80 +79,98 @@ const testimonials = [
   },
 ];
 
+function Stars({ value }: { value: number }) {
+  return (
+    <div className={styles.stars} aria-label={`${value} star rating`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg
+          key={i}
+          viewBox="0 0 20 20"
+          className={`${styles.star} ${i < value ? styles.starFill : ""}`}
+          aria-hidden
+        >
+          <path d="M10 1.6l2.5 5.1 5.7.8-4.1 4 1 5.9L10 15.8 4.9 17.4l1-5.9-4.1-4 5.7-.8L10 1.6z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
-export default function TestimonialsCarousel() {
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    pauseOnHover: true,
-    speed: 450,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 1200, settings: { slidesToShow: 2 } },
-      { breakpoint: 768, settings: { slidesToShow: 1 } },
-    ],
-  };
+function Card({ t }: { t: Testimonial }) {
 
-  const eyebrow = "OUR TESTIMONIALS";
-  const title = "What they’re talking about\nour company";
-  const lines = title.split("\n");
 
   return (
-    <section className={`${styles.testimonialsCarousel} py-5`}>
-      <div className="container">
-        {/* Heading */}
-        <div className={styles.testimonialsCarouselHead}>
-          {/* <span className={styles.testimonialsCarouselEyebrow}>{eyebrow}</span> */}
-          <h2 className={styles.testimonialsCarouselTitle}>
-            {lines.map((l, i) => (
-              <span key={i}>
-                {l}
-                {i === 0 ? <br /> : null}
-              </span>
-            ))}
-          </h2>
+    <article className={styles.card}>
+      <div className={styles.profile}>
+        <Image
+          src={t.avatar}
+          alt={t.name}
+          width={44}
+          height={44}
+          className={styles.avatar}
+        />
+        <div className={styles.meta}>
+          <h3 className={styles.name}>{t.name}</h3>
+          <p className={styles.role}>Client • {t.role}</p>
         </div>
+        <img
+          src="/icons/quote.svg"
+          alt=""
+          aria-hidden
+          className={styles.quoteMark}
+        />
+      </div>
 
-        {/* Slider */}
-        <Slider {...settings}>
-          {testimonials.map((t, i) => (
-            <div key={i} className={styles.testimonialsCarouselSlide}>
-              <article className={styles.testimonialsCarouselCard}>
-                <header className={styles.testimonialsCarouselHeader}>
-                  <div className={styles.testimonialsCarouselAvatarWrap}>
-                    <Image
-                      src={t.avatar}
-                      alt={t.name}
-                      width={96}
-                      height={96}
-                      className={styles.testimonialsCarouselAvatar}
-                    />
-                  </div>
-                  <div className={styles.testimonialsCarouselMeta}>
-                    <div className={styles.testimonialsCarouselStars}>
-                      {"★".repeat(t.rating)}
-                      <span className={styles.testimonialsCarouselMuted}>
-                        {"★".repeat(5 - t.rating)}
-                      </span>
-                    </div>
-                    <h4 className={styles.testimonialsCarouselName}>{t.name}</h4>
-                    {/* <div className={styles.testimonialsCarouselRole}>{t.role}</div> */}
-                  </div>
-                </header>
+    <p className={styles.text}>{t.text}</p>
 
-                <div className={styles.testimonialsCarouselDivider}>
-                  <span className={styles.testimonialsCarouselTick} />
+
+
+      <Stars value={t.rating} />
+    </article>
+  );
+}
+
+export default function TestimonialsCarousel() {
+  // duplicate arrays for seamless marquee
+  const rowA = [...testimonials, ...testimonials];
+  const rowB = [...testimonials.slice().reverse(), ...testimonials.slice().reverse()];
+
+  return (
+    <section className={styles.section8}>
+      <div className={styles.bg} />
+
+      <div className="container">
+        <h2 className={styles.sec8Heading}>Clients applaud us</h2>
+        <p className={styles.sec8Text}>
+          We’ve built websites and mobile apps that match our clients’ goals—here’s what
+          they say about working with Nakshatra Namaha Creations.
+        </p>
+
+        {/* Row 1 – left-to-right */}
+        <div className={styles.wrapper8}>
+          <div className={`${styles.slider8} ${styles.isRunning}`}>
+            <div className={`${styles.slidetrack8} ${styles.trackA}`}>
+              {rowA.map((t, i) => (
+                <div className={styles.slide8} key={`a-${i}-${t.name}`}>
+                  <Card t={t} />
                 </div>
-
-                <p className={styles.testimonialsCarouselText}>{t.text}</p>
-              </article>
+              ))}
             </div>
-          ))}
-        </Slider>
+          </div>
+        </div>
+                <br />
+        {/* Row 2 – right-to-left */}
+        <div className={styles.wrapper8}>
+          <div className={`${styles.slider8} ${styles.isRunning}`}>
+            <div className={`${styles.slidetrack8} ${styles.trackB}`}>
+              {rowB.map((t, i) => (
+                <div className={styles.slide8} key={`b-${i}-${t.name}`}>
+                  <Card t={t} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

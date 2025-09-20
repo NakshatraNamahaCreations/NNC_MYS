@@ -36,6 +36,7 @@ import Image from "next/image";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import { motion, Variants} from "framer-motion";
 import FaqSection from "./FaqSection";
+import TrustedPartnerBootstrap from "./TrustedPartnerBootstrap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,6 +51,20 @@ type Product = {
 
 
 
+type CardProps = { title: string; text: string; ariaHidden?: boolean };
+
+
+function Card({ title, text, ariaHidden }: CardProps) {
+  return (
+    <article
+      className={`${styles.trustedPartner__card}`}
+      aria-hidden={ariaHidden ? "true" : undefined}
+    >
+      <div className={styles.trustedPartner__cardTitle}>{title}</div>
+      <div className={styles.trustedPartner__cardCopy}>{text}</div>
+    </article>
+  );
+}
 
 
 const products: Product[] = [
@@ -398,8 +413,8 @@ const item = {
   
        <HeroBanner/>
       </div>
-      
-      <Specializations/>
+      <TrustedPartnerBootstrap/>
+      {/* <Specializations/> */}
        <FloatingActions />
       <MobileBottomBar />
 
@@ -413,9 +428,9 @@ const item = {
       <ClientsShowcase/>
       <ZeroSection/>
    <section ref={sectionRef} className={styles.industriesSection} style={{backgroundColor:"#e9e9e9"}}> 
-  {/* Full width container */}
+
   <div className={styles.fullWidth}>
-    {/* Heading stays centered in a container */}
+  
     <div className="container">
       <div className={styles.industriesHead}>
         <h3 className={styles.industriesTitle}>
@@ -427,7 +442,7 @@ const item = {
       </div>
     </div>
 
-    {/* Track is now full width */}
+   
     <div ref={trackRef} className={styles.industriesTrack}>
       {industries.map((ind, i) => (
         <div className={styles.industryGearWrap} key={ind.label}>
@@ -454,7 +469,7 @@ const item = {
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className="container">
-        {/* Heading */}
+        
         <motion.div
           className={styles.productsShowcaseHead}
           variants={containerVariants}
@@ -466,7 +481,7 @@ const item = {
           </h2>
         </motion.div>
 
-        {/* Grid with stagger */}
+        
         <motion.div
           className="row g-4"
           variants={gridVariants}
@@ -520,84 +535,10 @@ const item = {
     </motion.section>
      
  <TestimonialsCarousel/>
-      {/* <CTASection /> */}
+
  
- <section className={styles.contactConsultHero} style={{ padding: "50px 0px" }}>
-  {/* Background image */}
-  <div className={styles.contactConsultHeroBg}>
-    <Image
-      src="/images/contact.jpg"
-      alt="Developer consulting"
-      fill
-      priority
-      className={styles.contactConsultHeroImg}
-    />
-    <div className={styles.contactConsultHeroVignette} />
-  </div>
+    <CTASection/>
 
-  {/* Right floating form */}
-  <motion.div className={styles.contactConsultHeroCard}>
-    <h2 className={styles.contactConsultHeroTitle}>
-      Consult with our professionals
-    </h2>
-
-    <form
-      className={styles.contactConsultHeroForm}
-      onSubmit={(e) => e.preventDefault()}
-    >
-      <div className={styles.contactConsultHeroRow}>
-        <label className={styles.contactConsultHeroField}>
-          <span>Name *</span>
-          <input type="text" name="name" required placeholder="Your name" />
-        </label>
-
-        <label className={styles.contactConsultHeroField}>
-          <span>Phone *</span>
-          <input type="tel" name="phone" required placeholder="Phone No" />
-        </label>
-      </div>
-
-      <label className={styles.contactConsultHeroField}>
-        <span>Email *</span>
-        <input
-          type="email"
-          name="email"
-          required
-          placeholder="you@company.com"
-        />
-      </label>
-
-      <label className={styles.contactConsultHeroField}>
-        <span>Your Message *</span>
-        <textarea
-          name="message"
-          required
-          rows={4}
-          placeholder="Tell us about your project…"
-        />
-      </label>
-
-      <motion.button
-        type="submit"
-        className={styles.contactConsultHeroCta}
-        whileHover={{ x: 2, boxShadow: "0 10px 28px rgba(0,0,0,.25)" }}
-        whileTap={{ scale: 0.98 }}
-      >
-        Get free consultation
-        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden>
-          <path
-            d="M4 10h10M10 4l6 6-6 6"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </motion.button>
-    </form>
-  </motion.div>
-</section>
 
      <FaqSection/>
       <InfoSection /> 

@@ -1,16 +1,159 @@
-/* ==== General Reset ==== */
-body {
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #000;
-    background-color: #9baebc;
-    overflow-x: hidden;
-  }
-  
+/* --- Global fixes (scoped via :global) --- */
+:global(html, body) {
+  margin: 0;           /* kill browser default gap */
+  padding: 0;
+}
 
-  :global([data-reveal]) {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+:global(header), :global(nav) {
+  /* float the site header on top of the hero, transparent */
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  background: transparent !important;
+  z-index: 50;
+}
+
+
+.hero {
+  position: relative;
+  /* add top padding so the panel doesn't sit under the now-absolute header */
+  --header-h: 76px;                 /* tweak to your actual header height */
+  padding-top: var(--header-h);
+  min-height: clamp(560px, 80vh, 820px);
+  isolation: isolate;
+  /* overflow: clip; */
+}
+
+  /* Full-bleed background image (Next/Image with fill) */
+  .bg {
+    object-fit: cover;
+    object-position: 50% 50%;
+    z-index: -2;
+  }
+
+/* Subtle top-to-bottom gradient so text stays legible */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 70% 0%, rgba(0,0,0,.25), transparent 70%),
+    linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.05) 35%, rgba(0,0,0,.35));
+  z-index: -1;
+}
+
+/* Glass panel with asym corner + inner glow */
+.panel {
+  --bg: rgba(18, 24, 21, 0.55);
+  --ring: rgba(255,255,255,.24);
+  --radius: 22px;
+
+  position: relative;
+  max-width: 980px;
+  margin: clamp(56px, 12vh, 120px) auto;
+  padding: clamp(20px, 5vw, 44px) clamp(18px, 4.2vw, 56px);
+  background: var(--bg);
+  border-radius: var(--radius);
+  border-top-right-radius: 60px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.06),
+    0 20px 60px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px) saturate(110%);
+  color: #fff;
+  text-align: center;
+  outline: 1px solid rgba(255,255,255,.06);
+  animation: rise .6s cubic-bezier(.22,.61,.36,1) both;
+}
+
+@keyframes rise {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ESTB — rule — year row */
+.estRow {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  letter-spacing: .36em;
+  font-size: .9rem;
+  color: rgba(255,255,255,.85);
+}
+.rule {
+  width: 52px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #ffffffcc, transparent);
+  border-radius: 2px;
+}
+.est, .year { font-weight: 600; }
+
+/* Logo */
+.logoWrap { margin: 6px 0 10px; }
+.logo { filter: drop-shadow(0 6px 10px rgba(0,0,0,.35)); }
+
+/* Title with gentle tracking + shadow */
+.title {
+  margin: 10px 0 6px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: clamp(36px, 6.2vw, 64px);
+  letter-spacing: .06em;
+  line-height: 1.06;
+  text-shadow: 0 4px 5px rgba(0,0,0,.4);
+}
+
+/* Tagline with custom middle dot that animates slightly */
+.tagline {
+  margin: 4px 0 26px;
+  font-size: clamp(16px, 2.2vw, 22px);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.92);
+}
+.dot {
+  display: inline-block;
+  margin: 0 .25em;
+  transform: translateY(-.05em);
+  animation: pulse 2.2s ease-in-out infinite;
+  opacity: .9;
+}
+@keyframes pulse {
+  0%, 100% { transform: translateY(-.05em) scale(1); opacity: .9; }
+  50%      { transform: translateY(-.05em) scale(1.18); opacity: 1; }
+}
+
+/* CTA button (no underline) */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f4c45;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+  outline: 0;
+  border: 0;
+}
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.28);
+  background: #f8faf9;
+}
+.cta:active { transform: translateY(0); }
+.ctaIcon { transition: transform .2s ease; }
+.cta:hover .ctaIcon { transform: translateX(4px); }
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  .panel {
+    margin: 56px 16px;
+    padding: 22px 18px;
+    border-top-right-radius: 36px;
+  }
+  .estRow { gap: 12px; letter-spacing: .28em; }
 }
