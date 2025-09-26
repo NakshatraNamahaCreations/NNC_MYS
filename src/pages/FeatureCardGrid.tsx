@@ -138,7 +138,7 @@ export default function FeatureCardGrid() {
                     </span>
                     <h3 className={styles.title}>{card.title}</h3>
                     <p className={styles.text}>{card.paragraph}</p>
-                    <motion.span
+                    {/* <motion.span
                       className={styles.cta}
                       whileHover={{ x: 3 }}
                       transition={{ type: "spring", stiffness: 300, damping: 18 }}
@@ -154,7 +154,7 @@ export default function FeatureCardGrid() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </motion.span>
+                    </motion.span> */}
                   </div>
                 </div>
               </motion.div>
