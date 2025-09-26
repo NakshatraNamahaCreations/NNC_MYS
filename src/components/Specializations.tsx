@@ -53,26 +53,26 @@ const slides: Slide[] = [
   {
     img: "/images/banner15.jpg",
     title: "Custom Web Development",
-    blurb: "We stand as the best web app development company in Bangalore...",
+    blurb: "We stand as the best web app development company in Mysore...",
     href: "/custom-web-development.html",
   },
   {
     img: "/images/our4.jpg",
     title: "Android Development",
-    blurb: "No.1 Mobile App Development Company located in Bangalore...",
-    href: "/android-apps-bangalore.html",
+    blurb: "No.1 Mobile App Development Company located in Mysore...",
+    href: "/android-apps-Mysore.html",
   },
   {
     img: "/images/our6.jpg",
     title: "Ecommerce Solutions",
     blurb: "Create secure, high-performance ecommerce platforms...",
-    href: "/ecommerce-solutions-bangalore.html",
+    href: "/ecommerce-solutions-Mysore.html",
   },
   {
     img: "/images/ecom.jpg",
     title: "iOS App Development",
-    blurb: "No.1 iOS app development team in Bangalore...",
-    href: "/ios-apps-bangalore.html",
+    blurb: "No.1 iOS app development team in Mysore...",
+    href: "/ios-apps-Mysore.html",
   },
 ];
 

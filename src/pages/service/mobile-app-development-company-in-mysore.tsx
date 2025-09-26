@@ -310,7 +310,7 @@ export default function MobileAppPage() {
   </ol>
 </nav>
 
-              <h1 className={styles.title}>MOBILE APP DEVELOPMENT COMPANY IN MYSORE</h1>
+              <h2 className={styles.title}>MOBILE APP DEVELOPMENT COMPANY IN MYSORE</h2>
               <p className={styles.subtitle}>
                 Empower your business with high-performing, feature-rich mobile apps designed to engage your audience and drive growth. Nakshatra Namaha Creations specializes in building custom Android, iOS, and cross-platform apps with seamless user experiences, ensuring your brand stays ahead in the digital era.
               </p>

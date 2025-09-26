@@ -380,7 +380,7 @@ export default function SeoDevelopment() {
   </ol>
 </nav>
 
-<h1 className={styles1.title}>SEO SERVICES COMPANY IN MYSORE</h1>
+<h2 className={styles1.title}>SEO SERVICES COMPANY IN MYSORE</h2>
 <p className={styles1.subtitle}>
   Boost your online visibility and attract the right audience with our proven SEO services. 
   At Nakshatra Namaha Creations, we specialize in on-page, off-page, and technical SEO 

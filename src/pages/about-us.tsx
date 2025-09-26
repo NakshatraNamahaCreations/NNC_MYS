@@ -62,7 +62,7 @@ const faqs: Faq[] = [
 // Hero constants
 const HERO_TITLE = "ABOUT NAKSHATRA NAMAHA CREATIONS";
 const HERO_SUBTITLE =
-  "We are a Bengaluru-based creative tech studio building websites, apps, and content that move brands forward.";
+  "We are a creative tech studio dedicated to building websites, apps, and content that move brands forward.";
 
 export default function AboutUs() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -124,7 +124,7 @@ export default function AboutUs() {
               </li>
             </ol>
           </nav>
-          <h1 className={styles.title}>{HERO_TITLE}</h1>
+          <h2 className={styles.title}>{HERO_TITLE}</h2>
           <p className={styles.subtitle}>{HERO_SUBTITLE}</p>
         </div>
         <div className={styles.scrollExplore}>SCROLL TO EXPLORE</div>

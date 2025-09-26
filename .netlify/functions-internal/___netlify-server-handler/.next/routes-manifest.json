@@ -44,6 +44,12 @@
       "namedRegex": "^/(?:/)?$"
     },
     {
+      "page": "/AboutFaq",
+      "regex": "^/AboutFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/AboutFaq(?:/)?$"
+    },
+    {
       "page": "/AllServices",
       "regex": "^/AllServices(?:/)?$",
       "routeKeys": {},
@@ -68,6 +74,12 @@
       "namedRegex": "^/BlogCard(?:/)?$"
     },
     {
+      "page": "/BlogsFaq",
+      "regex": "^/BlogsFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/BlogsFaq(?:/)?$"
+    },
+    {
       "page": "/Buissness",
       "regex": "^/Buissness(?:/)?$",
       "routeKeys": {},
@@ -78,6 +90,12 @@
       "regex": "^/CTASection(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/CTASection(?:/)?$"
+    },
+    {
+      "page": "/CareeresFaq",
+      "regex": "^/CareeresFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/CareeresFaq(?:/)?$"
     },
     {
       "page": "/ClientSlider",
@@ -92,10 +110,22 @@
       "namedRegex": "^/ClientsSay(?:/)?$"
     },
     {
+      "page": "/ClientsShowcase",
+      "regex": "^/ClientsShowcase(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ClientsShowcase(?:/)?$"
+    },
+    {
       "page": "/ContactUs",
       "regex": "^/ContactUs(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/ContactUs(?:/)?$"
+    },
+    {
+      "page": "/ContactUsfaq",
+      "regex": "^/ContactUsfaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ContactUsfaq(?:/)?$"
     },
     {
       "page": "/DesignTypesSection",
@@ -162,6 +192,12 @@
       "regex": "^/FaqAccordion6(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/FaqAccordion6(?:/)?$"
+    },
+    {
+      "page": "/FaqSection",
+      "regex": "^/FaqSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/FaqSection(?:/)?$"
     },
     {
       "page": "/FeatureCardGrid",
@@ -236,6 +272,12 @@
       "namedRegex": "^/OurWorkGallery(?:/)?$"
     },
     {
+      "page": "/Ourworkfaq",
+      "regex": "^/Ourworkfaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/Ourworkfaq(?:/)?$"
+    },
+    {
       "page": "/PortFolio",
       "regex": "^/PortFolio(?:/)?$",
       "routeKeys": {},
@@ -284,6 +326,12 @@
       "namedRegex": "^/SeoTypesSection(?:/)?$"
     },
     {
+      "page": "/ServicesFaq",
+      "regex": "^/ServicesFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ServicesFaq(?:/)?$"
+    },
+    {
       "page": "/ServicesImages",
       "regex": "^/ServicesImages(?:/)?$",
       "routeKeys": {},
@@ -302,10 +350,28 @@
       "namedRegex": "^/StickyServices(?:/)?$"
     },
     {
+      "page": "/TechnologySection",
+      "regex": "^/TechnologySection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/TechnologySection(?:/)?$"
+    },
+    {
+      "page": "/TestimonialsCarousel",
+      "regex": "^/TestimonialsCarousel(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/TestimonialsCarousel(?:/)?$"
+    },
+    {
       "page": "/TopWeb",
       "regex": "^/TopWeb(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/TopWeb(?:/)?$"
+    },
+    {
+      "page": "/TrustedPartnerBootstrap",
+      "regex": "^/TrustedPartnerBootstrap(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/TrustedPartnerBootstrap(?:/)?$"
     },
     {
       "page": "/TwoDAnimationFeatureCard",
@@ -366,6 +432,12 @@
       "regex": "^/WorkCarousel(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/WorkCarousel(?:/)?$"
+    },
+    {
+      "page": "/ZeroSection",
+      "regex": "^/ZeroSection(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/ZeroSection(?:/)?$"
     },
     {
       "page": "/about-us",
@@ -452,6 +524,66 @@
       "namedRegex": "^/service/2d\\-animation\\-company\\-in\\-mysore(?:/)?$"
     },
     {
+      "page": "/service/B2BFaq",
+      "regex": "^/service/B2BFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/B2BFaq(?:/)?$"
+    },
+    {
+      "page": "/service/EcommerceFaq",
+      "regex": "^/service/EcommerceFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/EcommerceFaq(?:/)?$"
+    },
+    {
+      "page": "/service/MobileFaq",
+      "regex": "^/service/MobileFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/MobileFaq(?:/)?$"
+    },
+    {
+      "page": "/service/SeoServiceFaq",
+      "regex": "^/service/SeoServiceFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/SeoServiceFaq(?:/)?$"
+    },
+    {
+      "page": "/service/SocialMediaFaq",
+      "regex": "^/service/SocialMediaFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/SocialMediaFaq(?:/)?$"
+    },
+    {
+      "page": "/service/SoftwareFaq",
+      "regex": "^/service/SoftwareFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/SoftwareFaq(?:/)?$"
+    },
+    {
+      "page": "/service/TwoDAnimation",
+      "regex": "^/service/TwoDAnimation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/TwoDAnimation(?:/)?$"
+    },
+    {
+      "page": "/service/UiuxFaq",
+      "regex": "^/service/UiuxFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/UiuxFaq(?:/)?$"
+    },
+    {
+      "page": "/service/VideoFaq",
+      "regex": "^/service/VideoFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/VideoFaq(?:/)?$"
+    },
+    {
+      "page": "/service/WordpressFaq",
+      "regex": "^/service/WordpressFaq(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/WordpressFaq(?:/)?$"
+    },
+    {
       "page": "/service/b2b-marketing-service-in-mysore",
       "regex": "^/service/b2b\\-marketing\\-service\\-in\\-mysore(?:/)?$",
       "routeKeys": {},
@@ -512,8 +644,8 @@
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
-      "dataRouteRegex": "^/_next/data/eGVxryQPLMNbGaKsdrjVp/jobs/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/eGVxryQPLMNbGaKsdrjVp/jobs/(?<nxtPslug>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/wH7du5223RBgnWMFPgLh6/jobs/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/wH7du5223RBgnWMFPgLh6/jobs/(?<nxtPslug>[^/]+?)\\.json$"
     }
   ],
   "rsc": {

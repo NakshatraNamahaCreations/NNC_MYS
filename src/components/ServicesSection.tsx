@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import styles from "./ServicesSection.module.css";
+import Link from "next/link";
 
 type Service = {
   title: string;
@@ -94,14 +95,9 @@ export default function ServicesSection() {
               of your needs. We target your audience with mobile app development
               solutions and web solutions for increased engagement.
             </p>
-            <button
-              className="btn btn-light fw-bold shadow-sm px-4 py-2 rounded-3"
-              type="button"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Request A Free Quote
-            </button>
+          <Link href="/contact-us" className="btn btn-light fw-bold shadow-sm px-4 py-2 rounded-3">
+  Request A Free Quote
+</Link>
           </div>
 
           {/* Right grid */}

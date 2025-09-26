@@ -113,7 +113,7 @@ export default function OurProcessScroll() {
                       Our Vision is to become the top choice for businesses seeking success in the
                       digital world. Known for our creativity, innovation, and high-quality work, we
                       aim to be recognized as the best website and mobile app developers in
-                      Bangalore.
+                      Mysore.
                     </p>
                   </div>
                 </div>

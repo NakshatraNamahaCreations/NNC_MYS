@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -26,7 +27,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Header />
       <Component {...pageProps} />
     </>
   );

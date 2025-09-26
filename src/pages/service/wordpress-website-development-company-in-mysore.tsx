@@ -295,7 +295,7 @@ while providing flexibility for future updates and modifications.`,
   </ol>
 </nav>
 
-<h1 className={styles1.title}>WORDPRESS WEBSITE DEVELOPMENT COMPANY IN MYSORE</h1>
+<h2 className={styles1.title}>WORDPRESS WEBSITE DEVELOPMENT COMPANY IN MYSORE</h2>
 <p className={styles1.subtitle}>
   Build fast, secure, and SEO-ready WordPress websites that convert. Nakshatra Namaha
   Creations crafts custom themes, lightning-quick pages, and scalable CMS experiences—

@@ -105,7 +105,7 @@ export default function MarketingHero({
               whileHover={prefersReduced ? {} : { x: 2 }}
               transition={{ duration: 0.15, ease: "easeOut" }}
             >
-              <Link href="/digital-marketing-company" className={styles.cta}>
+              <Link href="/about-us" className={styles.cta}>
                 <span>Know more</span>
                 <motion.svg
                   className={styles.arrow}

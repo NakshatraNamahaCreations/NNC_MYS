@@ -365,7 +365,7 @@ export default function EcommercePage() {
   </ol>
 </nav>
 
-              <h1 className={styles1.title}>E-COMMERCE WEBSITE DEVELOPMENT COMPANY IN MYSORE</h1>
+              <h2 className={styles1.title}>E-COMMERCE WEBSITE DEVELOPMENT COMPANY IN MYSORE</h2>
 <p className={styles1.subtitle}>
   Transform your business with a high-performance e-commerce platform built for growth.
   Nakshatra Namaha Creations delivers feature-rich online stores with intuitive navigation,

@@ -389,7 +389,7 @@ export default function SoftwareDevelopmentPage() {
   </ol>
 </nav>
 
-<h1 className={styles1.title}>SOFTWARE DEVELOPMENT COMPANY IN MYSORE</h1>
+<h2 className={styles1.title}>SOFTWARE DEVELOPMENT COMPANY IN MYSORE</h2>
 <p className={styles1.subtitle}>
   At Nakshatra Namaha Creations, we deliver powerful, scalable, and secure software solutions 
   designed to meet your business goals. Whether you need custom software development, automation 

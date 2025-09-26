@@ -1,9 +1,13 @@
+functionsDirectory = "C:\\Users\\admin\\Downloads\\nnc-next\\netlify\\functions"
+functionsDirectoryOrigin = "ui"
 headersOrigin = "inline"
 redirectsOrigin = "inline"
 
 [functions]
 
 [functions."*"]
+external_node_modules = ["sharp"]
+node_bundler = "esbuild"
 
 [[plugins]]
 origin = "config"
@@ -16,9 +20,10 @@ publish = "C:\\Users\\admin\\Downloads\\nnc-next\\.next"
 publishOrigin = "config"
 commandOrigin = "config"
 command = "npm run build"
+functions = "C:\\Users\\admin\\Downloads\\nnc-next\\netlify\\functions"
 
 [build.environment]
-NODE_VERSION = "18"
+NODE_VERSION = "20"
 
 [build.processing]
 

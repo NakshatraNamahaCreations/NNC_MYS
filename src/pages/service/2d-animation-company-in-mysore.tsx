@@ -8,6 +8,8 @@ import styles from './AnimationDevelopment.module.css';
 import Link from "next/link";
 import Image from "next/image";
 import styles1 from './B2BMarket.module.css';
+import ContactForm from '@components/ContactForm'
+
 import {
   MdOutlineVideoLibrary,
   MdOutlineSlowMotionVideo,
@@ -383,7 +385,7 @@ export default function AnimationDevelopment() {
 </ol>
 </nav>
 
-<h1 className={styles1.title}>2D ANIMATION COMPANY IN MYSORE</h1>
+<h2 className={styles1.title}>CREATIVE 2D ANIMATION SERVICES</h2>
 <p className={styles1.subtitle}>
   Bring your stories, ideas, and products to life with engaging 2D animation.  
   At Nakshatra Namaha Creations, we create dynamic and visually appealing animations 
@@ -399,7 +401,7 @@ export default function AnimationDevelopment() {
 
           {/* Right Contact Form */}
           <div className="col-12 col-lg-4 mt-4 mt-lg-0 mb-3">
-            <div className={styles1.contactCard}>
+            {/* <div className={styles1.contactCard}>
               <h3 className={styles1.contactHeading}>Let’s Connect</h3>
               <form onSubmit={handleSubmit} noValidate>
                 <input
@@ -463,7 +465,8 @@ export default function AnimationDevelopment() {
                   Submit
                 </button>
               </form>
-            </div>
+            </div> */}
+            <ContactForm/>
           </div>
         </div>
       </div>

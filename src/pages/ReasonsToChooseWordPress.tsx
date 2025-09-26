@@ -31,7 +31,7 @@ const cards: Card[] = [
   {
     title: "Branding with ROI",
     description:
-      "Effective social media branding boosts audience engagement and ROI. Nakshatra Namaha Creations, a top social media company in Bangalore, crafts strategies to enhance your brand visibility. We set the right tone to attract customers, drive traffic, and generate leads.",
+      "Effective social media branding boosts audience engagement and ROI. Nakshatra Namaha Creations, a top social media company in Mysore, crafts strategies to enhance your brand visibility. We set the right tone to attract customers, drive traffic, and generate leads.",
     iconTag: <i className="fa-solid fa-chart-line" />,
   },
   {

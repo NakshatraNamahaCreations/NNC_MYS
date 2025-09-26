@@ -10,34 +10,36 @@ type Faq = {
 };
 
 const faqs: Faq[] = [
+
   {
-    question: "What are the benefits of hiring a mobile app development company in Bangalore?",
-    answer: "Bangalore offers skilled developers, advanced infrastructure, and innovative solutions for businesses of all sizes.",
+    question: "What types of websites do companies in Mysore develop?",
+    answer: "Website development companies in Mysore build corporate websites, e-commerce platforms, landing pages, portfolio sites, blogs, and web applications."
   },
   {
-    question: "What industries do mobile app development companies in Bangalore cater to?",
-    answer: "They serve industries like healthcare, e-commerce, education, logistics, real estate, fintech, and more.",
+    question: "Do website developers in Mysore provide SEO-friendly solutions?",
+    answer: "Yes. Most Mysore-based agencies follow modern SEO practices, ensuring optimized site structures, faster loading, and mobile responsiveness."
   },
   {
-    question: "Do mobile app development companies in Bangalore offer post-launch support?",
-    answer: "Yes, most companies provide regular updates, bug fixes, maintenance, and performance monitoring.",
+    question: "Can Mysore website developers customize designs for my brand?",
+    answer: "Absolutely. They create custom UI/UX designs to align with your brand’s identity and provide a consistent look across all devices."
   },
   {
-    question: "How can I ensure my app idea remains confidential?",
-    answer: "Sign an NDA (Non-Disclosure Agreement) with the company before sharing your project details.",
+    question: "Do website development companies in Mysore offer maintenance and support?",
+    answer: "Yes. Many agencies offer post-launch support including updates, bug fixes, backups, and performance monitoring."
   },
   {
-    question: "Can app development companies in Bangalore integrate advanced features like AI and IoT?",
-    answer: "Yes, leading companies specialize in implementing AI, IoT, AR/VR, and other emerging technologies.",
+    question: "How much does it cost to build a website in Mysore?",
+    answer: "The cost depends on factors such as the type of website, number of pages, integrations, and design complexity. Most agencies provide customized quotes."
   },
   {
-  question: "How much does it cost to develop a mobile app in Bangalore?",
-  answer: "The cost varies depending on features, design complexity, platform (iOS, Android, or both), and development time. Most companies offer customized quotes based on project needs.",
-},
-{
-  question: "How long does it take to build a mobile app?",
-  answer: "A basic app can take 2–3 months, while feature-rich apps with advanced integrations may require 6 months or more, depending on scope and revisions.",
-},
+    question: "How long does it take to develop a website in Mysore?",
+    answer: "A basic website typically takes 3–4 weeks, while more complex e-commerce or web applications may take 2–3 months depending on features and revisions."
+  },
+  {
+    question: "Can Mysore agencies integrate third-party tools like payment gateways or CRMs?",
+    answer: "Yes. Most website development companies in Mysore are experienced in integrating CRMs, ERPs, payment systems, and other third-party APIs."
+  },
+
 
 ];
 

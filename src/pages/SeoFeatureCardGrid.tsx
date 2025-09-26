@@ -34,7 +34,7 @@ export default function SeoFeatureCardGrid() {
       title: "Multiply Your Leads",
       icon: <FaUserPlus className={styles["seo11-icon"]} />,
       paragraph:
-        "Collaborate with Bangalore’s top SEO agency to drive lead generation and boost conversion rates. Reach potential customers actively searching for your products or services, leading to higher sales and business expansion.",
+        "Collaborate with Mysore’s top SEO agency to drive lead generation and boost conversion rates. Reach potential customers actively searching for your products or services, leading to higher sales and business expansion.",
     },
     {
       title: "Access to Top SEO Tools",

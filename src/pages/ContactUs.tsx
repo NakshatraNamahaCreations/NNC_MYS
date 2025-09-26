@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
 import { motion } from "framer-motion";
-// ⛔️ Don't import global CSS here. Use a CSS Module:
+
 import styles from "./ContactUs.module.css";
 
 type FormData = {

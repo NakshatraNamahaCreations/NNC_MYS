@@ -72,7 +72,7 @@ const services: Service[] = [
       "Nakshatra Namaha Creations is known for its high-quality, seamless integration across platforms.",
       "We ensure a consistent user experience on all devices with our expert UI/UX designs.",
       "Our Android mobile applications are crafted for smooth performance and high quality.",
-      "As one of the best UI/UX companies in Bangalore, we prioritize delivering exceptional user experiences.",
+      "As one of the best UI/UX companies in Mysore, we prioritize delivering exceptional user experiences.",
     ],
   },
   {

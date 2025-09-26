@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./ZeroSection.module.css";
 
 export default function ZeroSection() {
@@ -8,32 +9,22 @@ export default function ZeroSection() {
     <section className={`${styles.collaborateSection} position-relative`}>
       <div className="container">
         <div className="row align-items-center">
+          
           {/* Left Content */}
           <div className="col-md-6 text-white z-1">
             <h2 className="fw-bold mb-3">
-              Let's Collaborate for <br /> Mutual Success
+              Let&apos;s Collaborate for <br /> Mutual Success
             </h2>
-            <p className="mb-4">
+            <p className="mb-4" style={{ color: "#fff" }}>
               Discuss your mobile app requirements with our team & get the finest fit for your
               business.
             </p>
+
             <div className="d-flex gap-3 flex-wrap">
-              <button
-                className="btn btn-light fw-semibold"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-              >
+              {/* Link to Contact Us page */}
+              <Link href="/contact-us" className="btn btn-light fw-semibold">
                 🗨️ Talk to our Experts
-              </button>
-              <button
-                className="btn btn-outline-light fw-semibold"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-              >
-                👨‍💼 Hire our Experts
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -43,7 +34,7 @@ export default function ZeroSection() {
               <div className={styles.imgMaxHeight}></div>
               <Image
                 src="/images/contactus.jpg"
-                alt="dots"
+                alt="Contact Us"
                 width={120}
                 height={120}
                 className={styles.dotImg}
@@ -63,7 +54,7 @@ export default function ZeroSection() {
       />
       <Image
         src="/assets/circle.png"
-        alt="circle"
+        alt="Circle Graphic"
         width={300}
         height={300}
         className={styles.circleImg}

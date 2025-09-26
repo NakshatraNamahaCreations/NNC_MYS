@@ -32,7 +32,7 @@ const marqueeItems: string[] = [
   "Fast API",
   "Figma",
   "Photoshop",
-  "MsSQL",
+  "MySQL",
 ];
 
 export default function TechnologySection() {
