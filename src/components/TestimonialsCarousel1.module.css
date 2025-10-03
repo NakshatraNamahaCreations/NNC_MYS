@@ -1,0 +1,128 @@
+/* Page section */
+.section {
+  padding: 40px 16px 56px;
+  background: #ffffff;
+  font-family: "Be Vietnam Pro", -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Outer shell */
+.shell {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top slate bar (like screenshot) */
+.topbar {
+  height: 16px;
+  background: #505a6a;     /* slate */
+  border-radius: 4px 4px 0 0;
+  margin: 0 0 12px;
+  box-shadow: 0 12px 34px rgba(0,0,0,.08);
+}
+
+/* White panel with soft shadow */
+.panel {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 4px;
+  box-shadow: 0 28px 60px rgba(0,0,0,.08);
+  padding: 36px 28px;
+}
+
+/* chevrons inside the panel, left/right */
+.chev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+.chev:hover { color: #111; }
+.left { left: 18px; }
+.right { right: 18px; }
+
+/* sliding area */
+.viewport { overflow: hidden; }
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1);
+}
+
+/* one slide = up to two cards (desktop) */
+.slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+@media (max-width: 900px) {
+  .slide { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* card contents */
+.card { text-align: center; padding: 6px; }
+
+.avatarWrap { display: grid; place-items: center; margin-bottom: 14px; }
+.avatar {
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
+
+/* quote line with open/close marks */
+.qrow {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 10px;
+  margin: 6px 0 18px;
+  color: #333;
+}
+.qopen, .qclose {
+  font-size: 30px;
+  color: #bfbfbf;
+  line-height: 1;
+}
+.quote {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* name + role exactly like screenshot (bold then muted grey) */
+.footer { display: grid; gap: 4px; }
+.name {
+  font-weight: 700;
+  color: #000;
+}
+.role {
+  font-size: 14px;
+  color: #9aa0a6;  /* light grey */
+}
+
+/* dots under panel */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 18px;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 999px;
+  background: #c2c9cf;
+  border: none;
+  cursor: pointer;
+}
+.active { background: #505a6a; }
+
+/* spacing similar to screenshot panel drop shadow */
+.section .panel { margin-bottom: 18px; }

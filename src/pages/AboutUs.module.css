@@ -486,3 +486,233 @@
   margin: 0;
 }
 .container55 { width: 100%; }
+
+
+.aboutWrap {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.aboutHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.aboutText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.aboutImageCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.aboutImage {
+  object-fit: cover;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .aboutHeading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .aboutText {
+    text-align: center;
+  }
+  .aboutImageCard {
+    margin-top: 2rem;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.sectionIntro {
+  font-size: 2.4rem;               /* Desktop heading */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+  color: #111;
+   margin-top: 1.2rem;
+}
+
+.sectionIntro span {
+  color: #ff6f47;                   /* Accent color for highlighted words */
+}
+
+.sectionText {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;                   /* Desktop paragraph */
+  line-height: 1.7;
+  color: #555;
+  padding: 0 1rem;                    /* Add side padding for mobile screens */
+}
+
+/* ===========================
+   RESPONSIVE OPTIMIZATION
+   =========================== */
+
+/* Tablets (below 992px) */
+@media (max-width: 992px) {
+  .sectionIntro {
+    font-size: 2rem;                /* Slightly smaller heading */
+    line-height: 1.35;
+  }
+
+  .sectionText {
+    font-size: 0.95rem;             /* Adjust text size */
+    line-height: 1.6;
+    max-width: 90%;
+  }
+}
+
+/* Mobile (below 768px) */
+@media (max-width: 768px) {
+  .sectionIntro {
+    font-size: 1.75rem;             /* Smaller heading */
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    padding: 0 1rem;                /* Add padding for better spacing */
+  }
+
+  .sectionText {
+    font-size: 0.9rem;              /* Adjust paragraph font size */
+    line-height: 1.6;
+    max-width: 95%;
+    text-align: justify;            /* Optional: improves readability on narrow screens */
+  }
+}
+
+/* Small phones (below 480px) */
+@media (max-width: 480px) {
+  .sectionIntro {
+    font-size: 1.5rem;              /* Compact heading for very small screens */
+    line-height: 1.35;
+  }
+
+  .sectionText {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+/* Unique class names prefixed with process- */
+
+.processWrap {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.processHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+.processHeading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+.processHeading span {
+  color: #ff6f47; /* highlight color */
+}
+
+.processSubText {
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Timeline */
+.processTimeline {
+  position: relative;
+  margin-left: 40px;
+  padding-left: 30px;
+}
+
+.processTimeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 2px;
+  height: 100%;
+  background: #ccc;
+}
+
+.processStep {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.processDot {
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ff6f47;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #ff6f47;
+}
+
+.processContent {
+  margin-left: 30px;
+}
+
+.processStepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.processStepDesc {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.processStep:hover .processDot {
+  background: #fff;
+  box-shadow: 0 0 0 3px #ff6f47 inset;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .processHeading {
+    font-size: 2rem;
+  }
+
+  .processTimeline {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+
+  .processStepTitle {
+    font-size: 1.1rem;
+  }
+
+  .processStepDesc {
+    font-size: 0.95rem;
+  }
+}
+

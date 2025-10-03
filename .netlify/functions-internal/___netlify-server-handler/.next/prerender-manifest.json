@@ -4,7 +4,7 @@
     "/jobs/automation-tester": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/automation-tester.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/automation-tester.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -17,7 +17,7 @@
     "/jobs/react-native-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/react-native-developer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/react-native-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -30,7 +30,7 @@
     "/jobs/mern-stack-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/mern-stack-developer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/mern-stack-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -43,7 +43,7 @@
     "/jobs/node-js-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/node-js-developer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/node-js-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -56,7 +56,7 @@
     "/jobs/devops-engineer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/devops-engineer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/devops-engineer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -69,7 +69,7 @@
     "/jobs/bdm": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/bdm.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/bdm.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -82,7 +82,7 @@
     "/jobs/wordpress-developer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/wordpress-developer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/wordpress-developer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -95,7 +95,7 @@
     "/jobs/graphic-designer": {
       "initialRevalidateSeconds": false,
       "srcRoute": "/jobs/[slug]",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/graphic-designer.json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/graphic-designer.json",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -109,9 +109,9 @@
   "dynamicRoutes": {
     "/jobs/[slug]": {
       "routeRegex": "^/jobs/([^/]+?)(?:/)?$",
-      "dataRoute": "/_next/data/wH7du5223RBgnWMFPgLh6/jobs/[slug].json",
+      "dataRoute": "/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/[slug].json",
       "fallback": false,
-      "dataRouteRegex": "^/_next/data/wH7du5223RBgnWMFPgLh6/jobs/([^/]+?)\\.json$",
+      "dataRouteRegex": "^/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/([^/]+?)\\.json$",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -124,8 +124,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "c64cb2215331f6afb6792280fde9cf4e",
-    "previewModeSigningKey": "c8dbf7c51f0ee8b095e1915e5a255bc0ce674b086ea5f5422d7187cca9017a95",
-    "previewModeEncryptionKey": "b34d8b1b7cd366628600a71dbf2aada6245eda034d9b0ed7cdee0e795017d14e"
+    "previewModeId": "123927461db3039c07ab7c62a212e5fb",
+    "previewModeSigningKey": "70f69615d9263b14345a006091f1d1b817200ab7e5ad70f325b584390d47f7a8",
+    "previewModeEncryptionKey": "0f0c8db1303880121778ea70f98bcc1fbcdd4b7a05c8b9b00957e8dfaec4c005"
   }
 }

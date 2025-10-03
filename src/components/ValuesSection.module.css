@@ -1,0 +1,95 @@
+/* Section background with subtle ambient glow like the screenshot */
+.wrap {
+  padding: clamp(28px, 4vw, 48px) 0;
+  background: radial-gradient(140% 60% at 50% -10%, rgba(17, 24, 39, 0.06), rgba(0, 0, 0, 0) 60%) no-repeat;
+}
+
+/* Three-up grid */
+.grid {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 0 20px;
+}
+
+/* Card */
+.card {
+  position: relative;
+  min-height: 360px;           /* matches the screenshot height */
+  background: #fffefe;
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(16, 24, 40, 0.08);
+  padding: 34px 38px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  isolation: isolate;
+}
+
+/* Vertical divider feel between cards */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
+  pointer-events: none;
+}
+.grid > .card:last-child::after {
+  display: none;
+}
+
+/* Hover effect: lift + stronger shadow */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 44px rgba(16, 24, 40, 0.14);
+}
+
+/* Icon as an image box (44x44), hot-pink tint like screenshot */
+.icon {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 18px;
+  /* filter: brightness(0) saturate(100%) invert(28%) sepia(99%) saturate(4327%)
+    hue-rotate(324deg) brightness(102%) contrast(102%);  */
+}
+
+/* Heading + paragraph */
+.title {
+  margin: 0 0 10px;
+  color: #191937;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+    line-height: 24px;
+  font-size: 18px;
+}
+
+.text {
+  color: #323d51;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 56ch;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card::after {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card {
+    min-height: unset;
+    padding: 26px;
+  }
+}

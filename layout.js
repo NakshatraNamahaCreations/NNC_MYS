@@ -1,4 +1,4 @@
-import "./globals.css";
+
 import ScrollToTop from "@/pages/ScrollToTop";
 
 export default function RootLayout({ children }) {

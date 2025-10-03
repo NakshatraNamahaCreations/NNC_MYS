@@ -6,19 +6,19 @@ import styles from "./FaqSection.module.css";
 // ---------- Data ----------
 const faqs = [
   {
-    question: "What is the core mission of Nakshatra Namaha Creations?",
+    question: "Why choose Nakshatra Namaha Creations for website development services in Mysore?",
     answer:
-      "Our mission is to empower businesses through creative technology—delivering design, development, and marketing solutions that drive real growth.",
+      "We started our journey in 2015 in Bangalore and expanded our services to Mysore in November 2024. With years of experience and hundreds of successful projects, we focus on building SEO-friendly, user-focused websites that help businesses in Mysore grow their online presence and achieve real results.",
   },
   {
-    question: "How long has Nakshatra Namaha Creations been in business?",
+    question: "Do you provide mobile app development services in Mysore along with website solutions?",
     answer:
-      "We've been serving clients across industries with digital solutions for several years, building a reputation for reliability, creativity, and results.",
+      "Yes. We are a full-service mobile app development company in Mysore, offering Android app development, iOS app development, Flutter app development, and React Native app development alongside professional website solutions.",
   },
   {
-    question: "What industries does your team specialize in?",
+    question: "Can you develop e-commerce websites for startups and small businesses in Mysore?",
     answer:
-      "We work with a wide range of industries, including retail, healthcare, education, real estate, logistics, and professional services.",
+      "Absolutely. We specialize in e-commerce website development in Mysore, delivering secure, scalable, and conversion-focused online stores that help businesses increase sales and improve the customer experience.",
   },
   {
     question: "What values guide your company culture and client relationships?",
@@ -26,16 +26,27 @@ const faqs = [
       "Transparency, collaboration, creativity, and accountability form the foundation of how we work—with both our team and our clients.",
   },
   {
-    question: "Is your team in-house or do you outsource work?",
+    question: "Do you offer custom app development services for unique business needs?",
     answer:
-      "We have a dedicated in-house team of developers, designers, marketers, and project managers to ensure quality control and efficient communication.",
+      "Yes. As a leading custom mobile app development company in Mysore, we design and develop tailored apps to meet the specific requirements of startups, enterprises, and niche industries.",
   },
-  {
-    question: "How does Nakshatra Namaha Creations stay updated with industry trends?",
+   {
+    question: "What technologies do you use for website and app development?",
     answer:
-      "Our team actively follows emerging trends in tech and design, attends workshops and conferences, and continuously experiments with modern tools and frameworks.",
+      "Our experts use modern technologies like React JS, Flutter, React Native, and advanced e-commerce platforms to ensure every project is future-ready, scalable, and easy to manage.",
+  },
+    {
+    question: "Do you offer post-launch support and maintenance for websites and apps?",
+    answer:
+      "Yes. We provide end-to-end support and maintenance including bug fixes, performance optimization, security updates, and ongoing enhancements to ensure your platforms run smoothly after launch.",
+  },
+    {
+    question: "How can Nakshatra Namaha Creations help my business grow online?",
+    answer:
+      "We combine SEO-friendly website development in Mysore with high-performing mobile app development in Mysore to improve online visibility, engage customers effectively, and drive higher conversions. ",
   },
 ];
+
 
 // ---------- Component ----------
 function AboutFaq() {

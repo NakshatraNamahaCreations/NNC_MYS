@@ -15,6 +15,10 @@ import MobileBottomBar from "@/pages/MobileBottomBar";
 
 import styles from "./AboutUs.module.css";
 import AboutFaq from "./AboutFaq";
+import ValuesSection from "@/components/ValuesSection";
+import WhyChooseUs from "@/components/WhyChooseUs";
+
+
 
 const CounterWithLottie = dynamic(
   () => import("@/components/CounterWithLottie"),
@@ -28,19 +32,19 @@ type Faq = {
 
 const faqs: Faq[] = [
   {
-    question: "What is the core mission of Nakshatra Namaha Creations?",
+    question: "Why choose Nakshatra Namaha Creations for website development services in Mysore?",
     answer:
-      "Our mission is to empower businesses through creative technology—delivering design, development, and marketing solutions that drive real growth.",
+      "We started our journey in 2015 in Bangalore and expanded our services to Mysore in November 2024. With years of experience and hundreds of successful projects, we focus on building SEO-friendly, user-focused websites that help businesses in Mysore grow their online presence and achieve real results.",
   },
   {
-    question: "How long has Nakshatra Namaha Creations been in business?",
+    question: "Do you provide mobile app development services in Mysore along with website solutions?",
     answer:
-      "We've been serving clients across industries with digital solutions for several years, building a reputation for reliability, creativity, and results.",
+      "Yes. We are a full-service mobile app development company in Mysore, offering Android app development, iOS app development, Flutter app development, and React Native app development alongside professional website solutions.",
   },
   {
-    question: "What industries does your team specialize in?",
+    question: "Can you develop e-commerce websites for startups and small businesses in Mysore?",
     answer:
-      "We work with a wide range of industries, including retail, healthcare, education, real estate, logistics, and professional services.",
+      "Absolutely. We specialize in e-commerce website development in Mysore, delivering secure, scalable, and conversion-focused online stores that help businesses increase sales and improve the customer experience.",
   },
   {
     question: "What values guide your company culture and client relationships?",
@@ -48,14 +52,24 @@ const faqs: Faq[] = [
       "Transparency, collaboration, creativity, and accountability form the foundation of how we work—with both our team and our clients.",
   },
   {
-    question: "Is your team in-house or do you outsource work?",
+    question: "Do you offer custom app development services for unique business needs?",
     answer:
-      "We have a dedicated in-house team of developers, designers, marketers, and project managers to ensure quality control and efficient communication.",
+      "Yes. As a leading custom mobile app development company in Mysore, we design and develop tailored apps to meet the specific requirements of startups, enterprises, and niche industries.",
   },
-  {
-    question: "How does Nakshatra Namaha Creations stay updated with industry trends?",
+   {
+    question: "What technologies do you use for website and app development?",
     answer:
-      "Our team actively follows emerging trends in tech and design, attends workshops and conferences, and continuously experiments with modern tools and frameworks.",
+      "Our experts use modern technologies like React JS, Flutter, React Native, and advanced e-commerce platforms to ensure every project is future-ready, scalable, and easy to manage.",
+  },
+    {
+    question: "Do you offer post-launch support and maintenance for websites and apps?",
+    answer:
+      "Yes. We provide end-to-end support and maintenance including bug fixes, performance optimization, security updates, and ongoing enhancements to ensure your platforms run smoothly after launch.",
+  },
+    {
+    question: "How can Nakshatra Namaha Creations help my business grow online?",
+    answer:
+      "We combine SEO-friendly website development in Mysore with high-performing mobile app development in Mysore to improve online visibility, engage customers effectively, and drive higher conversions. ",
   },
 ];
 
@@ -70,6 +84,34 @@ export default function AboutUs() {
   const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+const processSteps = [
+  {
+    title: "Proven Experience",
+    description:
+      "8+ years in IT services and 890+ completed projects.",
+  },
+  {
+    title: "Focused Expertise",
+    description:
+      "Dedicated teams for website development in Mysore and mobile app development in Mysore.",
+  },
+  {
+    title: "Tailored Solutions",
+    description:
+      "Every project is customized to align with your brand goals.",
+  },
+  {
+    title: "End-to-End Support",
+    description:
+      "From strategy to launch and post-launch maintenance.",
+  },
+  {
+    title: "Transparent Process & Fair Pricing",
+    description:
+      "Quality services at competitive rates.",
+  },
+];
+
 
   return (
     <>
@@ -130,88 +172,127 @@ export default function AboutUs() {
         <div className={styles.scrollExplore}>SCROLL TO EXPLORE</div>
       </section>
 
-      {/* About Section */}
-      <section className={styles["design-section"]}>
-        <div className={styles["design-container"]}>
-          <div className={styles["visual-left"]}>
-            <div className={styles["circle"]}>
-              <div className={styles["arrow-line"]} />
-            </div>
-          </div>
-          <div className={styles["content-right"]}>
-            <h1>
-              What makes Nakshatra Namaha Creations the Leading <br />
-              <strong>Mobile App and Website Development Company in Mysore?</strong>
-            </h1>
-            <div className={styles["image-wrapper7"]}>
-              <img
-                src="/images/team.jpg"
-                alt="Web design team"
-                className={styles["rounded-img"]}
-              />
-              <div className={styles["floating-text-box"]}>
-                <h2>
-                  <strong>ABOUT Nakshatra Namaha Creations</strong>
-                </h2>
-                <p>
-                  At Nakshatra Namaha Creations, we take pride in being the best website
-                  development company in Mysore, offering a wide range of web services,
-                  including website development, app development, E-Commerce website
-                  development, WordPress website development, Flutter App development, React
-                  Native Website Development, and React JS Website Development. With over 8
-                  years of experience, we deliver unique, high-performance solutions
-                  tailored to each client’s specific needs. Recognized as the best website
-                  design company in Mysore, our skilled team blends creativity with the
-                  latest technologies to craft visually appealing and seamless websites. As
-                  the best mobile app development company in Mysore, we also specialize in
-                  building intuitive, high-quality mobile apps. From initial planning to
-                  final execution, we provide comprehensive services, ensuring timely
-                  delivery and continued support to help businesses thrive in the digital
-                  world.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+      {/* <AboutOverview/> */}
+<section className={styles.aboutWrap}>
+  <div className="container">
+    <div className="row align-items-center g-5">
+      {/* Left content */}
+      <div className="col-lg-7">
+        <h2 className={styles.aboutHeading}>
+          About Our Mobile App and Website Development Services in Mysore
+        </h2>
+        <p className={styles.aboutText}>
+         Nakshatra Namaha Creations is a top website development company Mysore and a Trusted website development company and mobile app development company in Mysore having more than 8+ years of experience in the this industry, We have been committed to providing client-centric digital solutions that uplift businesses and keep them competitive in the online market since 2015.
+        </p>
+        <p className={styles.aboutText}>
+        We do this by integrating unique web designing strategies, up-to-date technologies, and targeted digital solutions, thus creating customer-friendly platforms that become the brands' tools for achieving tangible results. Each member of our team sticks to tough standards for quality and is fully dedicated to the development of websites and mobile apps that are not only safe and scalable but also efficiently-driven.
+        </p>
+      </div>
 
-      {/* About Section 2 */}
-      <section className={styles["about-nnc-section"]}>
-        <div className={styles["about-nnc-container"]}>
-          <div className={styles["about-left"]}>
-            <h2>Nakshatra Namaha Creations is a Reliable Website Development Company</h2>
-          </div>
-          <div className={styles["about-divider"]} />
-          <div className={styles["about-right"]}>
-            <p>
-              Since 2015, our team has been shaping digital experiences, serving over 890+
-              clients. As the best mobile app and website development company in Mysore, we
-              offer a comprehensive range of services to help businesses grow in the online
-              space.
-            </p>
-            <p>
-              We specialize in everything from website design and web applications to
-              mobile app development, providing user-friendly, high-performing solutions
-              that meet your needs. Whether you’re looking to improve your web presence or
-              enhance customer engagement, our expertise ensures that we deliver practical,
-              effective results.
-            </p>
-            <p>
-              Partner with us to explore new possibilities for your business online. Let us
-              help you achieve your goals with a strategy that focuses on growth and
-              success in the digital world. As a result, we are a top choice for
-              entrepreneurs seeking web design services for numerous reasons:
-            </p>
-          </div>
+      {/* Right image */}
+      <div className="col-lg-5">
+        <div className={styles.aboutImageCard}>
+          <Image
+            src="/images/tech30.jpg"
+            alt="Mobile app & website development illustration"
+            fill
+            sizes="(max-width: 992px) 100vw, 520px"
+            priority
+            className={styles.aboutImage}
+          />
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+  <br />
+  <h2 className={styles.sectionIntro}>
+  Leading  <span>Website Development Company</span> in Mysore
+</h2>
+
+<p className={styles.sectionText}>
+  We feel proud to be known as a <strong>trustworthy website creation company in Mysore</strong> and have been a major part of more than 890 companies' success in various fields., 
+Our goal is to energize new businesses, small local businesses, and large enterprises with the power of the internet to attract customers, increase sales, and multiply profits. We do this through effective SEO-friendly website design and off-the-shelf website development services.
+</p>
+
+</section>
 
       {/* Floating Actions & Components */}
       <FloatingActions />
       <MobileBottomBar />
       <WebDesignServices />
       {/* <CounterWithLottie /> */}
-      <CTASection />
+      {/* <CTASection /> */}
+        <ValuesSection/>
+        <section className={styles.aboutWrap}>
+  <div className="container">
+    <div className="row align-items-center g-5">
+      {/* Left content */}
+         {/* Right image */}
+      <div className="col-lg-5">
+        <div className={styles.aboutImageCard}>
+          <Image
+            src="/images/icons/tech30jpg.jpg"
+            alt="Mobile app & website development illustration"
+            fill
+            sizes="(max-width: 992px) 100vw, 520px"
+            priority
+            className={styles.aboutImage}
+          />
+        </div>
+      </div>
+      
+      <div className="col-lg-7">
+        <h2 className={styles.aboutHeading}>
+         Trusted Mobile App Development Company in Mysore
+        </h2>
+        <p className={styles.aboutText}>
+       A trusted mobile app development company in Mysore builds applications that combine smooth performance with practical functionality. The focus is on creating mobile apps that help businesses improve customer interaction, increase efficiency, and stay competitive in the digital space. By using modern frameworks and proven development practices, every app is built to be secure, fast, and reliable for daily business use.
+          </p>
+        <p className={styles.aboutText}>
+       The team also works on cross-platform mobile app development in Mysore to deliver applications that run effectively on both Android and iOS. Each project is planned around real business needs, whether it is helping a startup launch its first app or supporting an established company to scale its digital services. The result is mobile applications that engage users, simplify processes, and support consistent business growth.
+          </p>
+      </div>
+
+   
+    </div>
+  </div>
+    {/* <br />
+    <h2 className={styles.sectionIntro}>
+    Leading  <span>Leading Website Development Company</span> in Mysore
+  </h2>
+
+  <p className={styles.sectionText}>
+    We feel proud to be known as a <strong>trustworthy website creation company in Mysore</strong> and have been a major part of more than 890 companies' success in various fields., 
+  Our goal is to energize new businesses, small local businesses, and large enterprises with the power of the internet to attract customers, increase sales, and multiply profits. We do this through effective SEO-friendly website design and off-the-shelf website development services.
+  </p> */}
+
+</section>
+  <section className={styles.processWrap}>
+      <div className="container">
+        <div className={styles.processHeader}>
+          <h2 className={styles.processHeading}>
+            Why Choose <span>Nakshatra Namaha Creations</span>
+          </h2>
+          <p className={styles.processSubText}>
+            We don’t just create websites or apps – we deliver digital experiences that enhance customer engagement, online visibility, and business growth.
+          </p>
+        </div>
+
+        <div className={styles.processTimeline}>
+          {processSteps.map((step, index) => (
+            <div key={index} className={styles.processStep}>
+              <div className={styles.processDot}></div>
+              <div className={styles.processContent}>
+                <h3 className={styles.processStepTitle}>{step.title}</h3>
+                <p className={styles.processStepDesc}>{step.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+<WhyChooseUs/>
 
       {/* FAQ Section */}
       <AboutFaq/>

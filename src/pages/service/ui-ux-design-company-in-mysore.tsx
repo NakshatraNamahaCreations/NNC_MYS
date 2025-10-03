@@ -18,6 +18,7 @@ import { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
+import ContactForm from "@/components/ContactForm";
 
 const faqs = [
   {
@@ -398,71 +399,7 @@ export default function UIUXDevelopment() {
 
           {/* Right Contact Form */}
           <div className="col-12 col-lg-4 mt-4 mt-lg-0 mb-3">
-            <div className={styles1.contactCard}>
-              <h3 className={styles1.contactHeading}>Let’s Connect</h3>
-              <form onSubmit={handleSubmit} noValidate>
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Your Name *"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="form-control mb-3"
-                />
-                <input
-                  name="phoneNo"
-                  type="tel"
-                  placeholder="Phone Number *"
-                  required
-                  pattern="[0-9+\s()-]{7,}"
-                  value={formData.phoneNo}
-                  onChange={handleChange}
-                  className="form-control mb-3"
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email *"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="form-control mb-3"
-                />
-                <select
-                  name="service"
-                  required
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="form-select mb-3"
-                >
-                  <option value="" disabled>
-                    Select Service *
-                  </option>
-                  <option>Website Development</option>
-                  <option>Mobile App Development</option>
-                  <option>Digital Marketing</option>
-                  <option>UI/UX Design</option>
-                  <option>Ecommerce</option>
-                  <option>Other</option>
-                </select>
-                <button
-                  type="submit"
-                  className="btn w-100"
-                  style={{
-                    height: 46,
-                    borderRadius: 12,
-                    fontWeight: 700,
-                    background:
-                      "linear-gradient(135deg, rgba(255,90,90,1), rgba(255,64,64,1))",
-                    color: "#fff",
-                    boxShadow: "0 8px 18px rgba(255,64,64,.35)",
-                  }}
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
+           <ContactForm/>
           </div>
         </div>
       </div>

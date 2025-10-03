@@ -518,6 +518,12 @@
       "namedRegex": "^/service(?:/)?$"
     },
     {
+      "page": "/service/2d-animation-company",
+      "regex": "^/service/2d\\-animation\\-company(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/2d\\-animation\\-company(?:/)?$"
+    },
+    {
       "page": "/service/2d-animation-company-in-mysore",
       "regex": "^/service/2d\\-animation\\-company\\-in\\-mysore(?:/)?$",
       "routeKeys": {},
@@ -602,6 +608,12 @@
       "namedRegex": "^/service/ecommerce\\-website\\-development\\-company\\-in\\-mysore(?:/)?$"
     },
     {
+      "page": "/service/mobile-app-development-company",
+      "regex": "^/service/mobile\\-app\\-development\\-company(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/service/mobile\\-app\\-development\\-company(?:/)?$"
+    },
+    {
       "page": "/service/mobile-app-development-company-in-mysore",
       "regex": "^/service/mobile\\-app\\-development\\-company\\-in\\-mysore(?:/)?$",
       "routeKeys": {},
@@ -636,6 +648,12 @@
       "regex": "^/service/wordpress\\-website\\-development\\-company\\-in\\-mysore(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/service/wordpress\\-website\\-development\\-company\\-in\\-mysore(?:/)?$"
+    },
+    {
+      "page": "/thankyou",
+      "regex": "^/thankyou(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/thankyou(?:/)?$"
     }
   ],
   "dataRoutes": [
@@ -644,8 +662,8 @@
       "routeKeys": {
         "nxtPslug": "nxtPslug"
       },
-      "dataRouteRegex": "^/_next/data/wH7du5223RBgnWMFPgLh6/jobs/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/wH7du5223RBgnWMFPgLh6/jobs/(?<nxtPslug>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/ib8cOF1GM2ELj1MxyHdcQ/jobs/(?<nxtPslug>[^/]+?)\\.json$"
     }
   ],
   "rsc": {
