@@ -19,15 +19,15 @@ type FormData = {
 };
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phoneNo: "",
-    service: "",
-    message: "",
-    referenceFrom: "contactus",
-    city: "Mysore",
-  });
+    const [formData, setFormData] = useState<FormData>({
+      name: "",
+      email: "",
+      phoneNo: "",
+      service: "",
+      message: "",
+      referenceFrom: "contactus",
+      city: "Mysore",
+    });
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 

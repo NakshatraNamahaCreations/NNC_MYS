@@ -10,6 +10,7 @@ type FormData = {
   user_email: string;
   user_phone: string;
   user_service: string;
+   message: string;    
   referenceFrom: string;
   city: string;
 };
@@ -29,6 +30,7 @@ const ContactForm = () => {
     user_email: "",
     user_phone: "",
     user_service: "",
+    message: "New enquiry received from website contact form.",
     referenceFrom: "website",
     city: "Bangalore",
   });
@@ -115,28 +117,34 @@ const ContactForm = () => {
       return;
     }
 
-    try {
-      const response = await axios.post(
-        "https://api.nakshatranamahacreations.in/api/enquiries",
-        {
-          name: user_name,
-          email: user_email,
-          phoneNo: user_phone,
-          service: user_service,
-          referenceFrom: formData.referenceFrom,
-          city: formData.city,
-        }
-      );
+ try {
+ const response = await axios.post(
+  "/api/enquiries", 
+  {
+    name: user_name,
+    email: user_email,
+    phoneNo: user_phone,
+    service: user_service,
+    message: formData.message,
+    referenceFrom: formData.referenceFrom,
+    city: formData.city,
+  },
+  {
+    headers: { "Content-Type": "application/json" },
+  }
+);
 
-      if (response.status === 200 || response.status === 201) {
-        router.push("/thankyou");
-      } else {
-        alert("Failed to send enquiry. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error sending enquiry:", error);
-      alert("Failed to send enquiry.");
-    }
+
+  if (response.status === 200 || response.status === 201) {
+    router.push("/thankyou");
+  } else {
+    alert("Failed to send enquiry. Please try again.");
+  }
+} catch (error) {
+  console.error("Error sending enquiry:", error);
+  alert("Failed to send enquiry.");
+}
+
   };
 
   return (
