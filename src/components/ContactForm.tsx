@@ -62,8 +62,8 @@ const ContactForm = () => {
       else if (path.includes("/service/2d-animation-company-in-mysore")) service = "2D Animations";
       else if (path.includes("/software-development")) service = "Software Development";
   else if (path.includes("/service/2d-animation-company")) service = "2D Animation";
-
-      
+else if (path.includes("/service/corporate-ad-film-production-company")) service = "Corporate Video Production";
+      else if (path.includes("/service/web-design-company-in-mysore")) service = "Web Development";
 
       setFormData((prev) => ({ ...prev, user_service: service }));
     }

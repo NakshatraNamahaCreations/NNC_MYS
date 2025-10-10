@@ -128,6 +128,11 @@
 @media (max-width: 1024px) { .wrap { margin-top: 26%; } }
 @media (max-width: 560px)  { .wrap { margin-top: 34%; } }
 
+@media (max-width: 480px){
+
+  .left { display: grid; align-content: center; gap: 12px; align-items: center;}
+
+}
 /* motion safety */
 @media (prefers-reduced-motion: reduce) {
   .bgVideo { display: none; }

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import s from "./HeroBanner.module.css";
 
-const VIDEO_SRC = "/images/tech/HomeBanner.mp4";  // your mp4 in /public/videos/
+const VIDEO_SRC = "/images/tech/HomeBanner.webm";  // your mp4 in /public/videos/
 
 export default function HeroBanner() {
   const videoRef = useRef<HTMLVideoElement | null>(null);

@@ -6,43 +6,43 @@ import s from "./TestimonialsCarousel1.module.css";
 const ITEMS = [
   {
     quote:
-      "We needed a creative 2D animation studio for our product demo, and the results were fantastic. The visuals were engaging, and the message was clear.",
-    name: "Mr. Jayantrh Gopal",
+      "The ad films created by this corporate ad film production company elevated our brand presence and connected with customers.",
+    name: "Mr. Ranjaneesh",
     role: "",
     avatar: "/images/man.png",
   },
   {
     quote:
-      "As an education startup, we wanted to simplify complex lessons. This 2D animation studio created animations that our students absolutely love",
-    name: "Mr. Prajwal R",
+      "Nakshatra Namaha Creations delivered our product launch ad film on time with stunning quality and attention to detail.",
+    name: "Mr. Kamal M",
     role: "Chief Accounts & Finance Officer at Astute Group",
     avatar: "/images/man.png",
   },
     {
     quote:
-      "Our marketing campaigns have performed so much better since partnering with this 2D animation studio. Their explainer videos helped us connect with our audience in a meaningful way",
-    name: "Sri Ratna",
+      "Their creativity and professionalism turned our campaign idea into an impactful video that resonated with our audience",
+    name: "Sowmya Kumari",
     role: "Head of Operations",
     avatar: "/images/woman.png",
   },
   {
     quote:
-      "We were searching for a reliable 2D animation studio to develop training content for our employees. The final product was interactive, professional, and easy to follow",
-    name: "Mukhtar Ansari",
+      "Working with their team was seamless; the entire process from concept to delivery was highly efficient.",
+    name: "Ramanna M",
     role: "VP — Information Technologies & Infrastructure, Rebel Foods",
     avatar: "/images/man.png",
   },
   {
     quote:
-      "The branding animation we received was top-notch. This 2D animation studio brought our story to life and helped us make a strong impression on social media.”",
-    name: "Reshma Sharma",
+      "Our recruitment ad film was clear, engaging, and helped us attract top talent quickly.”",
+    name: "Ramya M",
     role: "Head of Operations",
     avatar: "/images/woman.png",
   },
     {
     quote:
-      "Working with this 2D animation studio was seamless. From concept to delivery, the team was professional, creative, and committed to quality”",
-    name: "Bharath Deshpande",
+      "The brand awareness ad film brought our story to life and helped us engage better with clients and investors.",
+    name: "Geetha Kumari",
     role: "Head of Operations",
     avatar: "/images/woman.png",
   },
@@ -54,7 +54,7 @@ const perSlide = 2;
 const SLIDES = [];
 for (let i = 0; i < ITEMS.length; i += perSlide) SLIDES.push(ITEMS.slice(i, i + perSlide));
 
-export default function TestimonialsCarousel1() {
+export default function TestimonialsCarousel2() {
   const [idx, setIdx] = useState(0);
   const hover = useRef(false);
   const timer = useRef(null);
