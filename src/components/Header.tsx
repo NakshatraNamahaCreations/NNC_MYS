@@ -30,7 +30,7 @@ const MENU: MenuItem[] = [
         "Creating unique and attractive websites and apps to grow business and deliver real outcomes.",
       links: [
         { label: "Mobile App Development", href: "/service/mobile-app-development-company-in-mysore" },
-        { label: "Website Design", href: "/service/wordpress-website-development-company-in-mysore" },
+        { label: "Website Design", href: "/service/web-design-company-in-mysore" },
         { label: "E-Commerce Website Development", href: "/service/ecommerce-website-development-company-in-mysore" },
         { label: "Software Development", href: "/service/software-development-company-in-mysore" },
         { label: "Social Media Marketing", href: "/service/social-media-marketing-company-in-mysore" },
