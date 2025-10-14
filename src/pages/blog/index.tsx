@@ -136,6 +136,8 @@ const HERO_SUBTITLE =
 
       <FloatingActions />
       <MobileBottomBar />
+      <h2 className="text-center fw-bold" style={{margin:"40px"}}>Our Latest Blogs</h2>
+
       <BlogClient/>
       <ClientSlider />
 
