@@ -17,27 +17,27 @@ type Blog = {
 const BLOGS: Blog[] = [
   {
     title: "How a Well-Designed Website Can Help Businesses Stand Out",
-    href: "/blogs/well-designed-website-benefits",
+    href: "/blog/well-designed-website-benefits",
     img: "/images/blog.webp",
   },
   {
     title: "How 2D Animation Can Simplify Sales Communication",
-    href: "/blogs/2d-animation-sales-communication",
+    href: "/blog/2d-animation-sales-communication",
     img: "/images/blog6.webp",
   },
   {
     title: "How Custom Website Development Can Drive Growth",
-    href: "/blogs/custom-website-development-growth",
+    href: "/blog/custom-website-development-growth",
     img: "/images/blog1.webp",
   },
   {
     title: "How Website Speed Optimization Impacts Conversion",
-    href: "/blogs/how-website-speed-optimization-impacts-conversion",
+    href: "/blog/how-website-speed-optimization-impacts-conversion",
     img: "/images/blog3.webp",
   },
   {
     title: "The Role of Mobile Apps in Business Operations",
-    href: "/blogs/role-of-mobile-apps-in-business",
+    href: "/blog/role-of-mobile-apps-in-business",
     img: "/images/blog4.webp",
   },
 ];

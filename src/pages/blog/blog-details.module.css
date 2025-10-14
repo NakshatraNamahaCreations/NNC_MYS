@@ -1,0 +1,143 @@
+.blog-wrap {
+  padding-inline: 4%;
+  margin-top: 120px;
+}
+
+.blog-breadcrumbs {
+  margin: 8px 0 12px;
+  font-size: 14px;
+}
+
+.blog-crumb {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.blog-sep {
+  color: #555;
+}
+
+.blog-current {
+  color: #222;
+  font-weight: 600;
+}
+
+.blog-banner {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.blog-banner-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.blog-banner-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+  margin: 0;
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  font-size: 28px;
+  text-align: center;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.blog-content {
+  text-align: justify;
+  line-height: 1.7;
+  color: #222;
+}
+
+.blog-right {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.blog-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.blog-card-title {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.blog-faq {
+  margin-top: 40px;
+}
+
+.blog-faq-title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.blog-faq-list {
+  border-radius: 8px;
+}
+
+.blog-faq-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.blog-faq-q {
+  width: 100%;
+  text-align: left;
+  background: #f9f9f9;
+  border: 0;
+  padding: 12px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-faq-a {
+  padding: 12px 14px;
+  background: #fff;
+  color: #444;
+}
+
+.blog-faq-icon {
+  font-size: 18px;
+}
+
+@media (max-width: 992px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-right {
+    position: static;
+  }
+
+  .blog-banner-img {
+    height: 300px;
+  }
+
+  .blog-banner-title {
+    font-size: 24px;
+    bottom: -24px;
+  }
+}

@@ -1,112 +1,148 @@
 "use client";
 
-import Link from "next/link";
+import { useSpring, animated } from "@react-spring/web";
+import { useInView } from "react-intersection-observer";
+import { Card } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import styles from "./BlogCard.module.css";
+import { useRouter } from "next/navigation";
 
-type Blog = {
-  image: string;
-  title: string;
-  date: string;
-  day: string;
-  month: string;
-  link: string; // e.g. /blogs/my-post
+// Define the shape of the card prop
+interface BlogCardProps {
+  card: {
+    id?: string | number;
+    title: string;
+    description?: string;
+    banner: string;
+    date?: string | Date | null;
+    link?: string;
+  };
+}
+
+const BlogCard: React.FC<BlogCardProps> = ({ card }) => {
+  const [refCard, inViewCard] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const router = useRouter();
+
+  const cardSpring = useSpring({
+    opacity: inViewCard ? 1 : 0,
+    transform: inViewCard ? "scale(1)" : "scale(0.95)",
+    config: { tension: 170, friction: 26 },
+  });
+
+  const handleNavigate = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    if (card.link) router.push(card.link);
+  };
+
+  return (
+    <animated.div
+      ref={refCard}
+      style={{
+        margin: "20px 0",
+        padding: "10px",
+        ...cardSpring,
+      }}
+      className="blogCard"
+    >
+      <Card
+        className="h-100"
+        style={{
+          width: "100%",
+          borderRadius: "10px",
+          overflow: "hidden",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.05)",
+        }}
+      >
+        {/* Responsive Image */}
+        <div style={{ position: "relative", width: "100%", height: "200px" }}>
+          <Image
+            src={card.banner}
+            alt={card.title || "Blog Banner"}
+            fill
+            style={{
+              objectFit: "cover",
+            }}
+            sizes="(max-width: 768px) 100vw, 320px"
+          />
+        </div>
+
+        <Card.Body>
+          <Card.Subtitle
+            className="mb-2 text-muted"
+            style={{ fontSize: "0.75rem" }}
+          >
+            {card.date
+              ? typeof card.date === "string"
+                ? card.date
+                : card.date.toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })
+              : ""}
+          </Card.Subtitle>
+          <Card.Text
+            style={{
+              fontSize: "0.9rem",
+              fontWeight: 600,
+              lineHeight: "1.4",
+            }}
+          >
+            {card.title}
+          </Card.Text>
+        </Card.Body>
+
+        <Card.Footer
+          style={{
+            textAlign: "right",
+            backgroundColor: "transparent",
+            borderTop: "none",
+            paddingBottom: "10px",
+            paddingRight: "10px",
+          }}
+        >
+          <a
+            href={card.link || "#"}
+            onClick={handleNavigate}
+            style={{
+              textDecoration: "none",
+              color: "#666",
+              fontSize: "0.75rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-end",
+              gap: "6px",
+            }}
+          >
+            Read Blog
+            <FontAwesomeIcon icon={faArrowRight} />
+          </a>
+        </Card.Footer>
+      </Card>
+
+      {/* Responsive Styling */}
+      <style jsx>{`
+        @media (max-width: 576px) {
+          .blogCard {
+            padding: 5px;
+          }
+
+          .blogCard :global(.card-text) {
+            font-size: 0.85rem;
+          }
+
+          .blogCard :global(.card-subtitle) {
+            font-size: 0.7rem;
+          }
+
+          .blogCard a {
+            font-size: 0.7rem !important;
+          }
+        }
+      `}</style>
+    </animated.div>
+  );
 };
 
-const blogs: Blog[] = [
-  {
-    image: "/images/blog.webp",
-    title: "How a Well-Designed Website Can Help Businesses Stand Out",
-    date: "October 22, 2024",
-    day: "22",
-    month: "Oct",
-    link: "/blogs/well-designed-website-benefits",
-  },
-  {
-    image: "/images/blog1.webp",
-    title: "How Custom Website Development Can Drive Growth",
-    date: "October 22, 2024",
-    day: "22",
-    month: "Oct",
-    link: "/blogs/custom-website-development-growth",
-  },
-  {
-    image: "/images/blog3.webp",
-    title: "How Website Speed Optimization Impacts Conversion",
-    date: "October 12, 2024",
-    day: "12",
-    month: "Oct",
-    link: "/blogs/how-website-speed-optimization-impacts-conversion",
-  },
-  {
-    image: "/images/blog4.webp",
-    title: "The Role of Mobile Apps in Business Operations",
-    date: "October 10, 2024",
-    day: "10",
-    month: "Oct",
-    link: "/blogs/role-of-mobile-apps-in-business",
-  },
-  {
-    image: "/images/blog5.webp",
-    title: "Why Mobile-Optimized Websites Are Crucial Today",
-    date: "October 9, 2024",
-    day: "09",
-    month: "Oct",
-    link: "/blogs/why-mobile-optimized-websites-are-crucial",
-  },
-  {
-    image: "/images/blog6.webp",
-    title: "How 2D Animation Can Simplify Sales Communication",
-    date: "October 5, 2024",
-    day: "05",
-    month: "Oct",
-    link: "/blogs/2d-animation-sales-communication",
-  },
-];
-
-export default function BlogCard() {
-  return (
-    <section className={styles["blog-wrapper"]}>
-      <div className={styles["container19"]}>
-        <h2 className={styles["section-title17"]}>Latest Blog Insights</h2>
-
-        <div className={styles["blog-grid"]}>
-          {blogs.map((blog, index) => (
-            <motion.div
-              key={blog.link}
-              className={styles["blog-card"]}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Link href={blog.link} className={styles["blog-link"]}>
-                <div className={styles["blog-image-wrap"]}>
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    width={640}
-                    height={420}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px"
-                    className={styles["blog-img"]}
-                    priority={index < 2}
-                  />
-                  <div className={styles["date-badge"]}>
-                    <span className={styles["day"]}>{blog.day}</span>
-                    <span className={styles["month"]}>{blog.month}</span>
-                  </div>
-                </div>
-
-                <div className={styles["blog-body"]}>
-                  <span className={styles["blog-date-text"]}>📅 {blog.date}</span>
-                  <h4 className={styles["blog-title"]}>{blog.title}</h4>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+export default BlogCard;

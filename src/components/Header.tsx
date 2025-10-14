@@ -43,7 +43,7 @@ const MENU: MenuItem[] = [
     }
   },
   { label: "Our Work", href: "/our-work" },
-  { label: "Blog", href: "/blogs" },
+  { label: "Blog", href: "/blog" },
   { label: "Careers", href: "/careers" },
   { label: "ContacT US", href: "/contact-us" }
 ];

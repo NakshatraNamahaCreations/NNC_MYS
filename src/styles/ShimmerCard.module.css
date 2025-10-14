@@ -1,0 +1,171 @@
+.shimmer-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(
+    to right,
+    #f6f7f8 0%,
+    #edeef1 20%,
+    #f6f7f8 40%,
+    #f6f7f8 100%
+  );
+  background-size: 800px 104px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer-card-image {
+  height: 200px;
+  background: #e0e0e0;
+  border-radius: 0.375rem 0.375rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.shimmer-card-body {
+  padding: 1rem;
+}
+
+.shimmer-line {
+  height: 12px;
+  margin-bottom: 0.75rem;
+  background: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.shimmer-title {
+  width: 70%;
+  height: 20px;
+  margin-bottom: 1rem;
+}
+
+.shimmer-text {
+  width: 90%;
+  height: 10px;
+}
+
+.shimmer-text-short {
+  width: 60%;
+  height: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.shimmer-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.shimmer-button {
+  width: 80px;
+  height: 36px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+.shimmer-price {
+  width: 60px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-price::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* Optional: Different shimmer effects */
+.shimmer-card.fast {
+  animation-duration: 1s;
+}
+
+.shimmer-card.slow {
+  animation-duration: 3s;
+}
+
+.shimmer-card.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

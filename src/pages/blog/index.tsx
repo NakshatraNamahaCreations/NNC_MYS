@@ -10,8 +10,10 @@ import ClientSlider from "@/pages/ClientSlider";
 import InfoSection from "@/components/InfoSection";
 import FloatingActions from "@/pages/FloatingActions";
 import MobileBottomBar from "@/pages/MobileBottomBar";
-import BlogsFaq from "./BlogsFaq";
-import styles1 from "./AboutUs.module.css";
+import BlogsFaq from "../BlogsFaq";
+import styles1 from "../AboutUs.module.css";
+import BlogClient from "./BlogClient";
+
 
 const faqs = [
   { id: 1, question: "What topics does the Nakshatra Namaha Creations blog cover?",
@@ -33,7 +35,7 @@ const faqs = [
 export default function Blogs() {
   const crumbs = [
     { name: "Home", path: "/" },
-    { name: "Blogs", path: "/blogs" },
+    { name: "Blogs", path: "/blog" },
   ];
 
   const jsonLd = {
@@ -134,7 +136,7 @@ const HERO_SUBTITLE =
 
       <FloatingActions />
       <MobileBottomBar />
-      <BlogCard />
+      <BlogClient/>
       <ClientSlider />
 
       {/* FAQ (scoped) */}

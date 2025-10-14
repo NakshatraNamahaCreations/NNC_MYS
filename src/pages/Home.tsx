@@ -71,21 +71,21 @@ const products: Product[] = [
   {
     title: "Why Mobile-Optimized Websites Are Crucial Today",
     img: "/images/blog5.webp",
-    href: "/blogs/why-mobile-optimized-websites-are-crucial",
+    href: "/blog/why-mobile-optimized-websites-are-crucial",
     blurb:
       "Scrolling, tapping, and swiping have become second nature. In this mobile-first world, websites can no longer afford to be designed solely for desktops. People expect websites to work seamlessly on their smartphones—whether they’re shopping, reading, booking, or just browsing.",
   },
   {
     title: "How 2D Animation Can Simplify Sales Communication",
     img: "/images/blog6.webp",
-    href: "/blogs/2d-animation-sales-communication",
+    href: "/blog/2d-animation-sales-communication",
     blurb:
       "Trying to explain your product to a potential customer can be tough—especially when the product is complex or technical. People have limited attention spans, and they won’t stick around for a lengthy explanation. This is where 2D animation steps in.",
   },
   {
     title: "How Website Speed Optimization Impacts Conversion",
     img: "/images/blog3.webp",
-    href: "/blogs/how-website-speed-optimization-impacts-conversion",
+    href: "/blog/how-website-speed-optimization-impacts-conversion",
     blurb:
       "Website visitors are not a patient crowd. In a world where every second matters, the speed at which your website loads directly affects whether someone stays, explores, buys—or walks away. Speed optimization isn’t just a backend concern for developers. It’s a real business factor that can make or break a customer’s decision to convert.",
   },
