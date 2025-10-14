@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 // move these files into src/components/** and fix their exports if needed
 import MyBreadcrumb from "@/components/MyBreadcrumb";
-import BlogCard from "@/pages/BlogCard";
+import BlogCard from "@/components/BlogCard";
 import ClientSlider from "@/pages/ClientSlider";
 import InfoSection from "@/components/InfoSection";
 import FloatingActions from "@/pages/FloatingActions";

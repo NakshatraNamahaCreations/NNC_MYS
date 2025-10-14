@@ -4,7 +4,7 @@ import React, { useEffect, useState, useMemo } from "react";
 import axios, { AxiosResponse } from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 import ShimmerCard from "../ShimmerCard";
-import BlogCard from "../BlogCard";
+import BlogCard from "../../components/BlogCard";
 import ViewAllBtn from "../ViewAllBtn";
 import { useRouter } from "next/navigation";
 

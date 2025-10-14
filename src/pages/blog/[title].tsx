@@ -1,7 +1,7 @@
 // src/pages/blog/[title].tsx
 import Head from "next/head";
 import type { GetServerSideProps, NextPage } from "next";
-import BlogDetailsClient from "./BlogDetailsClient"; // <-- use the client component
+import BlogDetailsClient from "../../components/BlogDetailsClient"; // <-- use the client component
 
 const API = "https://api.nakshatranamahacreations.in";
 const CITY = "Mysore";
@@ -95,7 +95,7 @@ const BlogDetailsPage: NextPage<BlogPageProps> = ({ blog, error }) => {
   if (!blog) {
     return (
       <main style={{ padding: 24, marginTop: 100 }}>
-        <h1>Blog not found.</h1>
+        <h2>Blog not found.</h2>
         {error && <p style={{ color: "crimson" }}>Reason: {error}</p>}
       </main>
     );

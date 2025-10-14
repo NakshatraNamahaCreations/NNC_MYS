@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import type { BlogPageProps } from "./[title]";
+import type { BlogPageProps } from "../pages/blog/[title]";
 import BlogContactForm from "@/components/BlogContactForm"; // must exist & have "use client"
 import styles from "./blog-details.module.css"; // CSS Module import
 
