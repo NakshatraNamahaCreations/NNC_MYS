@@ -16,32 +16,32 @@ export default function Blogs2() {
     <>
       <Head>
         {/* Primary Meta Tags */}
-        <title>How a Well-Designed Website Can Help Businesses Stand Out</title>
+        <title>How Custom Website Development Can Drive Growth</title>
         <meta
           name="description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Discover how custom website development boosts business growth, enhances user experience, and drives higher conversions.."
         />
         <meta
           name="keywords"
-          content="business website design, website user experience, brand identity online, responsive website, web design benefits, conversion-focused website"
+          content="custom website development, website development for business growth, benefits of custom web development, custom website design and development, business growth through web development"
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          href="https://nakshatranamahacreations.in/blog/custom-website-development-growth"
         />
 
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="How a Well-Designed Website Can Help Businesses Stand Out"
+          content="How Custom Website Development Can Drive Growth"
         />
         <meta
           property="og:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Discover how custom website development boosts business growth, enhances user experience, and drives higher conversions.."
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          content="https://nakshatranamahacreations.in/blog/custom-website-development-growth"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -50,11 +50,11 @@ export default function Blogs2() {
         <meta name="twitter:card" content="Summary" />
         <meta
           name="twitter:title"
-          content="How a Well-Designed Website Can Help Businesses Stand Out"
+          content="How Custom Website Development Can Drive Growth"
         />
         <meta
           name="twitter:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Discover how custom website development boosts business growth, enhances user experience, and drives higher conversions.."
         />
         <meta
           name="twitter:image"
@@ -69,12 +69,12 @@ export default function Blogs2() {
         {
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "How a Well-Designed Website Can Help Businesses Stand Out",
-          "description": "Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions.",
+          "headline": "How Custom Website Development Can Drive Growth",
+          "description": "Discover how custom website development boosts business growth, enhances user experience, and drives higher conversions..",
           "author": {
             "@type": "Person",
             "name": "Nakshatra Namaha Creations",
-            "url": "https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+            "url": "https://nakshatranamahacreations.in/blog/custom-website-development-growth"
           },
           "publisher": {
             "@type": "Organization",
@@ -88,7 +88,7 @@ export default function Blogs2() {
           "dateModified": "2025-05-15",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+            "@id": "https://nakshatranamahacreations.in/blog/custom-website-development-growth"
           }
         }
         `}

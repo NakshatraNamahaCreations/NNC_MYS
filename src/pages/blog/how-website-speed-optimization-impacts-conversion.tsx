@@ -14,32 +14,33 @@ export default function Blogs3() {
     <>
       <Head>
         {/* Primary Meta Tags (kept exactly as in your original snippet) */}
-        <title>How a Well-Designed Website Can Help Businesses Stand Out</title>
+        <title>How Website Speed Optimization Impacts Conversion</title>
         <meta
           name="description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Learn how website speed optimization improves user experience, boosts engagement, and increases conversion rates effectively.."
         />
-        <meta
-          name="keywords"
-          content="business website design, website user experience, brand identity online, responsive website, web design benefits, conversion-focused website"
-        />
+      <meta
+  name="keywords"
+  content="website speed optimization, website loading speed, improve website performance, website conversion rate, impact of website speed on conversions"
+/>
+
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          href="https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
         />
 
         {/* Open Graph / Facebook */}
         <meta
           property="og:title"
-          content="How a Well-Designed Website Can Help Businesses Stand Out"
+          content="How Website Speed Optimization Impacts Conversion"
         />
         <meta
           property="og:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Learn how website speed optimization improves user experience, boosts engagement, and increases conversion rates effectively.."
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          content="https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -48,11 +49,11 @@ export default function Blogs3() {
         <meta name="twitter:card" content="Summary" />
         <meta
           name="twitter:title"
-          content="How a Well-Designed Website Can Help Businesses Stand Out"
+          content="How Website Speed Optimization Impacts Conversion"
         />
         <meta
           name="twitter:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
+          content="Learn how website speed optimization improves user experience, boosts engagement, and increases conversion rates effectively.."
         />
         <meta
           name="twitter:image"
@@ -67,12 +68,12 @@ export default function Blogs3() {
         {
           "@context": "https://schema.org",
           "@type": "Article",
-          "headline": "How a Well-Designed Website Can Help Businesses Stand Out",
-          "description": "Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions.",
+          "headline": "How Website Speed Optimization Impacts Conversion",
+          "description": "Learn how website speed optimization improves user experience, boosts engagement, and increases conversion rates effectively..",
           "author": {
             "@type": "Person",
             "name": "Nakshatra Namaha Creations",
-            "url": "https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+            "url": "https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
           },
           "publisher": {
             "@type": "Organization",
@@ -86,7 +87,7 @@ export default function Blogs3() {
           "dateModified": "2025-05-15",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+            "@id": "https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
           }
         }
         `}
