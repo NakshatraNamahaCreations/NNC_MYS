@@ -78,16 +78,16 @@ export default function FloatingActions() {
           RequestToCallback
         </button>
 
-        <a
-          href="https://wa.me/9900566466"
-          target="_blank"
-          rel="noreferrer"
-          className={styles["floating-whatsapp"]}
-          aria-label="Chat on WhatsApp"
-        >
-          {/* Using plain <img> is fine for UI icons; ensure the file is in /public/images */}
-          <img src="/images/whatsapp.png" alt="WhatsApp" />
-        </a>
+ <a
+  href="https://wa.me/919900566466"
+  target="_blank"
+  rel="noreferrer"
+  className={styles["floating-whatsapp"]}
+  aria-label="Chat on WhatsApp"
+>
+  <img src="/images/whatsapp.png" alt="WhatsApp" />
+          </a>
+
       </div>
 
       {showModal && (

@@ -276,6 +276,8 @@ filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-r
   }
 
   .website-title {
+    align-items: center;
+    text-align: center;
     font-size: 2rem;
     margin-bottom: 0px;
   }
@@ -307,11 +309,17 @@ filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-r
 /* 🌐 Mobile Optimization (325px – 768px) */
 @media (max-width: 768px) {
 
-
+ 
 
   .website-section {
     padding: 40px 15px;
+   
   }
+      .website-section1 {
+    width: 100% !important;
+      max-width: 100% !important; 
+    
+    }
 
   .website-title {
     font-size: 1.8rem;
