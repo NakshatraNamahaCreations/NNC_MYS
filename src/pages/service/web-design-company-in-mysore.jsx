@@ -163,10 +163,10 @@ const cards = [
   return (
     <>
      <Head>
-            <title>Corporate Ad Film Production Company | Professional Ad Brand</title>
+            <title>Web Design Company in Mysore | Custom Website Design & Development</title>
             <meta
               name="description"
-              content="Partner with a leading corporate ad film production company for high-quality ad films, creative storytelling, and impactful brand communication across all platforms."
+              content="Build a powerful online presence with our professional web design company in Mysore. We create responsive, SEO-friendly, and visually engaging websites that grow your business."
             />
             <link
               rel="canonical"
@@ -324,7 +324,7 @@ Get mobile friendly web designs with a user experience centric approach. Contact
           </Link>
 
           <Link
-            href="tel:+91-80-41531025"
+            href="tel:+91-9900566466"
             className={`${styles.ctaBtn} ${styles.redBtn}`}
           >
             <Image

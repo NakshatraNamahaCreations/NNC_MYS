@@ -305,7 +305,7 @@ const cards = [
           </Link>
 
           <Link
-            href="tel:+91-80-41531025"
+            href="tel:+91-9900566466"
             className={`${styles.ctaBtn} ${styles.redBtn}`}
           >
             <Image
