@@ -234,7 +234,8 @@ export default function UIUXDevelopment() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
-        <meta name="keywords" content="Best UI/UX Design Company in Mysore" />
+        <meta name="keywords" content="ui ux design company in mysore, ui ux designers in mysore, user interface design mysore, user experience design mysore, product design company mysore, mobile app ui design mysore, website ui design mysore, ux research services mysore, interaction design mysore, wireframing and prototyping mysore, app interface designers mysore, best ui ux company in mysore, top ui ux designers in mysore, creative ui ux agency mysore, design thinking services mysore, usability testing mysore, custom ui ux design mysore, dashboard design services mysore, ui design agency mysore, ux consulting company in mysore" />
+
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />

@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import React from "react";
 import axios, { AxiosError } from "axios";
 import Modal from "react-modal";
@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import styles from "./CTASection.module.css";
 
 export default function CTASection() {
+  const router = useRouter();
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -47,7 +48,8 @@ export default function CTASection() {
       });
 
       if (res.status === 200 || res.status === 201) {
-        setModalIsOpen(true);
+       router.push("/thankyou");
+
         setFormData({
           name: "",
           email: "",
@@ -137,7 +139,7 @@ export default function CTASection() {
               type="email"
               name="email"
               required
-              placeholder="you@company.com"
+              placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
               autoComplete="email"
@@ -196,7 +198,7 @@ export default function CTASection() {
       </motion.div>
 
       {/* Success modal */}
-      <Modal
+      {/* <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         contentLabel="Thank You"
@@ -217,7 +219,7 @@ export default function CTASection() {
         <button onClick={() => setModalIsOpen(false)} className="btn btn-secondary mt-3">
           Close
         </button>
-      </Modal>
+      </Modal> */}
     </section>
   );
 }

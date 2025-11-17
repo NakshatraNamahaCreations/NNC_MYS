@@ -2,8 +2,33 @@
 import Link from "next/link";
 import styles from "./InfoSection.module.css";
 
+
+const data = [
+  {
+    label: "Our Service",
+    links: [
+   
+      { text: "Mobile App Development Company In Mysore", href: "/service/mobile-app-development-company-in-mysore" },
+         { text: "Mobile App Development Company ", href: "/service/mobile-app-development-company" },
+      { text: "Website Design Company In Mysore", href: "/service/web-design-company-in-mysore" },
+      { text: "2D Animation Company", href: "/service/2d-animation-company" }, //corporate-ad-film-production-company
+       
+      { text: "E-Commerce Website Development Company In Mysore", href: "/service/ecommerce-website-development-company-in-mysore" },
+      { text: "Software Development Company In Mysore", href: "/service/software-development-company-in-mysore" },
+       { text: "Social Media Marketing Company In Mysore", href: "/service/social-media-marketing-company-in-mysore" },
+        { text: "SEO Services Company In Mysore", href: "/service/seo-service-company-in-mysore" },
+         { text: "B2B Marketing Service Company In Mysore", href: "/service/b2b-marketing-service-in-mysore" },
+      { text: "Corporate Video Production Company In Mysore", href: "/service/corporate-video-production-in-mysore" },
+      { text: "UI/UX Design Company In Mysore", href: "/service/ui-ux-design-company-in-mysore" },
+      { text: "2D Animation Company In Mysore", href: "/service/2d-animation-company-in-mysore" },
+       { text: "Corporate Ad Film Production Company", href: "/service/corporate-ad-film-production-company" },
+        { text: "Website Developers", href: "/service/website-developers" },
+    ],
+  }
+]
 const InfoSection = () => {
   return (
+    <>
     <footer className={styles["footer-wrapper"]}>
       <div className="container">
         <div className="row">
@@ -158,6 +183,29 @@ const InfoSection = () => {
         </div>
       </div>
     </footer>
+    <section className={`${styles.bar} ${styles.themeTeal}`} aria-labelledby="popular-title">
+  <div className={styles.inner}>
+    <h2 id="popular-title" className={styles.title}>General Website Services</h2>
+
+    <ul className={styles.list}>
+      {data.map((row, i) => (
+        <li className={styles.row} key={i}>
+          <span className={styles.label}>{row.label}:</span>
+          <div className={styles.links} aria-label={row.label}>
+            {row.links.map((link, j) => (
+              <a className={styles.link} href={link.href} key={j}>
+                {link.text}
+              </a>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+  <br /><br />
+</section>  
+
+    </>
   );
 };
 

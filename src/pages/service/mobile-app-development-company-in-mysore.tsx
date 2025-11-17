@@ -1,4 +1,5 @@
 // src/pages/service/mobile-app-development-company-in-mysore.tsx
+import { useRouter } from "next/navigation";
 import Head from "next/head";
 import Script from "next/script";
 import { motion } from "framer-motion";
@@ -112,7 +113,7 @@ const HERO_SUBTITLE =
   "Empower your business with high-performing, feature-rich mobile apps designed to engage your audience and drive growth. Nakshatra Namaha Creations specializes in building custom Android, iOS, and cross-platform apps with seamless user experiences, ensuring your brand stays ahead in the digital era.";
 
 export default function MobileAppPage() {
-
+const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phoneNo: "",
@@ -136,7 +137,7 @@ export default function MobileAppPage() {
         formData
       );
       if (res.status === 200 || res.status === 201) {
-        alert("Thank you! Your enquiry has been sent.");
+       
         setFormData({
           name: "",
           phoneNo: "",
@@ -145,6 +146,7 @@ export default function MobileAppPage() {
           referenceFrom: "quickform",
           city: "Mysore",
         });
+         router.push("/thankyou");
       } else {
         alert("Failed to send. Try again.");
       }
@@ -246,7 +248,7 @@ export default function MobileAppPage() {
           name="description"
           content="Build feature-rich Android, iOS, and cross-platform apps in Mysore with skilled developers focused on performance, user experience, and business growth."
         />
-        <meta name="keywords" content="Best Mobile App Development Company in Mysore" />
+       <meta name="keywords" content="mobile app development company in mysore, app developers in mysore, mobile application development mysore, android app development mysore, ios app development mysore, best mobile app developers in mysore, top app development company in mysore, custom mobile app development mysore, mobile app development services mysore, hybrid app development mysore, react native app development mysore, flutter app development mysore, enterprise mobile app development mysore, startup app development mysore, app development agency in mysore, mobile app designers in mysore, app development cost in mysore, mobile app maintenance services mysore, ecommerce app development mysore, local app developers in mysore" />
         <link
           rel="canonical"
           href="https://nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore"

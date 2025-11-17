@@ -300,10 +300,8 @@ export default function SoftwareDevelopmentPage() {
           name="description"
           content="Build secure, scalable, and custom software solutions in Mysore with experienced developers focused on performance, integration, and business outcomes."
         />
-        <meta
-          name="keywords"
-          content="Reliable Software Development Company in Mysore"
-        />
+       <meta name="keywords" content="software development company in mysore, software developers in mysore, custom software development mysore, enterprise software development mysore, business software solutions mysore, software development services mysore, best software company in mysore, top software developers in mysore, web application development mysore, mobile app development mysore, erp software development mysore, crm software development mysore, billing software development mysore, automation software development mysore, cloud software development mysore, bespoke software development mysore, software maintenance services mysore, software testing services mysore, saas development company mysore, software consulting company in mysore" />
+
         <link
           rel="canonical"
           href="https://nakshatranamahacreations.in/service/software-development-company-in-mysore"

@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 
 import { useState, useEffect, type ChangeEvent, type FormEvent, type MouseEvent } from "react";
 import styles from "./FloatingActions.module.css";
@@ -12,6 +13,8 @@ type CallbackData = {
 };
 
 export default function FloatingActions() {
+
+  const router = useRouter();
   const [callbackData, setCallbackData] = useState<CallbackData>({
     name: "",
     phone: "",
@@ -29,30 +32,48 @@ export default function FloatingActions() {
 
   const handleCallbackSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { name, phone, email, subject } = callbackData;
+    const { name, phone, email, subject, message } = callbackData;
 
     if (!name || !phone || !email || !subject) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    const endpoint = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:5001";
+    // Construct payload in the same shape as your ContactUs form expects.
+    // Keep `phone` for local usage but include `phoneNo` for upstream.
+    const payload = {
+      name,
+      email,
+      phoneNo: phone,           // map to phoneNo (ContactUs uses phoneNo)
+      phone,                    // include original too (proxy will normalize)
+      service: subject,         // many backends expect `service` instead of `subject`
+      message,
+      referenceFrom: "callback",// small identifier so you know it came from floating callback
+      city: "Mysore",
+    };
 
     try {
-      const res = await fetch(`${endpoint}/api/enquiries`, {
+      // Use the internal relative path so your pages/api/enquiries.js proxy handles forwarding.
+      const res = await fetch("/api/enquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(callbackData),
+        body: JSON.stringify(payload),
       });
 
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        const txt = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${txt}`);
+      }
 
-      alert("Callback request submitted successfully!");
+      // success
+      // alert("Callback request submitted successfully!");
       setCallbackData({ name: "", phone: "", email: "", subject: "", message: "" });
       setShowModal(false);
+      router.push("/thankyou");
+
     } catch (err) {
       console.error("Error submitting callback request:", err);
-      alert("An error occurred. Check the console.");
+      alert("An error occurred while submitting. Check console for details.");
     }
   };
 
@@ -78,16 +99,15 @@ export default function FloatingActions() {
           RequestToCallback
         </button>
 
- <a
-  href="https://wa.me/919900566466"
-  target="_blank"
-  rel="noreferrer"
-  className={styles["floating-whatsapp"]}
-  aria-label="Chat on WhatsApp"
->
-  <img src="/images/whatsapp.png" alt="WhatsApp" />
-          </a>
-
+        <a
+          href="https://wa.me/919900566466"
+          target="_blank"
+          rel="noreferrer"
+          className={styles["floating-whatsapp"]}
+          aria-label="Chat on WhatsApp"
+        >
+          <img src="/images/whatsapp.png" alt="WhatsApp" />
+        </a>
       </div>
 
       {showModal && (

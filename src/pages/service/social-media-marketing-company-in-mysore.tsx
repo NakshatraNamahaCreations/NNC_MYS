@@ -305,10 +305,8 @@ export default function SocialMediaPage() {
           name="description"
           content="Grow your brand in Mysore with expert social media marketers. We craft result-driven strategies for Instagram, Facebook, LinkedIn, and more to boost engagement."
         />
-        <meta
-          name="keywords"
-          content="Best Social Media Marketing Company in Mysore"
-        />
+       <meta name="keywords" content="social media marketing company in mysore, social media agency in mysore, social media marketers in mysore, smm services mysore, facebook marketing mysore, instagram marketing mysore, social media advertising mysore, social media management mysore, digital marketing company in mysore, best social media marketing company in mysore, social media experts in mysore, content creation mysore, social media branding mysore, influencer marketing mysore, youtube marketing mysore, social media strategy mysore, social media optimization mysore, paid social media campaigns mysore, top smm agency in mysore, corporate social media marketing mysore" />
+
         <link
           rel="canonical"
           href="https://nakshatranamahacreations.in/service/social-media-marketing-company-in-mysore"

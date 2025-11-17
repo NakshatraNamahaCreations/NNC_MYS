@@ -245,10 +245,8 @@ export default function SeoDevelopment() {
           property="og:description"
           content="Improve your website’s Google ranking with expert SEO services in Mysore—covering on-page, off-page, local SEO, audits, and keyword optimization strategies."
         />
-        <meta
-          name="keywords"
-          content="SEO Service Company in Mysore"
-        />
+       <meta name="keywords" content="seo services company in mysore, seo company in mysore, seo agency in mysore, best seo company in mysore, seo experts in mysore, search engine optimization mysore, local seo services mysore, organic seo mysore, technical seo mysore, on page seo mysore, off page seo mysore, keyword research mysore, link building services mysore, ecommerce seo mysore, website seo audit mysore, google ranking services mysore, top seo agency in mysore, affordable seo services mysore, digital marketing and seo mysore, professional seo services mysore" />
+
         <meta
           property="og:url"
           content="https://nakshatranamahacreations.in/service/seo-service-company-in-mysore"

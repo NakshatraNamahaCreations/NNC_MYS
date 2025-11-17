@@ -194,10 +194,8 @@ export default function Video() {
           property="og:description"
           content="Create engaging corporate videos in Mysore with professional filmmakers skilled in storytelling, branding, and video editing for marketing, events, and business"
         />
-        <meta
-          name="keywords"
-          content="Corporate Video Production Company in Mysore"
-        />
+  <meta name="keywords" content="corporate video production company in mysore, corporate video makers in mysore, corporate filmmakers mysore, business video production mysore, promotional video production mysore, company profile video mysore, brand video production mysore, event video production mysore, product video production mysore, testimonial video production mysore, video editing services mysore, professional videographers in mysore, explainer video production mysore, animation video production mysore, training video production mysore, advertising video agency mysore, corporate film production mysore, marketing video production mysore, commercial video production mysore, top corporate video production company in mysore" />
+
         <meta
           property="og:url"
           content="https://nakshatranamahacreations.in/service/corporate-video-production-in-mysore"

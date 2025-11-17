@@ -1,6 +1,6 @@
 // src/components/ContactUs.tsx
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "react-modal";
@@ -19,6 +19,7 @@ type FormData = {
 };
 
 export default function ContactUs() {
+  const router = useRouter();
     const [formData, setFormData] = useState<FormData>({
       name: "",
       email: "",
@@ -63,7 +64,7 @@ export default function ContactUs() {
         });
 
       if (response.status === 201 || response.status === 200) {
-        setModalIsOpen(true);
+        router.push("/thankyou");
         setFormData({
           name: "",
           email: "",
@@ -202,7 +203,7 @@ export default function ContactUs() {
         </div>
       </form>
 
-      <Modal
+      {/* <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Thank You"
@@ -223,7 +224,7 @@ export default function ContactUs() {
         <button onClick={closeModal} className="btn btn-secondary mt-3">
           Close
         </button>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

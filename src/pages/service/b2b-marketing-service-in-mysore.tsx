@@ -202,6 +202,7 @@ export default function B2BMarketPage() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
+<meta name="keywords" content="b2b marketing services company in mysore, b2b marketing agency in mysore, b2b lead generation mysore, b2b digital marketing mysore, b2b content marketing mysore, b2b branding services mysore, b2b seo services mysore, b2b social media marketing mysore, b2b email marketing mysore, b2b marketing consultants mysore, industrial marketing services mysore, corporate marketing services mysore, b2b performance marketing mysore, b2b advertising agency mysore, b2b marketing strategy mysore, technology marketing mysore, b2b demand generation mysore, b2b growth marketing mysore, top b2b marketing company in mysore, professional b2b marketing services mysore" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />

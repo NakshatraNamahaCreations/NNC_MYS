@@ -239,7 +239,8 @@ export default function AnimationDevelopment() {
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
-        <meta name="keywords" content="2D Animation Company in Mysore" />
+       <meta name="keywords" content="2d animation company in mysore, 2d animation studio mysore, animation services in mysore, explainer video animation mysore, cartoon animation mysore, character animation mysore, motion graphics company mysore, animation production mysore, animated videos for business mysore, 2d animated ads mysore, animation agency in mysore, whiteboard animation mysore, educational animation mysore, product animation mysore, marketing animation mysore, best 2d animation company in mysore, professional animators in mysore, corporate animation videos mysore, storytelling animation mysore, top animation studio in mysore" />
+
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary" />

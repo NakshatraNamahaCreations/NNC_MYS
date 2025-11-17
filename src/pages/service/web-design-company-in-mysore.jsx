@@ -166,12 +166,14 @@ const cards = [
             <title>Web Design Company in Mysore | Custom Website Design & Development</title>
             <meta
               name="description"
-              content="Build a powerful online presence with our professional web design company in Mysore. We create responsive, SEO-friendly, and visually engaging websites that grow your business."
+              content="Build a online presence with our web design company in Mysore. We create responsive, SEO-friendly, visually appealing websites that help your business grow."
             />
             <link
               rel="canonical"
               href="https://nakshatranamahacreations.in/service/web-design-company-in-mysore"
             />
+            <meta name="keywords" content="web design company in mysore, web designers in mysore, website design services mysore, responsive web design mysore, professional web design mysore, custom website design mysore, best web design company in mysore, ui ux design mysore, web development company in mysore, ecommerce web design mysore, wordpress website design mysore, business website design mysore, creative web design agency mysore, affordable web design mysore, top web designers in mysore, corporate website design mysore, landing page design mysore, website redesign services mysore, website maintenance services mysore, static and dynamic website design mysore" />
+
       </Head>
     <section className={styles.heroBannerWrapper} id="contact-hero">
       {/* Banner Image */}
