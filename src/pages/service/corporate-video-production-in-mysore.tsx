@@ -219,7 +219,7 @@ export default function Video() {
         />
         <meta name="twitter:site" content="@nncbengaluru" />
 
-        {/* Schemas */}
+        {/* Schemas */} 
         <script type="application/ld+json">{`
         {
           "@context": "https://schema.org",
