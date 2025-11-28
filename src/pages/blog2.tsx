@@ -62,7 +62,7 @@ export default function Blogs() {
       "@id": "https://nakshatranamahacreations.in/blogs",
     },
   };
-const HERO_TITLE = "EXPLORE THE NNC BLOG";
+const HERO_TITLE = "EXPLORE THE NAKSHATRA NAMAHA CREATIONS BLOG";
 const HERO_SUBTITLE =
   "Stay ahead with insights, strategies, and stories from Nakshatra Namaha Creations. Discover expert tips on web development, mobile apps, UI/UX, marketing, and the latest trends shaping the digital world.";
 

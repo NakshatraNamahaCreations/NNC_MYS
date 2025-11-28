@@ -12,32 +12,33 @@ type Faq = {
 const faqs: Faq[] = [
 
   {
-    question: "What types of websites do companies in Mysore develop?",
-    answer: "Website development companies in Mysore build corporate websites, e-commerce platforms, landing pages, portfolio sites, blogs, and web applications."
+    question: "What services does Nakshatra Namaha Creations provide?",
+    answer: "We offer website development, mobile app development, UI/UX design, digital marketing, eCommerce solutions, video production, and SEO services tailored for businesses."
   },
   {
-    question: "Do website developers in Mysore provide SEO-friendly solutions?",
-    answer: "Yes. Most Mysore-based agencies follow modern SEO practices, ensuring optimized site structures, faster loading, and mobile responsiveness."
+  question: "Do you serve clients only in Mysore or across India?",
+    answer: "While we're based in Mysore, we work with clients across India and globally through digital collaboration tools and remote project management."
   },
   {
-    question: "Can Mysore website developers customize designs for my brand?",
-    answer: "Absolutely. They create custom UI/UX designs to align with your brand’s identity and provide a consistent look across all devices."
+  question: "What makes Nakshatra Namaha Creations different from other agencies?",
+    answer: "We combine creative design with robust development, ensuring that each solution we build is user-friendly, performance-driven, and aligned with your business goals." 
   },
   {
-    question: "Do website development companies in Mysore offer maintenance and support?",
+   question: "Can I hire your team for just design or just development?",
+    answer: "Yes, we offer modular services—whether you need only UI/UX design, development support, or marketing services, we’re flexible to your needs."
+  },
+  {
+   question: "Do you provide ongoing support after project delivery?",
+    answer: "Yes, we offer ongoing support, maintenance, and performance monitoring to keep your digital products secure, fast, and updated."
+  },
+  {
+  question: "How do I get started with a project at Nakshatra Namaha Creations?",
+    answer: "You can contact us via phone, email, or our contact form. We’ll schedule a discovery call to understand your needs and provide a custom proposal. "
+  },
+  {
+ question: "Do website development companies in Mysore offer maintenance and support?",
     answer: "Yes. Many agencies offer post-launch support including updates, bug fixes, backups, and performance monitoring."
-  },
-  {
-    question: "How much does it cost to build a website in Mysore?",
-    answer: "The cost depends on factors such as the type of website, number of pages, integrations, and design complexity. Most agencies provide customized quotes."
-  },
-  {
-    question: "How long does it take to develop a website in Mysore?",
-    answer: "A basic website typically takes 3–4 weeks, while more complex e-commerce or web applications may take 2–3 months depending on features and revisions."
-  },
-  {
-    question: "Can Mysore agencies integrate third-party tools like payment gateways or CRMs?",
-    answer: "Yes. Most website development companies in Mysore are experienced in integrating CRMs, ERPs, payment systems, and other third-party APIs."
+  
   },
 
 

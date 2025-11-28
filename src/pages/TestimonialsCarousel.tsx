@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     role: "Operations Manager, The Mysore Oils",
     rating: 5,
     text:
-      "Our e-commerce platform was seamlessly designed by NNC. The product catalog, checkout, and secure payment integration are smooth. Their support team is quick to resolve queries and keeps everything running stable.",
+      "Our e-commerce platform was seamlessly designed by Nakshatra Namaha Creations. The product catalog, checkout, and secure payment integration are smooth. Their support team is quick to resolve queries and keeps everything running stable.",
     avatar: "/images/man.png",
   },
   {

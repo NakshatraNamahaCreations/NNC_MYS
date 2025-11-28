@@ -8,7 +8,7 @@ type Testimonial = { text: string; author: string };
 
 const testimonials: Testimonial[] = [
   {
-    text: `NNC provides the best services in digital marketing and branding with their excellent team and I thank Mr.Harish and 
+    text: `Nakshatra Namaha Creations provides the best services in digital marketing and branding with their excellent team and I thank Mr.Harish and 
     team members who supported in each and every step, I would rate their work as one of the best in Mysore! Thank you`,
     author: "Bhaskar Bhasu",
   },

@@ -54,7 +54,7 @@ const faqs = [
       "Absolutely. We offer internships in design, development, marketing, and content, with the possibility of full-time placement after successful completion.",
   },
 ];
-const HERO_TITLE = "JOIN THE NNC TEAM";
+const HERO_TITLE = "JOIN THE NAKSHATRA NAMAHA CREATIONS TEAM";
 const HERO_SUBTITLE =
   "Be part of a creative tech studio that’s building next-generation digital experiences. At Nakshatra Namaha Creations, we’re always looking for passionate designers, developers, marketers, and creators who thrive on innovation and teamwork. Explore career opportunities and grow with us in a culture of learning, collaboration, and impact.";
 

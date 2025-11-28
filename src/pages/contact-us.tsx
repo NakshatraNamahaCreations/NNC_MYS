@@ -52,7 +52,7 @@ const faqs = [
   },
 ];
 
-const HERO_TITLE = "LET’S CONNECT WITH NNC";
+const HERO_TITLE = "LET’S CONNECT WITH NAKSHATRA NAMAHA CREATIONS";
 const HERO_SUBTITLE =
   "Have a project in mind or need expert advice? Nakshatra Namaha Creations is here to help. Whether you're looking for a custom website, mobile app, marketing strategy, or creative content, our team is just a message away. Get in touch to discuss your ideas, ask questions, or explore collaboration opportunities — we’ll respond within 24 hours and guide you every step of the way.";
 
