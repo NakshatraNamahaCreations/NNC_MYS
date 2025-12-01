@@ -23,6 +23,7 @@ const data = [
       { text: "2D Animation Company In Mysore", href: "/service/2d-animation-company-in-mysore" },
        { text: "Corporate Ad Film Production Company", href: "/service/corporate-ad-film-production-company" },
         { text: "Website Developers", href: "/service/website-developers" },
+         { text: "CMS Development Services", href: "/service/cms-development-services" },
     ],
   }
 ]

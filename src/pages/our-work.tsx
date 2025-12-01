@@ -144,7 +144,7 @@ const HERO_SUBTITLE =
               </li>
             </ol>
           </nav>
-          <h1 className={styles1.title}>{HERO_TITLE}</h1>
+          <h2 className={styles1.title}>{HERO_TITLE}</h2>
           <p className={styles1.subtitle}>{HERO_SUBTITLE}</p>
         </div>
         <div className={styles1.scrollExplore}>SCROLL TO EXPLORE</div>

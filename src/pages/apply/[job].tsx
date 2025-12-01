@@ -254,7 +254,7 @@ export default function ApplyJobPage() {
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
           <div>
-            <label className="form-label">Current CTC (in LPA)</label>
+            <label className="form-label">Current CTC (in LPA)*</label>
             <input
               className="form-control"
               placeholder="e.g., 6.0"
@@ -263,7 +263,7 @@ export default function ApplyJobPage() {
             />
           </div>
           <div>
-            <label className="form-label">Expected CTC (in LPA)</label>
+            <label className="form-label">Expected CTC (in LPA)*</label>
             <input
               className="form-control"
               placeholder="e.g., 9.0"

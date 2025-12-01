@@ -246,7 +246,7 @@ export default function ApplyModal({ isOpen, onClose, jobTitle }: Props) {
 
           <div className="grid-2">
             <div>
-              <label className="form-label">Current CTC (in LPA)</label>
+              <label className="form-label">Current CTC (in LPA)*</label>
               <input
                 className="form-control"
                 placeholder="e.g., 6.0"
@@ -255,7 +255,7 @@ export default function ApplyModal({ isOpen, onClose, jobTitle }: Props) {
               />
             </div>
             <div>
-              <label className="form-label">Expected CTC (in LPA)</label>
+              <label className="form-label">Expected CTC (in LPA)*</label>
               <input
                 className="form-control"
                 placeholder="e.g., 9.0"

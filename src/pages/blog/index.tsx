@@ -71,7 +71,7 @@ const HERO_SUBTITLE =
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://nakshatranamahacreations.in/blogs" />
+        <link rel="canonical" href="https://nakshatranamahacreations.in/blog" />
         <title>How a Well-Designed Website Can Help Businesses Stand Out</title>
         <meta
           name="description"
@@ -86,7 +86,7 @@ const HERO_SUBTITLE =
           property="og:description"
           content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
         />
-        <meta property="og:url" content="https://nakshatranamahacreations.in/blogs" />
+        <meta property="og:url" content="https://nakshatranamahacreations.in/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
         <meta name="twitter:card" content="summary" />
@@ -95,7 +95,7 @@ const HERO_SUBTITLE =
           name="twitter:description"
           content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/blogs/2.png" />
+        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/blog/2.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

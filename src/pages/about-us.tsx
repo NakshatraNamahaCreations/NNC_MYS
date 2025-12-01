@@ -179,9 +179,9 @@ const processSteps = [
     <div className="row align-items-center g-5">
       {/* Left content */}
       <div className="col-lg-7">
-        <h2 className={styles.aboutHeading}>
+        <h1 className={styles.aboutHeading}>
           About Our Mobile App and Website Development Services in Mysore
-        </h2>
+        </h1>
         <p className={styles.aboutText}>
          Nakshatra Namaha Creations is a top website development company Mysore and a Trusted website development company and mobile app development company in Mysore having more than 8+ years of experience in the this industry, We have been committed to providing client-centric digital solutions that uplift businesses and keep them competitive in the online market since 2015.
         </p>
