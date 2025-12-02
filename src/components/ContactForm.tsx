@@ -66,6 +66,7 @@ else if (path.includes("/service/corporate-ad-film-production-company")) service
       else if (path.includes("/service/web-design-company-in-mysore")) service = "Website Development";
         else if (path.includes("/service/website-developers")) service = "Website Development";
            else if (path.includes("/service/cms-development-services")) service = "CMS Development Service";
+            else if (path.includes("/service/flutter-app-development-company")) service = "Flutter App Development";
       setFormData((prev) => ({ ...prev, user_service: service }));
     }
   }, []);

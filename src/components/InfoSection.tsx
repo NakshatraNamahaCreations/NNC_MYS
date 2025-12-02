@@ -24,6 +24,7 @@ const data = [
        { text: "Corporate Ad Film Production Company", href: "/service/corporate-ad-film-production-company" },
         { text: "Website Developers", href: "/service/website-developers" },
          { text: "CMS Development Services", href: "/service/cms-development-services" },
+          { text: "Flutter App Development", href: "/service/flutter-app-development-company" },
     ],
   }
 ]
