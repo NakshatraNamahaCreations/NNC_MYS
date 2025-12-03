@@ -237,7 +237,7 @@ const cards = [
           <div className="col-lg-5">
             <div className={styles.aboutImageCard}>
               <Image
-                src="/images/icons/tech32.jpg"
+                src="/images/tech31.jpg"
                 alt="Mobile app & website development illustration"
                 fill
                 sizes="(max-width: 992px) 100vw, 520px"
