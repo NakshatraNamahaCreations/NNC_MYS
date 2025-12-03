@@ -157,7 +157,7 @@ const cards = [
             <title>iOS App Development Company | Custom iPhone App Developers</title>
             <meta
               name="description"
-              content="Build powerful and user-friendly iOS apps with our expert iPhone app developers. We design, develop, and deploy secure, high-performance apps for startups and enterprises. Get a free consultation today."
+              content="Build powerful iOS apps with our expert developers. We design, develop, and deploy secure, high-performance iPhone apps for businesses of all sizes."
             />
             <link
               rel="canonical"

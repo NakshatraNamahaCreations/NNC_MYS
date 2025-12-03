@@ -157,7 +157,7 @@ const cards = [
             <title>Flutter App Development Company | Cross-Platform Mobile App Solutions</title>
             <meta
               name="description"
-              content="Build high-performance mobile apps with a trusted Flutter App Development Company. We create fast, secure, and scalable cross-platform applications for Android and iOS with clean UI, smooth performance, and end-to-end development support."
+              content="Build powerful mobile apps with a trusted iOS App Development Company. We create fast and scalable iPhone apps with and end-to-end development support."
             />
             <link
               rel="canonical"
