@@ -161,7 +161,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/flutter-app-development-company"
+              href="https://nakshatranamahacreations.in/service/ios-app-development-company"
             />
            <meta name="keywords" content="iOS app development company, iPhone app development company, iOS app developers, iPhone app developers, hire iOS developers, iOS app development services, iOS application development, iPhone application development, custom iOS app development, Swift app development company, iOS app development agency, mobile app development for iOS, iOS app design and development, professional iOS developers, scalable iOS app solutions, iOS app UI/UX design, enterprise iOS app development, iOS app testing services, app store deployment services" />
 
