@@ -26,6 +26,8 @@ const data = [
          { text: "CMS Development Services", href: "/service/cms-development-services" },
           { text: "Flutter App Development", href: "/service/flutter-app-development-company" },
            { text: "Ios App Development", href: "/service/ios-app-development-company" },
+           { text: "Social Media Marketing", href: "/service/social-media-marketing" },
+            { text: "Google Ads Management Services", href: "/service/google-ads-management-services" },
     ],
   }
 ]

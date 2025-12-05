@@ -69,6 +69,7 @@ else if (path.includes("/service/corporate-ad-film-production-company")) service
             else if (path.includes("/service/flutter-app-development-company")) service = "Flutter App Development";
             else if (path.includes("/service/ios-app-development-company")) service = "IOS App Development";
             else if (path.includes("/service/social-media-marketing")) service = "Social Media Marketing";
+              else if (path.includes("/service/google-ads-management-services")) service = "Google Ads Management";
       setFormData((prev) => ({ ...prev, user_service: service }));
     }
   }, []);
