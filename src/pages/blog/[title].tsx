@@ -41,7 +41,7 @@ export type BlogPageProps = {
 
 export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (ctx) => {
   const routeSlug = String(ctx.params?.title || "");
-  const canonical = `https://www.nakshatranamahacreations.com/blog/${routeSlug}`;
+  const canonical = `https://nakshatranamahacreations.in/blog/${routeSlug}`;
 
   try {
     // fetch including city=Mysore so it matches your grid list
@@ -69,7 +69,7 @@ export const getServerSideProps: GetServerSideProps<BlogPageProps> = async (ctx)
         ? found.bannerImage!
         : found.bannerImage
         ? `${API}/uploads/${found.bannerImage}`
-        : "https://www.nakshatranamahacreations.com/media/blogs/placeholder.png";
+        : "https://nakshatranamahacreations.in/media/blogs/placeholder.png";
 
     return {
       props: {
