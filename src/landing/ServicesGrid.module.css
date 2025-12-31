@@ -1,0 +1,104 @@
+.section {
+  padding: 80px 0;
+  background: linear-gradient(
+    120deg,
+    #f3f0ff 0%,
+    #ffffff 45%,
+    #fff3e6 100%
+  );
+  text-align: center;
+}
+.heading {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #6b6b8a;
+  margin-bottom: 60px;
+}
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 38px 32px;
+  text-align: left;
+  transition: all 0.35s ease;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.07),
+    0 30px 60px rgba(0, 0, 0, 0.10),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b6b8a;
+}
+.card:hover {
+  background: #042151;
+  transform: translateY(-6px);
+}
+
+.card:hover h3,
+.card:hover p {
+  color: #fff;
+}
+.dark {
+  background: #000;
+}
+
+.dark h3,
+.dark p {
+  color: #fff;
+}
+.icon {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+}
+.purple {
+  filter: invert(48%) sepia(78%) saturate(2300%) hue-rotate(245deg);
+}
+.teal {
+  filter: invert(65%) sepia(60%) saturate(550%) hue-rotate(120deg);
+}
+.orange {
+  filter: invert(55%) sepia(85%) saturate(650%) hue-rotate(10deg);
+}
+.yellow {
+  filter: invert(72%) sepia(85%) saturate(700%) hue-rotate(35deg);
+}
+.blue {
+  filter: invert(45%) sepia(78%) saturate(1800%) hue-rotate(180deg);
+}
+.green {
+  filter: invert(60%) sepia(50%) saturate(600%) hue-rotate(85deg);
+}
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

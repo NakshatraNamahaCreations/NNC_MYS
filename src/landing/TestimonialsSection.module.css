@@ -1,0 +1,394 @@
+  .section {
+    position: relative;
+    padding: 70px 0;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+
+  /* headings */
+  .kicker {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #222;
+    font-weight: 600;
+  }
+
+  .heading {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 12px 0 70px;
+    color: #333;
+  }
+
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+  }
+
+  /* card */
+  .card {
+    background: #fff;
+    border: 1.5px solid #222;
+    border-radius: 60px;
+    padding: 50px 48px 42px;
+    text-align: left;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+  }
+
+  /* text */
+  .text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 40px;
+  }
+
+  /* profile */
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .profile img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .profile h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .profile span {
+    font-size: 12px;
+    color: #555;
+  }
+
+  /* dots */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px  !important;
+  }
+
+  .dots span {
+    width: 8px;
+    height: 8px;
+    background: #d0d0d0;
+    border-radius: 50%;
+  }
+
+  .dots .active {
+    width: 18px;
+    border-radius: 6px;
+    background: #333;
+  }
+
+  /* floating icons */
+  .messageIcon {
+    position: absolute;
+    top: 140px;
+    left: 120px;
+    font-size: 36px;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .heartIcon {
+    position: absolute;
+    bottom: 140px;
+    right: 120px;
+    font-size: 38px;
+    opacity: 0.18;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .slick-dots {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    position: absolute;
+    bottom: -55px !important;
+}
+
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+    100% { transform: translateY(0); }
+  }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      border-radius: 40px;
+    }
+
+    .heading {
+      font-size: 32px;
+    }
+  }
+
+  
+  /* slick spacing fix */
+  .slider {
+    margin: 0 -25px;
+  }
+
+  .slide {
+    padding: 0 25px;
+  }
+
+
+/* DOTS WRAPPER */
+.dotsWrap {
+  margin-top: 70px !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* MANUAL DOTS */
+.manualDots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c7cbe0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.dot:hover {
+  background: #9abec6;
+}
+
+.activeDot {
+  width: 24px;
+  border-radius: 8px;
+  background: #333;
+}
+
+
+/* DOT BAR */
+.dots {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background: #f4f6fb;
+  border-radius: 999px;
+}
+
+/* DOT */
+.dots li span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: #bfc4d4;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.dots li.slick-active span {
+  width: 22px;
+  height: 8px;
+  background: #333;
+  border-radius: 6px;
+}
+
+/* REMOVE DEFAULT BUTTON */
+.dots li button {
+  display: none;
+}
+
+
+
+  /* floating icons (image-based) */
+  .messageIcon {
+    position: absolute;
+    top: 140px;
+    left: 120px;
+    width: 96px;
+    height: 96px;
+    opacity: 0.18;
+    animation: floatSlow 6s ease-in-out infinite;
+  }
+
+  .heartIcon {
+    position: absolute;
+    bottom: 140px;
+    right: 90px;
+    width: 76px;
+    height: 76px;
+    opacity: 0.2;
+    animation: floatSlow 7s ease-in-out infinite;
+  }
+
+  /* smooth floating */
+  @keyframes floatSlow {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-14px) rotate(2deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  /* responsive hide if needed */
+  @media (max-width: 768px) {
+    .messageIcon,
+    .heartIcon {
+      display: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .heading {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  .slider {
+    margin: 0 -16px;
+  }
+
+  .slide {
+    padding: 0 16px;
+  }
+
+  .card {
+    padding: 36px 30px 32px;
+    border-radius: 40px;
+  }
+
+  .text {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .manualDots {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .heading {
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    padding: 28px 22px 26px;
+    border-radius: 28px;
+  }
+
+  .text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  /* PROFILE STACK */
+  .profile {
+    gap: 12px;
+  }
+
+  .profile img {
+    width: 46px;
+    height: 46px;
+  }
+
+  .profile h4 {
+    font-size: 15px;
+  }
+
+  .profile span {
+    font-size: 12px;
+  }
+
+  /* DOTS – TOUCH FRIENDLY */
+  .manualDots {
+    margin-top: 36px;
+    gap: 16px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .activeDot {
+    width: 28px;
+    height: 10px;
+    border-radius: 8px;
+  }
+
+  /* Disable hover effects on touch */
+  .card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .text {
+    font-size: 14.5px;
+  }
+
+  .card {
+    padding: 24px 18px;
+  }
+}

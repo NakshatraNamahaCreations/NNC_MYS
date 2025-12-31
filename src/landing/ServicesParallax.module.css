@@ -1,0 +1,183 @@
+/* ===============================
+   SECTION – FIXED PARALLAX BG
+================================ */
+.section {
+  position: relative;
+  padding: 80px 0;
+  background-image: url("/images/tech/ban4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 10, 40, 0.667) 0%,
+    rgba(5, 10, 40, 0.503) 100%
+  );
+  z-index: 1;
+}
+
+/* ===============================
+   CONTENT WRAPPER
+================================ */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1350px;
+  margin: auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+.kicker {
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #29a9e1;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 70px;
+}
+
+/* ===============================
+   GRID (CENTERED 3)
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ===============================
+   CARD
+================================ */
+.card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.45s ease;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.75);
+}
+
+/* ===============================
+   IMAGE WRAPPER
+================================ */
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .imageWrap img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   CENTER ICON (REACT ICON)
+================================ */
+.iconWrap {
+  position: absolute;
+  left: 50%;
+  bottom: -23px;
+  transform: translateX(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #29a9e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 35px rgba(0, 213, 255, 0.6);
+  transition: all 0.35s ease;
+  z-index: 5;
+}
+
+.icon {
+  font-size: 22px;
+  color: #ffffff;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.card:hover .iconWrap {
+  background: #ffffff;
+}
+
+.card:hover .icon {
+  color: #29a9e1;
+  transform: rotate(90deg);
+}
+
+/* ===============================
+   CARD TEXT
+================================ */
+.card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 34px 0 10px;
+  padding: 0 16px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0 18px 26px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
+

@@ -1,0 +1,152 @@
+.brandSection {
+  padding: 30px 0 70px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.header h2 {
+  font-size: 34px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.header h2 span {
+  font-weight: 700;
+}
+
+.header p {
+  font-size: 15px;
+  color: #555;
+}
+
+/* Slider spacing */
+.slider {
+  margin-bottom: 24px;
+}
+
+/* Logo card */
+.logoCard {
+  height: 90px;
+  background: #ffffff;
+  border: 1px solid hsl(0, 0%, 91%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 18px; */
+  transition: all 0.35s ease;
+}
+
+.logoCard img {
+  max-width: 100%;
+  max-height: 52px;           /* ⬅️ slightly bigger */
+  object-fit: contain;
+  opacity: 0.8;               /* ⬅️ more visible */
+  transform: scale(1);
+  transition: 
+    transform 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+
+.logoCard:hover img {
+  transform: scale(1.12);     /* ⬅️ noticeable but premium */
+  opacity: 1;
+  filter: brightness(1.05);
+}
+
+
+.logoCard:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Smooth continuous motion */
+:global(.swiper-wrapper) {
+  transition-timing-function: linear !important;
+}
+
+@media (max-width: 900px) {
+  .brandSection {
+    padding: 24px 0 56px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+
+  .header h2 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .slider {
+    margin-bottom: 18px;
+  }
+
+  .logoCard {
+    height: 78px;
+    border-radius: 16px;
+  }
+
+  .logoCard img {
+    max-height: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+  .brandSection {
+    padding: 20px 0 48px;
+  }
+
+  .header h2 {
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 13.5px;
+  }
+
+  .logoCard {
+    height: 68px;
+    border-radius: 14px;
+  }
+
+  .logoCard img {
+    max-height: 40px;
+    opacity: 0.9;
+  }
+
+  /* Disable hover zoom on touch devices */
+  .logoCard:hover img {
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .header h2 {
+    font-size: 20px;
+  }
+
+  .logoCard {
+    height: 62px;
+  }
+
+  .logoCard img {
+    max-height: 36px;
+  }
+}

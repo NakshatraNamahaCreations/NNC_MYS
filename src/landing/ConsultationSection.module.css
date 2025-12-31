@@ -1,0 +1,270 @@
+    .section {
+    padding: 60px 0;
+    background: #fff;
+    }
+
+    /* SPLIT BACKGROUND */
+    .wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 22px;
+    overflow: hidden;
+    display: flex;
+    background: linear-gradient(
+        to bottom,
+        #29a9e1 0%,
+        #29a9e1 50%,
+        #29a9e1 50%,
+        #0b2a4ad8 100%
+    );
+    }
+
+    /* LEFT SIDE */
+    .left {
+    flex: 1;
+    padding: 70px 60px;
+    color: #fff;
+    position: relative;
+    }
+
+    .tag {
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    }
+
+    .left h2 {
+    font-size: 46px;
+    font-weight: 700;
+    margin: 14px 0 20px;
+    }
+
+    .desc {
+    font-size: 16px;
+    max-width: 360px;
+    margin-bottom: 24px;
+    color: #fff;
+    }
+
+    .info p {
+    margin: 6px 0;
+    font-size: 15px;
+        color: #fff;
+    }
+
+    /* Decorative image */
+    .decorImage {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 180px;
+    opacity: 0.9;
+    }
+
+    /* FORM CARD */
+    .formCard {
+    position: relative;
+    background: #ffffff;
+    width: 520px;
+    margin: 60px;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    }
+
+    .formCard h3 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #29a9e1;
+    padding-bottom: 14px;
+    }
+
+    /* FORM */
+    .form label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    }
+
+    .form input,
+    .form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 18px;
+    font-size: 14px;
+    }
+
+    .row {
+    display: flex;
+    gap: 18px;
+    }
+
+    .submitBtn {
+    width: 100%;
+    background: #29a9e1;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .submitBtn:hover {
+    background: #1e8fc0;
+    transform: translateY(-1px);
+    }
+
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .formCard {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .decorImage {
+        display: none;
+    }
+    }
+
+    .trustText {
+    margin-top: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 420px;
+    opacity: 0.95;
+    }
+
+    /* SOCIAL ICONS */
+    .socialWrap {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    }
+
+    .socialWrap a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    }
+
+    .socialWrap a:hover {
+    background: #ffffff;
+    color: #29a9e1;
+    transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+  .section {
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    border-radius: 18px;
+  }
+
+  .left {
+    padding: 50px 32px;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 36px;
+  }
+
+  .desc {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .socialWrap {
+    justify-content: center;
+  }
+
+  .formCard {
+    width: 90%;
+    margin: 32px auto;
+    padding: 36px 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 20px 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    border-radius: 18px;
+  }
+
+  .left {
+    padding: 50px 32px;
+    text-align: center;
+  }
+
+  .left h2 {
+    font-size: 36px;
+  }
+
+  .desc {
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .info p {
+    font-size: 14px;
+  }
+
+  .socialWrap {
+    justify-content: center;
+  }
+
+  .formCard {
+    width: 90%;
+    margin: 32px auto;
+    padding: 36px 32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .left h2 {
+    font-size: 26px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .formCard {
+    padding: 24px 18px;
+  }
+
+  .submitBtn {
+    font-size: 13.5px;
+  }
+}

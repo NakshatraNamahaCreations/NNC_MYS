@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
 
@@ -158,7 +158,7 @@
 .ecommerce-process-wrapper {
   padding: 50px 20px;
   /* background-color: #f7f7f7; */
-  font-family: 'Lato', sans-serif;
+ font-family: 'Poppins', sans-serif;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;

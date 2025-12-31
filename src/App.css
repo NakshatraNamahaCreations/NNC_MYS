@@ -95,7 +95,7 @@
 /* Title with gentle tracking + shadow */
 .title {
   margin: 10px 0 6px;
-  font-family: "Times New Roman", Times, serif;
+ font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: clamp(36px, 6.2vw, 64px);
   letter-spacing: .06em;

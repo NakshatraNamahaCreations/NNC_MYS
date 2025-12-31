@@ -3,7 +3,7 @@
 
   .scroll-wrapper {
     overflow: hidden;
-    font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   }
 
   .scroll-container11 {
@@ -82,7 +82,7 @@
     justify-content: center;
     align-items: center;
     color: #222;
-    font-family: 'Segoe UI', sans-serif;
+     font-family: 'Poppins', sans-serif;
   }
 
   .panel-content-split {
@@ -184,7 +184,7 @@
     background-color: #fff9f7;
     padding: 130px 40px;
     color: #1e1e1e;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: left;
   }
 
@@ -590,7 +590,7 @@
       justify-content: center;
       align-items: center;
       color: #222;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     .panel-content-split {
@@ -782,7 +782,7 @@
       background-color: #fff9f7;
       /* padding: 50px 40px; */
       color: #1e1e1e;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       text-align: left;
     }
 

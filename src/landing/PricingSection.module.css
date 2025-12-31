@@ -1,0 +1,253 @@
+/* SECTION */
+.section {
+  padding: 60px 20px;
+  background: #f7f8fa;
+  text-align: center;
+}
+
+.heading {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 70px;
+}
+
+/* GRID */
+.grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+/* CARD BASE */
+.card {
+  position: relative;
+  border-radius: 28px;
+  padding: 48px 38px 42px;
+  text-align: center;
+   flex-direction: column;
+  align-items: center;
+  color: #fff;
+  display: flex;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.18);
+}
+
+/* GRADIENT VARIANTS */
+.blue {
+  background: linear-gradient(145deg, #1a9ad1, #5abce6);
+}
+
+.purple {
+  background: linear-gradient(145deg, #df2e31, #f9797b);
+}
+
+.green {
+  background: linear-gradient(145deg, #0b3d02, #2aa000);
+}
+
+/* POPULAR */
+.popular {
+  transform: translateY(-12px);
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: -38px;
+  background: #ffffff;
+  color: #111;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 40px;
+  transform: rotate(45deg);
+}
+
+/* ICON */
+.iconWrap {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.iconWrap img {
+  width: 66px;
+}
+
+/* TEXT */
+.card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 15.5px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* PRICE */
+.priceBox span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.priceBox strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* CONTACT BUTTON (PILL STYLE) */
+.contactBtn {
+  margin: 34px auto 0;          /* ✅ centers horizontally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  text-decoration: none;        /* ✅ removes underline */
+  transition: all 0.3s ease;
+}
+
+.contactBtn:link,
+.contactBtn:visited {
+  text-decoration: none;
+  color: #111;
+}
+
+@media (max-width: 900px) {
+  .card {
+    text-align: center;
+  }
+
+  .contactBtn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.contactBtn:hover {
+  transform: translateX(4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .iconWrap {
+    margin-inline: auto;
+  }
+
+  .badge {
+    right: -30px;
+  }
+}
+
+/* ============================= */
+/* 📱 MOBILE OPTIMIZATION */
+/* ============================= */
+@media (max-width: 480px) {
+
+  .section {
+    padding: 40px 16px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .card {
+    padding: 36px 26px 34px;
+    border-radius: 22px;
+  }
+
+  .iconWrap {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 22px;
+  }
+
+  .iconWrap img {
+    width: 56px;
+  }
+
+  .card h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+  }
+
+  .priceBox span {
+    font-size: 13px;
+  }
+
+  .priceBox strong {
+    font-size: 26px;
+  }
+
+  .contactBtn {
+    padding: 11px 26px;
+    font-size: 14px;
+    margin-top: 26px;
+  }
+
+  /* Fix badge overflow on small screens */
+  .badge {
+    top: 12px;
+    right: -32px;
+    font-size: 11px;
+    padding: 5px 34px;
+  }
+}

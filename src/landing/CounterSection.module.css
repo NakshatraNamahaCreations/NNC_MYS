@@ -1,0 +1,203 @@
+/* SECTION */
+.section {
+  padding: 50px 0;
+  background: linear-gradient(
+    120deg,
+    #dcfcff 12%,
+    #ffffff 45%,
+    #fae6e0 100%
+  );
+}
+
+/* WRAPPER */
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ICON + VALUE ROW */
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+/* ARROW ICON */
+.arrow {
+  font-size: 80px;
+  font-weight: 700;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* ARROW IMAGE */
+.arrowImg {
+  width: 62px;          /* scale control */
+  height: 62px;
+
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  color: inherit;       /* inherit color from class */
+}
+
+/* Hover micro-animation */
+.card:hover .arrowImg {
+  transform: rotate(35deg) translateX(4px);
+}
+
+.teal {
+  filter: invert(67%) sepia(40%) saturate(500%) hue-rotate(120deg);
+}
+
+.purple {
+  filter: invert(46%) sepia(78%) saturate(1800%) hue-rotate(170deg) brightness(100%) contrast(105%);
+}
+
+
+.orange {
+  filter: invert(32%) sepia(58%) saturate(4200%) hue-rotate(345deg) brightness(95%) contrast(102%);
+}
+
+
+.card:hover .arrow {
+  transform: rotate(45deg) translateX(4px);
+}
+
+/* COLORS */
+.teal {
+  color: #37e0c5;
+}
+
+.purple {
+  color: #7b6df6;
+}
+
+.orange {
+  color: #ff6b2c;
+}
+
+/* NUMBER */
+.value {
+  font-size: 64px;     /* exact match */
+  font-weight: 600;    /* premium weight */
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #000;
+}
+
+/* LABEL */
+.label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  text-align: center;
+  max-width: 260px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .value {
+    font-size: 52px;
+  }
+
+  .arrow {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .topRow {
+    gap: 14px;
+  }
+
+  .arrowImg {
+    width: 54px;
+    height: 54px;
+  }
+
+  .value {
+    font-size: 48px;
+  }
+
+  .label {
+    font-size: 15px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 0;
+  }
+
+  .wrapper {
+    padding: 0 14px;
+    gap: 28px;
+  }
+
+  .card {
+    transform: none;
+  }
+
+  .topRow {
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .arrowImg {
+    width: 46px;
+    height: 46px;
+  }
+
+  .value {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 1.45;
+    max-width: 220px;
+  }
+
+  /* Disable hover animation on touch devices */
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .arrowImg {
+    transform: none;
+  }
+}
