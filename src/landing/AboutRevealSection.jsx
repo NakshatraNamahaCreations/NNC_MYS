@@ -51,14 +51,14 @@ export default function AboutRevealSection() {
           </div>
 
           <div className={styles.experience}>
-            <h3>10+</h3>
-            <p>Years of Working Experience</p>
+            <h3>8+</h3>
+            <p>Years of Experience</p>
           </div>
         </div>
 
         {/* RIGHT CONTENT (ALWAYS VISIBLE) */}
         <div className={styles.right}>
-          <span className={styles.kicker}>ABOUT US</span>
+          {/* <span className={styles.kicker}>ABOUT US</span> */}
 
           <h2 className={styles.title}>
           Website Development Services Built for Business Growth
@@ -104,7 +104,7 @@ export default function AboutRevealSection() {
               </li>
             </ul>
 
-            <Link href="/contact-us" className={styles.cta}>
+            <Link href="#contact-us" className={styles.cta}>
               Book Your Website Consultation <span><FiArrowRight /></span>
             </Link>
           </div>
@@ -129,7 +129,7 @@ export default function AboutRevealSection() {
               </li>
             </ul>
 
-            <Link href="/contact-us" className={styles.cta}>
+            <Link href="#contact-us" className={styles.cta}>
               Get Your Free Consulting <span><FiArrowRight /></span>
             </Link>
           </div>
@@ -154,7 +154,7 @@ export default function AboutRevealSection() {
               </li>
             </ul>
 
-            <Link href="/contact-us" className={styles.cta}>
+            <Link href="#contact-us" className={styles.cta}>
               Request a Free Project Discussion <span><FiArrowRight /></span>
             </Link>
           </div>

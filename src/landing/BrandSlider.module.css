@@ -69,10 +69,7 @@
   opacity: 1;
 }
 
-/* Smooth continuous motion */
-:global(.swiper-wrapper) {
-  transition-timing-function: linear !important;
-}
+
 
 @media (max-width: 900px) {
   .brandSection {

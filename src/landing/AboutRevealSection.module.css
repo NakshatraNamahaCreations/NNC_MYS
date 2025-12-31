@@ -108,17 +108,39 @@
   text-align: center;
   box-shadow: 0 30px 70px rgba(0,0,0,0.25);
   z-index: 3;
+  
 }
 
 .experience h3 {
-  font-size: 36px;
+  font-size: 40px;
+  font-weight: 800  !important;
   color: #29a9e1;
   margin-bottom: 4px;
 }
 
+.number-mask {
+  width: 300px;
+  height: 400px;
+  background: url("/images/our3.png") center / cover no-repeat;
+
+  -webkit-mask-image: url("/images/our3.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-image: url("/images/our3.png");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  background-color: black;
+}
+
+
 .experience p {
-  font-size: 14px;
+  font-size: 15px;
   color: #353535;
+  font-weight: 600;
 }
 
 /* RIGHT */

@@ -81,7 +81,7 @@ export default function ConsultationSection() {
       <div className={styles.wrapper}>
 
         {/* LEFT CONTENT */}
-        <div className={styles.left}>
+        <div className={styles.left} id="contact-us">
           <span className={styles.tag}>CONTACT US</span>
 
           <h2>

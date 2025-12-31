@@ -59,7 +59,7 @@ export default function NewHeroBanner() {
           </p>
 
           {/* CALL CTA */}
-          <Link href="/contact" className={styles.callBtn}>
+          <Link href="/contact-us" className={styles.callBtn}>
 
   <div>
     <span>Contact Us</span> 

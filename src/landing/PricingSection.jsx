@@ -58,7 +58,7 @@ export default function PricingSection() {
               <strong>{plan.price}</strong>
             </div>
 
-           <Link href="/contact-us" className={styles.contactBtn}>
+           <Link href="#contact-us" className={styles.contactBtn}>
   Contact <FaArrowRight />
 </Link>
           </div>

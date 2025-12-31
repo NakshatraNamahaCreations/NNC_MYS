@@ -20,7 +20,8 @@ import PremiumGrid from "../../landing/PremiumGrid";
 import BrandSlider from "../../landing/BrandSlider";
 import ConsultationSection from "../../landing/ConsultationSection";
 import TechStackTabs from "../../landing/TechStackTabs";
-
+import FloatingActions from "@/pages/FloatingActions";
+import MobileBottomBar from "@/pages/MobileBottomBar";
 
 export default function WebsiteDeveloper() {
   // 🔹 State for form fields
@@ -267,7 +268,8 @@ const websiteDevelopmentSchema = {
     <ConsultationSection/>
 
       <FAQ/>
-
+    <FloatingActions />
+      <MobileBottomBar />
    
   <InfoSection/>
 
