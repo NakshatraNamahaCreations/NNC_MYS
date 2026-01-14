@@ -3,23 +3,26 @@
 import { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
-import styles from "./ContactForm.module.css"; // import the CSS you provided
+import styles from "./ContactForm.module.css";
 
 type FormData = {
   user_name: string;
+  companyName: string;
   user_email: string;
   user_phone: string;
   user_service: string;
-   message: string;    
+  message: string;
   referenceFrom: string;
   city: string;
 };
 
 type FormErrors = {
   user_name: string;
+  companyName: string;
   user_email: string;
   user_phone: string;
   user_service: string;
+  city: string;
 };
 
 const ContactForm = () => {
@@ -27,19 +30,22 @@ const ContactForm = () => {
 
   const [formData, setFormData] = useState<FormData>({
     user_name: "",
+    companyName: "",
     user_email: "",
     user_phone: "",
     user_service: "",
     message: "New enquiry received from website contact form.",
     referenceFrom: "website",
-    city: "Bangalore",
+    city: "",
   });
 
   const [formErrors, setFormErrors] = useState<FormErrors>({
     user_name: "",
+    companyName: "",
     user_email: "",
     user_phone: "",
     user_service: "",
+    city: "",
   });
 
   // ✅ Autofill service based on URL
@@ -74,7 +80,9 @@ else if (path.includes("/service/corporate-ad-film-production-company")) service
     }
   }, []);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
 
     if (name === "user_phone") {
@@ -102,18 +110,41 @@ else if (path.includes("/service/corporate-ad-film-production-company")) service
 
     const errors: FormErrors = {
       user_name: "",
+      companyName: "",
       user_email: "",
       user_phone: "",
       user_service: "",
+      city: "",
     };
 
-    const { user_name, user_phone, user_service, user_email } = formData;
+    const {
+      user_name,
+      companyName,
+      user_phone,
+      user_service,
+      user_email,
+      city,
+    } = formData;
 
-    // validation
-    if (!/^[A-Za-z\s]{3,}$/.test(user_name)) errors.user_name = "Enter a valid name (min 3 letters).";
-    if (!/^[6-9]\d{9}$/.test(user_phone)) errors.user_phone = "Enter a valid 10-digit mobile number.";
-    if (!user_service) errors.user_service = "Service is required.";
-    if (user_email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user_email)) {
+    if (!/^[A-Za-z\s]{3,}$/.test(user_name))
+      errors.user_name = "Enter a valid name (min 3 letters).";
+
+    if (!companyName.trim())
+      errors.companyName = "Company name is required.";
+
+    if (!/^[6-9]\d{9}$/.test(user_phone))
+      errors.user_phone = "Enter a valid 10-digit mobile number.";
+
+    if (!user_service)
+      errors.user_service = "Service is required.";
+
+    if (!city.trim())
+      errors.city = "City is required.";
+
+    if (
+      user_email &&
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(user_email)
+    ) {
       errors.user_email = "Enter a valid email address.";
     }
 
@@ -122,103 +153,132 @@ else if (path.includes("/service/corporate-ad-film-production-company")) service
       return;
     }
 
- try {
- const response = await axios.post(
-  "/api/enquiries", 
-  {
-    name: user_name,
-    email: user_email,
-    phoneNo: user_phone,
-    service: user_service,
-    message: formData.message,
-    referenceFrom: formData.referenceFrom,
-    city: formData.city,
-  },
-  {
-    headers: { "Content-Type": "application/json" },
-  }
-);
+    try {
+      const response = await axios.post(
+        "/api/enquiries",
+        {
+          name: formData.user_name,
+          companyName: formData.companyName,
+          email: formData.user_email,
+          phoneNo: formData.user_phone,
+          service: formData.user_service,
+          message: formData.message,
+          referenceFrom: formData.referenceFrom,
+          city: formData.city,
+          sourceDomain: "nakshatra.in", // ✅ CATEGORY IDENTIFIER
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-
-  if (response.status === 200 || response.status === 201) {
-    router.push("/thankyou");
-  } else {
-    alert("Failed to send enquiry. Please try again.");
-  }
-} catch (error) {
-  console.error("Error sending enquiry:", error);
-  alert("Failed to send enquiry.");
-}
-
+      if (response.status === 200 || response.status === 201) {
+        router.push("/thankyou");
+      } else {
+        alert("Failed to send enquiry. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error sending enquiry:", error);
+      alert("Failed to send enquiry.");
+    }
   };
 
   return (
+    <div className={styles.contactCard}>
+      <h3 className={styles.contactHeading}>Let’s Connect</h3>
 
-      <div className={styles.contactCard}>
-        <h3 className={styles.contactHeading}>Let’s Connect</h3>
-        <form onSubmit={handleSubmit} noValidate>
-          <input
-            name="user_name"
-            type="text"
-            placeholder="Your Name *"
-            value={formData.user_name}
-            onChange={handleChange}
-            required
-            className="form-control mb-3"
-          />
-          {formErrors.user_name && <div className="text-danger small">{formErrors.user_name}</div>}
+      <form onSubmit={handleSubmit} noValidate>
+        <input
+          name="user_name"
+          type="text"
+          placeholder="Your Name *"
+          value={formData.user_name}
+          onChange={handleChange}
+          className="form-control mb-2"
+        />
+        {formErrors.user_name && (
+          <div className="text-danger small">{formErrors.user_name}</div>
+        )}
 
-          <input
-            name="user_phone"
-            type="tel"
-            placeholder="Phone Number *"
-            value={formData.user_phone}
-            onChange={handleChange}
-            required
-            className="form-control mb-3"
-          />
-          {formErrors.user_phone && <div className="text-danger small">{formErrors.user_phone}</div>}
+       
 
-          <input
-            name="user_email"
-            type="email"
-            placeholder="Email *"
-            value={formData.user_email}
-            onChange={handleChange}
-            className="form-control mb-3"
-          />
-          {formErrors.user_email && <div className="text-danger small">{formErrors.user_email}</div>}
+        <input
+          name="user_phone"
+          type="tel"
+          placeholder="Phone Number *"
+          value={formData.user_phone}
+          onChange={handleChange}
+          className="form-control mb-2"
+        />
+        {formErrors.user_phone && (
+          <div className="text-danger small">{formErrors.user_phone}</div>
+        )}
 
-       <select
-  name="user_service"
-  value={formData.user_service}
-  disabled // 🔑 lock the dropdown so user cannot change it
-  className="form-select mb-3"
->
-  <option value={formData.user_service}>
-    {formData.user_service || "Select a Service"}
-  </option>
-</select>
+        <input
+          name="user_email"
+          type="email"
+          placeholder="Email Address"
+          value={formData.user_email}
+          onChange={handleChange}
+          className="form-control mb-2"
+        />
+        {formErrors.user_email && (
+          <div className="text-danger small">{formErrors.user_email}</div>
+        )}
 
-          {formErrors.user_service && <div className="text-danger small">{formErrors.user_service}</div>}
+        {/* Locked service (auto-filled) */}
+        <select
+          name="user_service"
+          value={formData.user_service}
+          disabled
+          className="form-select mb-2"
+        >
+          <option value={formData.user_service}>
+            {formData.user_service || "Select a Service"}
+          </option>
+        </select>
+        {formErrors.user_service && (
+          <div className="text-danger small">{formErrors.user_service}</div>
+        )}
 
-          <button
-            type="submit"
-            className="btn w-100"
-            style={{
-              height: 46,
-              borderRadius: 12,
-              fontWeight: 700,
-              background: "linear-gradient(135deg, rgba(255,90,90,1), rgba(255,64,64,1))",
-              color: "#fff",
-              boxShadow: "0 8px 18px rgba(255,64,64,.35)",
-            }}
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+ <input
+          name="companyName"
+          type="text"
+          placeholder="Company Name *"
+          value={formData.companyName}
+          onChange={handleChange}
+          className="form-control mb-2"
+        />
+        {formErrors.companyName && (
+          <div className="text-danger small">{formErrors.companyName}</div>
+        )}
+        <input
+          name="city"
+          type="text"
+          placeholder="City *"
+          value={formData.city}
+          onChange={handleChange}
+          className="form-control mb-3"
+        />
+        {formErrors.city && (
+          <div className="text-danger small">{formErrors.city}</div>
+        )}
 
+        <button
+          type="submit"
+          className="btn w-100"
+          style={{
+            height: 46,
+            borderRadius: 12,
+            fontWeight: 700,
+            background:
+              "linear-gradient(135deg, rgba(255,90,90,1), rgba(255,64,64,1))",
+            color: "#fff",
+            boxShadow: "0 8px 18px rgba(255,64,64,.35)",
+          }}
+        >
+          Submit
+        </button>
+      </form>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import { HiArrowRight } from "react-icons/hi";
-import { FiArrowRight  } from "react-icons/fi";
+import { FiArrowRight } from "react-icons/fi";
 import styles from "./AppHero.module.css";
 import Link from "next/link";
 
@@ -14,12 +14,13 @@ export default function NewHeroBanner() {
 
   const [formData, setFormData] = useState({
     name: "",
+    companyName: "",
     email: "",
     phoneNo: "",
+    city: "",
     message: "",
     service: "Website Development",
     referenceFrom: "hero-form",
-    city: "Mysore",
   });
 
   const handleChange = (e) => {
@@ -29,12 +30,35 @@ export default function NewHeroBanner() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phoneNo || !formData.message) return;
+
+    if (
+      !formData.name ||
+      !formData.companyName ||
+      !formData.phoneNo ||
+      !formData.city ||
+      !formData.message
+    ) {
+      return;
+    }
 
     try {
       setSubmitting(true);
-      const res = await axios.post("/api/enquiries", formData);
-      if (res.status === 200 || res.status === 201) router.push("/thankyou");
+
+      const res = await axios.post("/api/enquiries", {
+        name: formData.name,
+        companyName: formData.companyName,
+        email: formData.email,
+        phoneNo: formData.phoneNo,
+        message: formData.message,
+        service: formData.service,
+        city: formData.city,
+        referenceFrom: formData.referenceFrom,
+        sourceDomain: "nakshatra.in", // ✅ added
+      });
+
+      if (res.status === 200 || res.status === 201) {
+        router.push("/thankyou");
+      }
     } catch {
       alert("Something went wrong. Please try again.");
     } finally {
@@ -55,35 +79,72 @@ export default function NewHeroBanner() {
           </h1>
 
           <p className={styles.description}>
-            Strategic Website Development Services Designed for Growth, Speed & Conversions
+            Strategic Website Development Services Designed for Growth, Speed &
+            Conversions
           </p>
 
-          {/* CALL CTA */}
           <Link href="/contact-us" className={styles.callBtn}>
-
-  <div>
-    <span>Contact Us</span> 
-  </div>
-    <FiArrowRight  className={styles.callIcon} />
-</Link>
+            <div>
+              <span>Contact Us</span>
+            </div>
+            <FiArrowRight className={styles.callIcon} />
+          </Link>
         </div>
 
         {/* RIGHT */}
         <div className={styles.formWrapper}>
           <h3>Get a Free Website Consultation</h3>
-        
+
           <form className={styles.form} onSubmit={handleSubmit}>
-            <input name="name" placeholder="Name*" onChange={handleChange} required />
-            <input name="email" placeholder="Email*" onChange={handleChange} required />
-            <input name="phoneNo" placeholder="Phone*" onChange={handleChange} required />
-            <textarea rows="4" name="message" placeholder="Message*" onChange={handleChange} required />
+            <input
+              name="name"
+              placeholder="Name *"
+              onChange={handleChange}
+              required
+            />
+
+
+            <input
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+            />
+
+            <input
+              name="phoneNo"
+              placeholder="Phone *"
+              onChange={handleChange}
+              required
+            />
+
+            <input
+              name="city"
+              placeholder="City *"
+              onChange={handleChange}
+              required
+            />
+
+            
+            <input
+              name="companyName"
+              placeholder="Company Name *"
+              onChange={handleChange}
+              required
+            />
+
+            <textarea
+              rows="3"
+              name="message"
+              placeholder="Message *"
+              onChange={handleChange}
+              required
+            />
 
             <button type="submit" disabled={submitting}>
               {submitting ? "Sending..." : "Request Website Consultation"}
               <HiArrowRight />
             </button>
           </form>
-      
         </div>
       </div>
     </section>

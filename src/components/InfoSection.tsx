@@ -107,6 +107,7 @@ const InfoSection = () => {
                   href="https://maps.app.goo.gl/wK6ABZzpSUZaYf2U8"
                   target="_blank"
                   rel="noreferrer"
+                  style={{textDecoration:"none"}}
                 >
                   <strong>BENGALURU</strong>
                 </a>
@@ -123,6 +124,7 @@ const InfoSection = () => {
                   href="https://maps.app.goo.gl/MRzj1V4QJms5oVEY6"
                   target="_blank"
                   rel="noreferrer"
+                  style={{textDecoration:"none"}}
                 >
                   <strong>MYSURU</strong>
                 </a>
@@ -133,12 +135,13 @@ const InfoSection = () => {
                 <br />
                 Mysuru, Karnataka 570008
               </li>
-              <li>
+              <li >
                 <i className="fas fa-location-dot" />{" "}
                 <a
                   href="https://maps.app.goo.gl/wuH74f3KVHujdgMt8"
                   target="_blank"
                   rel="noreferrer"
+                  style={{textDecoration:"none"}}
                 >
                   <strong>HYDERABAD</strong>
                 </a>
@@ -147,6 +150,25 @@ const InfoSection = () => {
                 <br />
                 Hyderabad, Telangana - 500016
               </li>
+
+<li>
+  <i className="fas fa-location-dot" />{" "}
+  <a
+    href="https://www.google.com/maps/place/Lodha+Signet,+Kolshet+Road+Thane/@19.2339429,72.9880701,17z/data=!4m8!3m7!1s0x3be7b9d5e8737a41:0xbd231851659a1466!8m2!3d19.2339429!4d72.9880701!9m1!1b1"
+    target="_blank"
+    rel="noreferrer"
+    style={{ textDecoration: "none" }}
+  >
+    <strong>MUMBAI</strong>
+  </a>
+  <br />
+  Lodha Signet, 302, Kolshet Road,
+  <br />
+  Thane West, Maharashtra - 400607
+</li>
+
+
+              
             </ul>
           </div>
 

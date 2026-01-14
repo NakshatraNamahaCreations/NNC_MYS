@@ -333,7 +333,7 @@ export default function B2BMarketPage() {
   </ol>
 </nav>
 
-<h2 className={styles1.title}>B2B MARKETING SERVICES COMPANY IN MYSORE</h2>
+<h2 className={styles1.title}>B2B MARKETING SERVICES COMPANY </h2>
 <p className={styles1.subtitle}>
   Scale your business with strategic B2B marketing solutions designed to generate quality leads, 
   strengthen brand positioning, and drive long-term growth. At Nakshatra Namaha Creations, 

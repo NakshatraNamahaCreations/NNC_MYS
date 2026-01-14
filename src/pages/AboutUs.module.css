@@ -366,7 +366,7 @@
   line-height: 1.05;
   letter-spacing: .01em;
   text-transform: none;
-  font-size: clamp(28px, 6vw, 56px); /* big and bold like screenshot */
+ font-size: clamp(28px, 5vw, 50px);
   max-width: 980px;
   opacity: 0;
   transform: translateY(8px);
@@ -375,7 +375,7 @@
 .subtitle {
   margin: 4px 0 8px;
   color: #e9eef6;
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.55;
   max-width: 820px;
   opacity: 0;

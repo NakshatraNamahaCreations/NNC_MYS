@@ -1,72 +1,74 @@
 // src/components/ContactUs.tsx
 "use client";
+
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Modal from "react-modal";
 import { motion } from "framer-motion";
-
 import styles from "./ContactUs.module.css";
 
 type FormData = {
   name: string;
+  companyName: string;
   email: string;
   phoneNo: string;
   service: string;
   message: string;
-  referenceFrom: string; // static default
-  city: string; // static default
+  referenceFrom: string;
+  city: string;
 };
 
 export default function ContactUs() {
   const router = useRouter();
-    const [formData, setFormData] = useState<FormData>({
-      name: "",
-      email: "",
-      phoneNo: "",
-      service: "",
-      message: "",
-      referenceFrom: "contactus",
-      city: "Mysore",
-    });
 
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  // Next.js: set react-modal app element to the Next root
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      Modal.setAppElement("#__next");
-    }
-  }, []);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    companyName: "",
+    email: "",
+    phoneNo: "",
+    service: "",
+    message: "",
+    referenceFrom: "contactus",
+    city: "Mysore",
+  });
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const hasData = Object.values(formData).some(
-      (v) => (v ?? "").toString().trim() !== ""
-    );
-    if (!hasData) {
-      alert("Please provide at least one field.");
+    // Minimal validation
+    if (!formData.name.trim() || !formData.phoneNo.trim()) {
+      alert("Name and Phone are required");
       return;
     }
 
     try {
-      const response = await axios.post("/api/enquiries", formData, {
-        headers: { "Content-Type": "application/json" },
-        });
+      const response = await axios.post(
+        "/api/enquiries",
+        {
+          ...formData,
+          sourceDomain: "nakshatra.in", // ✅ CATEGORY IDENTIFIER
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
 
-      if (response.status === 201 || response.status === 200) {
+      if (response.status === 200 || response.status === 201) {
         router.push("/thankyou");
         setFormData({
           name: "",
+          companyName: "",
           email: "",
           phoneNo: "",
           service: "",
@@ -79,11 +81,9 @@ export default function ContactUs() {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("An error occurred. Check console for details.");
+      alert("Something went wrong. Please try again.");
     }
   };
-
-  const closeModal = () => setModalIsOpen(false);
 
   return (
     <div className={`container ${styles["contact-section"]}`}>
@@ -98,6 +98,7 @@ export default function ContactUs() {
           >
             Let’s grow
           </motion.h2>
+
           <motion.h2
             className={`${styles["let-grow-sub"]} ${styles["text-move"]}`}
             initial={{ opacity: 0, x: 40 }}
@@ -122,46 +123,45 @@ export default function ContactUs() {
         </div>
       </div>
 
+      {/* FORM */}
       <form onSubmit={handleSubmit} className={styles["contact-form"]}>
         <div className="row g-4">
           <div className="col-md-6">
-            <label>Name</label>
             <input
               type="text"
               name="name"
               className="form-control"
-              placeholder="Enter Name *"
+              placeholder="Name *"
               value={formData.name}
               onChange={handleChange}
             />
           </div>
 
+         
+
           <div className="col-md-6">
-            <label>Email</label>
             <input
               type="email"
               name="email"
               className="form-control"
-              placeholder="Enter Email *"
+              placeholder="Email Address"
               value={formData.email}
               onChange={handleChange}
             />
           </div>
 
           <div className="col-md-6">
-            <label>Phone</label>
             <input
               type="text"
               name="phoneNo"
               className="form-control"
-              placeholder="Enter Phone *"
+              placeholder="Phone Number *"
               value={formData.phoneNo}
               onChange={handleChange}
             />
           </div>
 
           <div className="col-md-6">
-            <label>Service</label>
             <select
               name="service"
               className="form-control"
@@ -183,12 +183,32 @@ export default function ContactUs() {
             </select>
           </div>
 
+     <div className="col-md-6">
+            <input
+              type="text"
+              name="companyName"
+              className="form-control"
+              placeholder="Company Name *"
+              value={formData.companyName}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="col-md-6">
+            <input
+              type="text"
+              name="city"
+              className="form-control"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleChange}
+            />
+          </div>
+
           <div className="col-12">
-            <label>Message</label>
             <textarea
               name="message"
               className="form-control"
-              placeholder="Your Message *"
+              placeholder="Your Message"
               rows={5}
               value={formData.message}
               onChange={handleChange}
@@ -202,29 +222,6 @@ export default function ContactUs() {
           </div>
         </div>
       </form>
-
-      {/* <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Thank You"
-        style={{
-          content: {
-            maxWidth: "400px",
-            margin: "auto",
-            height: "250px",
-            padding: "30px",
-            borderRadius: "12px",
-            textAlign: "center",
-          },
-          overlay: { backgroundColor: "rgba(0, 0, 0, 0.4)" },
-        }}
-      >
-        <h2>Thank you!</h2>
-        <p>Your message has been sent. We&apos;ll contact you soon.</p>
-        <button onClick={closeModal} className="btn btn-secondary mt-3">
-          Close
-        </button>
-      </Modal> */}
     </div>
   );
 }

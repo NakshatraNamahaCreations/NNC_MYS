@@ -37,6 +37,7 @@ import TestimonialsCarousel from "./TestimonialsCarousel";
 import { motion, Variants} from "framer-motion";
 import FaqSection from "./FaqSection";
 import TrustedPartnerBootstrap from "./TrustedPartnerBootstrap";
+import WebsitePopupForm from "./WebsitePopupForm";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -542,6 +543,7 @@ const item = {
 
      <FaqSection/>
       <InfoSection /> 
+      <WebsitePopupForm/>
     </div>
   );
 }

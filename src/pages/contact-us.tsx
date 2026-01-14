@@ -3,9 +3,10 @@ import Head from "next/head";
 import Script from "next/script";
 import styles from "./contact-us.module.css";
 import Image from "next/image";
-// keep these paths as you have them (adjust if you moved files)
+// keep these paths as you have them (adjust if you moved files) ContactLocations
 import ContactUsfaq from "./ContactUsfaq";
 import FloatingActions from "@/pages/FloatingActions";
+import ContactLocations from "@/components/ContactLocations";
 import MobileBottomBar from "@/pages/MobileBottomBar";
 import InfoSection from "@/components/InfoSection";
 import ContactUs from "@/pages/ContactUs"; // ← the Next.js client component version
@@ -214,7 +215,7 @@ export default function ContactPage() {
 
       <ContactUs />
 
-      <div className={styles["map-wrapper"]}>
+      {/* <div className={styles["map-wrapper"]}>
         <div className={styles["map-frame"]}>
           <iframe
             loading="lazy"
@@ -227,7 +228,8 @@ export default function ContactPage() {
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
-      </div>
+      </div> */}
+      <ContactLocations/>
 
       <FloatingActions />
       <MobileBottomBar />

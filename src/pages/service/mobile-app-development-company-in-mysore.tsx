@@ -15,6 +15,7 @@ import InfoSection from "@/components/InfoSection";
 import MobileProcessTimeline from "@/pages/MobileProcessTimeline";
 import MobileFeaturedCard from "@/pages/MobileFeaturedCard";
 import DesignTypesSection from "@/pages/DesignTypesSection";
+import ContactForm from "@/components/ContactForm";
 
 const faqs = [
   {
@@ -312,7 +313,7 @@ const router = useRouter();
   </ol>
 </nav>
 
-              <h2 className={styles.title}>MOBILE APP DEVELOPMENT COMPANY IN MYSORE</h2>
+              <h2 className={styles.title}>MOBILE APP DEVELOPMENT COMPANY </h2>
               <p className={styles.subtitle}>
                 Empower your business with high-performing, feature-rich mobile apps designed to engage your audience and drive growth. Nakshatra Namaha Creations specializes in building custom Android, iOS, and cross-platform apps with seamless user experiences, ensuring your brand stays ahead in the digital era.
               </p>
@@ -321,7 +322,7 @@ const router = useRouter();
 
           {/* Right Contact Form */}
           <div className="col-12 col-lg-4 mt-4 mt-lg-0 mb-3">
-            <div className={styles.contactCard}>
+            {/* <div className={styles.contactCard}>
               <h3 className={styles.contactHeading}>Let’s Connect</h3>
               <form onSubmit={handleSubmit} noValidate>
                 <input
@@ -385,7 +386,9 @@ const router = useRouter();
                   Submit
                 </button>
               </form>
-            </div>
+            </div> */}
+
+            <ContactForm/>
           </div>
         </div>
       </div>

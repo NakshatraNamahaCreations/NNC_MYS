@@ -559,7 +559,7 @@ filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-r
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: 0.01em;
-  font-size: clamp(28px, 6vw, 56px);
+  font-size: clamp(28px, 5vw, 50px);
   max-width: 980px;
   opacity: 0;
   transform: translateY(8px);
@@ -568,7 +568,7 @@ filter: brightness(0) saturate(100%) invert(40%) sepia(71%) saturate(639%) hue-r
 .subtitle {
   margin: 4px 0 8px;
   color: #e9eef6;
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 1.55;
   max-width: 820px;
   opacity: 0;

@@ -188,8 +188,10 @@
   margin: 0 0 8px;
   font-weight: 800;
   letter-spacing: .01em;
-  font-size: clamp(18px, 2vw, 20px);
+  font-size: clamp(18px, 2vw, 24px);
   opacity: .95;
+  margin-bottom: 1rem;
+
 }
 
 /* ===========================
@@ -305,3 +307,8 @@
   background: #0b0f14;  /* dark dropdown background */
   color: #fff;          /* white text */
 }
+
+.contactConsultHeroFormTitle {
+  text-align: center;
+}
+
