@@ -158,6 +158,18 @@ export default function CTASection() {
               />
             </label>
 
+                <label className={styles.contactConsultHeroField}>
+              {/* <span>Company *</span> */}
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Company name"
+                value={formData.companyName}
+                onChange={handleChange}
+                required
+              />
+            </label>
+
            
           </div>
 
@@ -210,17 +222,7 @@ export default function CTASection() {
           </label>
 
           <label className={styles.contactConsultHeroField}>
-             <label className={styles.contactConsultHeroField}>
-              {/* <span>Company *</span> */}
-              <input
-                type="text"
-                name="companyName"
-                placeholder="Company name"
-                value={formData.companyName}
-                onChange={handleChange}
-                required
-              />
-            </label>
+         
             {/* <span>City *</span> */}
             <input
               type="text"
