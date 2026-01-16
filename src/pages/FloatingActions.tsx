@@ -1,59 +1,78 @@
 "use client";
 import { useRouter } from "next/navigation";
-
-import { useState, useEffect, type ChangeEvent, type FormEvent, type MouseEvent } from "react";
+import {
+  useState,
+  useEffect,
+  type ChangeEvent,
+  type FormEvent,
+  type MouseEvent,
+} from "react";
 import styles from "./FloatingActions.module.css";
 
 type CallbackData = {
   name: string;
+  companyName: string;
   phone: string;
   email: string;
   subject: string;
+  city: string;
   message: string;
 };
 
 export default function FloatingActions() {
-
   const router = useRouter();
+
   const [callbackData, setCallbackData] = useState<CallbackData>({
     name: "",
+    companyName: "",
     phone: "",
     email: "",
     subject: "",
+    city: "",
     message: "",
   });
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleCallbackChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleCallbackChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setCallbackData((s) => ({ ...s, [name]: value }));
+    setCallbackData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleCallbackSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { name, phone, email, subject, message } = callbackData;
 
-    if (!name || !phone || !email || !subject) {
+    const {
+      name,
+      companyName,
+      phone,
+      email,
+      subject,
+      city,
+      message,
+    } = callbackData;
+
+    if (!name || !companyName || !phone || !email || !subject || !city) {
       alert("Please fill in all required fields.");
       return;
     }
 
-    // Construct payload in the same shape as your ContactUs form expects.
-    // Keep `phone` for local usage but include `phoneNo` for upstream.
     const payload = {
       name,
+      companyName,
       email,
-      phoneNo: phone,           // map to phoneNo (ContactUs uses phoneNo)
-      phone,                    // include original too (proxy will normalize)
-      service: subject,         // many backends expect `service` instead of `subject`
+      phoneNo: phone,
+      phone,
+      service: subject,
       message,
-      referenceFrom: "callback",// small identifier so you know it came from floating callback
-      city: "Mysore",
+      city,
+      referenceFrom: "callback",
+      sourceDomain: "nakshatra.in",
     };
 
     try {
-      // Use the internal relative path so your pages/api/enquiries.js proxy handles forwarding.
       const res = await fetch("/api/enquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -65,19 +84,25 @@ export default function FloatingActions() {
         throw new Error(`HTTP ${res.status} ${txt}`);
       }
 
-      // success
-      // alert("Callback request submitted successfully!");
-      setCallbackData({ name: "", phone: "", email: "", subject: "", message: "" });
+      setCallbackData({
+        name: "",
+        companyName: "",
+        phone: "",
+        email: "",
+        subject: "",
+        city: "",
+        message: "",
+      });
+
       setShowModal(false);
       router.push("/thankyou");
-
     } catch (err) {
       console.error("Error submitting callback request:", err);
-      alert("An error occurred while submitting. Check console for details.");
+      alert("An error occurred while submitting. Please try again.");
     }
   };
 
-  // lock scroll when modal open
+  // Lock body scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = showModal ? "hidden" : "";
     return () => {
@@ -85,7 +110,8 @@ export default function FloatingActions() {
     };
   }, [showModal]);
 
-  const stop = (e: MouseEvent<HTMLDivElement>) => e.stopPropagation();
+  const stopPropagation = (e: MouseEvent<HTMLDivElement>) =>
+    e.stopPropagation();
 
   return (
     <>
@@ -100,7 +126,7 @@ export default function FloatingActions() {
         </button>
 
         <a
-          href="https://wa.me/919900566466"
+          href="https://wa.me/919900566466?text=Hi,%20I%20need%20a%20callback"
           target="_blank"
           rel="noreferrer"
           className={styles["floating-whatsapp"]}
@@ -111,67 +137,114 @@ export default function FloatingActions() {
       </div>
 
       {showModal && (
-        <div className={styles["callback-overlay"]} onClick={() => setShowModal(false)}>
-          <div className={styles["callback-box"]} onClick={stop} role="dialog" aria-modal="true">
-            <button className={styles["close-btn"]} onClick={() => setShowModal(false)} aria-label="Close">
+        <div
+          className={styles["callback-overlay"]}
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className={styles["callback-box"]}
+            onClick={stopPropagation}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              className={styles["close-btn"]}
+              onClick={() => setShowModal(false)}
+              aria-label="Close"
+            >
               &times;
             </button>
-            <h3 className={styles["callback-title"]}>Request a callback</h3>
-            <p className={styles["callback-sub"]}>Fill out the form below, and we'll call you within 24 hours.</p>
 
-            <form className={styles["callback-form"]} onSubmit={handleCallbackSubmit}>
-              <label className={styles["label"]}>Name</label>
+            <h3 className={styles["callback-title"]}>Request a Callback</h3>
+            <p className={styles["callback-sub"]}>
+              Fill out the form below and we’ll call you within 24 hours.
+            </p>
+
+            <form
+              className={styles["callback-form"]}
+              onSubmit={handleCallbackSubmit}
+            >
+              {/* <label className={styles["label"]}>Name *</label> */}
               <input
                 type="text"
                 name="name"
-                placeholder="Enter your name"
+                placeholder="Your name"
                 value={callbackData.name}
                 onChange={handleCallbackChange}
                 required
                 className={styles["input"]}
+                style={{marginTop:"5px", marginBottom:"5px"}}
               />
 
-              <label className={styles["label"]}>Phone</label>
+              {/* <label className={styles["label"]}>Company Name *</label> */}
+              <input
+                type="text"
+                name="companyName"
+                placeholder="Company name"
+                value={callbackData.companyName}
+                onChange={handleCallbackChange}
+                required
+                className={styles["input"]}
+                   style={{marginTop:"5px", marginBottom:"5px"}}
+              />
+
+              {/* <label className={styles["label"]}>Phone *</label> */}
               <input
                 type="tel"
                 name="phone"
-                placeholder="Enter your phone number"
+                placeholder="10-digit mobile number"
                 value={callbackData.phone}
                 onChange={handleCallbackChange}
                 required
                 className={styles["input"]}
+                   style={{marginTop:"5px", marginBottom:"5px"}}
               />
 
-              <label className={styles["label"]}>Email</label>
+              {/* <label className={styles["label"]}>Email *</label> */}
               <input
                 type="email"
                 name="email"
-                placeholder="Enter your email"
+                placeholder="Your email"
                 value={callbackData.email}
                 onChange={handleCallbackChange}
                 required
                 className={styles["input"]}
+                style={{marginTop:"5px", marginBottom:"5px"}}
               />
 
-              <label className={styles["label"]}>Subject</label>
+              {/* <label className={styles["label"]}>City *</label> */}
+              <input
+                type="text"
+                name="city"
+                placeholder="City"
+                value={callbackData.city}
+                onChange={handleCallbackChange}
+                required
+                className={styles["input"]}
+                style={{marginTop:"5px", marginBottom:"5px"}}
+              />
+
+              {/* <label className={styles["label"]}>Subject *</label> */}
               <input
                 type="text"
                 name="subject"
-                placeholder="Subject"
+                placeholder="Service / Subject"
                 value={callbackData.subject}
                 onChange={handleCallbackChange}
                 required
                 className={styles["input"]}
+                style={{marginTop:"5px", marginBottom:"5px"}}
               />
 
-              <label className={styles["label"]}>Message</label>
+              {/* <label className={styles["label"]}>Message</label> */}
               <textarea
                 name="message"
-                placeholder="Enter your message"
+                placeholder="Your message"
                 rows={3}
                 value={callbackData.message}
                 onChange={handleCallbackChange}
                 className={styles["textarea"]}
+                style={{marginTop:"5px", marginBottom:"5px"}}
               />
 
               <button type="submit" className={styles["submit-btn"]}>
