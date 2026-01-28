@@ -161,7 +161,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/flutter-app-development-company"
+              href="https://www.nakshatranamahacreations.in/service/flutter-app-development-company"
             />
            <meta name="keywords" content="flutter app development company, flutter development services, cross platform app development, flutter mobile app development, flutter developers india, flutter app agency, custom flutter applications, flutter app design and development, hire flutter developers, scalable flutter apps, mobile app development company, hybrid mobile development, flutter ui development, dart app development" />
 

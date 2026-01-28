@@ -21,14 +21,14 @@ export default function Blogs6() {
       "@type": "Person",
       name: "Nakshatra Namaha Creations",
       url:
-        "https://nakshatranamahacreations.in/blogs/2d-animation-sales-communication",
+        "https://www.nakshatranamahacreations.in/blogs/2d-animation-sales-communication",
     },
     publisher: {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       logo: {
         "@type": "ImageObject",
-        url: "https://nakshatranamahacreations.in/media/blogs/2.png",
+        url: "https://www.nakshatranamahacreations.in/media/blogs/2.png",
       },
     },
     datePublished: "2025-05-15",
@@ -36,7 +36,7 @@ export default function Blogs6() {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://nakshatranamahacreations.in/blogs/2d-animation-sales-communication",
+        "https://www.nakshatranamahacreations.in/blogs/2d-animation-sales-communication",
     },
   };
 
@@ -55,7 +55,7 @@ export default function Blogs6() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blogs/2d-animation-sales-communication"
+          href="https://www.nakshatranamahacreations.in/blogs/2d-animation-sales-communication"
         />
 
         {/* Open Graph / Facebook */}
@@ -69,7 +69,7 @@ export default function Blogs6() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blogs/2d-animation-sales-communication"
+          content="https://www.nakshatranamahacreations.in/blogs/2d-animation-sales-communication"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -86,7 +86,7 @@ export default function Blogs6() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

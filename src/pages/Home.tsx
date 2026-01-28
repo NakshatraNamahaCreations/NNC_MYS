@@ -118,8 +118,8 @@ const jsonLd = {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       alternateName: "Website Development Company in Mysore",
-      url: "https://nakshatranamahacreations.in/",
-      logo: "https://nakshatranamahacreations.in/images/image.png",
+      url: "https://www.nakshatranamahacreations.in/",
+      logo: "https://www.nakshatranamahacreations.in/images/image.png",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+919900566466",
@@ -137,8 +137,8 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       name: "Nakshatra Namaha Creations",
-      image: "https://nakshatranamahacreations.in/images/image.png",
-      url: "https://nakshatranamahacreations.in/",
+      image: "https://www.nakshatranamahacreations.in/images/image.png",
+      url: "https://www.nakshatranamahacreations.in/",
       telephone: "+919900566466",
       address: {
         "@type": "PostalAddress",
@@ -373,7 +373,7 @@ const item = {
     <div>
 
      <Head>
-        <link rel="canonical" href="https://nakshatranamahacreations.in" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in" />
 
         <title>
           Website Development Company in Mysore | Nakshatra Namaha Creations
@@ -391,7 +391,7 @@ const item = {
           property="og:description"
           content="Nakshatra Namaha Creations offers expert website design and mobile app development in Mysore, delivering user-friendly, SEO-optimized solutions since 2015."
         />
-        <meta property="og:url" content="https://nakshatranamahacreations.in" />
+        <meta property="og:url" content="https://www.nakshatranamahacreations.in" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
         <meta name="twitter:card" content="summary" />
@@ -400,7 +400,7 @@ const item = {
           name="twitter:description"
           content="Nakshatra Namaha Creations offers expert website design and mobile app development in Mysore, delivering user-friendly, SEO-optimized solutions since 2015."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

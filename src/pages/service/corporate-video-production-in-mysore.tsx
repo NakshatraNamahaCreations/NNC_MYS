@@ -182,7 +182,7 @@ export default function Video() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
         />
 
         {/* Open Graph (OG) Tags */}
@@ -198,7 +198,7 @@ export default function Video() {
 
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -215,7 +215,7 @@ export default function Video() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
 
@@ -224,10 +224,10 @@ export default function Video() {
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "@id": "https://nakshatranamahacreations.in/#organization",
+          "@id": "https://www.nakshatranamahacreations.in/#organization",
           "name": "Nakshatra Namaha Creations",
-          "url": "https://nakshatranamahacreations.in",
-          "logo": "https://nakshatranamahacreations.in/images/image.png",
+          "url": "https://www.nakshatranamahacreations.in",
+          "logo": "https://www.nakshatranamahacreations.in/images/image.png",
           "sameAs": [
             "https://www.facebook.com/Nakshatranamahacreations/",
             "https://www.instagram.com/nnc.digitalbengaluru/"
@@ -239,9 +239,9 @@ export default function Video() {
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://nakshatranamahacreations.in/#localbusiness",
+          "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
           "name": "Nakshatra Namaha Creations",
-          "image": "https://nakshatranamahacreations.in/images/image.png",
+          "image": "https://www.nakshatranamahacreations.in/images/image.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "SUSWANI TOWERS, Akkamahadevi Rd, JP Nagar 2nd Stage, C-Block",
@@ -250,7 +250,7 @@ export default function Video() {
             "postalCode": "570008",
             "addressCountry": "IN"
           },
-          "url": "https://nakshatranamahacreations.in",
+          "url": "https://www.nakshatranamahacreations.in",
           "telephone": "+91-9900566466",
           "email": "info@nakshatranamahacreations.in",
           "areaServed": "Mysuru",
@@ -264,7 +264,7 @@ export default function Video() {
           "@type": "Service",
           "serviceType": "Corporate Video Production",
           "provider": {
-            "@id": "https://nakshatranamahacreations.in/#localbusiness"
+            "@id": "https://www.nakshatranamahacreations.in/#localbusiness"
           },
           "areaServed": {
             "@type": "Place",
@@ -272,7 +272,7 @@ export default function Video() {
           },
           "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceUrl": "https://nakshatranamahacreations.in/service/corporate-video-production-in-mysore",
+            "serviceUrl": "https://www.nakshatranamahacreations.in/service/corporate-video-production-in-mysore",
             "availableLanguage": "English"
           },
           "description": "Create engaging corporate videos in Mysore with professional filmmakers skilled in storytelling, branding, and video editing for marketing, events, and business."
@@ -345,19 +345,19 @@ export default function Video() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://nakshatranamahacreations.in"
+              "item": "https://www.nakshatranamahacreations.in"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Services",
-              "item": "https://nakshatranamahacreations.in/service"
+              "item": "https://www.nakshatranamahacreations.in/service"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Corporate Video Production Company",
-              "item": "https://nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
+              "item": "https://www.nakshatranamahacreations.in/service/corporate-video-production-in-mysore"
             }
           ]
         }

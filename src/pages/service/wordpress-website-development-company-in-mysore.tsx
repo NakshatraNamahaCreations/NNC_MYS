@@ -229,7 +229,7 @@ while providing flexibility for future updates and modifications.`,
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/wordpress-website-development-company-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/wordpress-website-development-company-in-mysore"
         />
         {/* Open Graph */}
         <meta
@@ -242,7 +242,7 @@ while providing flexibility for future updates and modifications.`,
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/wordpress-website-development-company-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/wordpress-website-development-company-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -258,7 +258,7 @@ while providing flexibility for future updates and modifications.`,
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

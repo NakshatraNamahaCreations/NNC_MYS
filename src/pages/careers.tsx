@@ -93,8 +93,8 @@ export default function Careers() {
     "@type": "Organization",
     name: "Nakshatra Namaha Creations",
     alternateName: "Web & App Development Jobs | Careers in Mysore",
-    url: "https://nakshatranamahacreations.in/careers",
-    logo: "https://nakshatranamahacreations.in/images/image.png",
+    url: "https://www.nakshatranamahacreations.in/careers",
+    logo: "https://www.nakshatranamahacreations.in/images/image.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+919900566466",
@@ -114,8 +114,8 @@ export default function Careers() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Nakshatra Namaha Creations",
-    image: "https://nakshatranamahacreations.in/images/image.png",
-    url: "https://nakshatranamahacreations.in/careers",
+    image: "https://www.nakshatranamahacreations.in/images/image.png",
+    url: "https://www.nakshatranamahacreations.in/careers",
     telephone: "+919900566466",
     address: {
       "@type": "PostalAddress",
@@ -164,7 +164,7 @@ export default function Careers() {
           name="keywords"
           content="Web Development Jobs Mysore, App Development Careers, UI/UX Designer Jobs, Software Developer Hiring, IT Jobs Mysore, Careers in Tech, React Developer Jobs, Mobile App Jobs, Join Tech Team Mysore"
         />
-        <link rel="canonical" href="https://nakshatranamahacreations.in/careers" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/careers" />
 
         {/* Open Graph */}
         <meta
@@ -175,7 +175,7 @@ export default function Careers() {
           property="og:description"
           content="Explore career opportunities in web development, mobile app development, UI/UX design, and digital tech. Join a growing team of professionals based in Mysore."
         />
-        <meta property="og:url" content="https://nakshatranamahacreations.in/careers" />
+        <meta property="og:url" content="https://www.nakshatranamahacreations.in/careers" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
 
@@ -191,7 +191,7 @@ export default function Careers() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

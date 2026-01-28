@@ -43,8 +43,8 @@ export default function OurWorkPage() {
         "@type": "Organization",
         name: "Nakshatra Namaha Creations",
         alternateName: "Website & App Development Portfolio | Projects in Mysore",
-        url: "https://nakshatranamahacreations.in/our-work",
-        logo: "https://nakshatranamahacreations.in/images/image.png",
+        url: "https://www.nakshatranamahacreations.in/our-work",
+        logo: "https://www.nakshatranamahacreations.in/images/image.png",
         contactPoint: {
           "@type": "ContactPoint",
           telephone: "+919900566466",
@@ -62,8 +62,8 @@ export default function OurWorkPage() {
       {
         "@type": "LocalBusiness",
         name: "Nakshatra Namaha Creations",
-        image: "https://nakshatranamahacreations.in/images/image.png",
-        url: "https://nakshatranamahacreations.in/our-work",
+        image: "https://www.nakshatranamahacreations.in/images/image.png",
+        url: "https://www.nakshatranamahacreations.in/our-work",
         telephone: "+919900566466",
         address: {
           "@type": "PostalAddress",
@@ -100,19 +100,19 @@ const HERO_SUBTITLE =
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://nakshatranamahacreations.in/our-work" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/our-work" />
         <title>Website & App Development Portfolio | Projects in Mysore</title>
         <meta name="description" content="Browse professional projects in website development, mobile apps, UI/UX, and branding. See real results crafted for businesses across industries in Mysore." />
         <meta name="keywords" content="Website Development Portfolio, App Development Projects, UI/UX Design Portfolio, Web Design Case Studies, Branding and Design Samples, Web Projects in Mysore, Mobile App Showcase, Ecommerce Website Examples, Custom Web Application Work, Digital Project Showcase" />
         <meta property="og:title" content="Website & App Development Portfolio | Projects in Mysore" />
         <meta property="og:description" content="Browse professional projects in website development, mobile apps, UI/UX, and branding. See real results crafted for businesses across industries in Mysore." />
-        <meta property="og:url" content="https://nakshatranamahacreations.in/our-work" />
+        <meta property="og:url" content="https://www.nakshatranamahacreations.in/our-work" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Website & App Development Portfolio | Projects in Mysore" />
         <meta name="twitter:description" content="Browse professional projects in website development, mobile apps, UI/UX, and branding. See real results crafted for businesses across industries in Mysore." />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

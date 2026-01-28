@@ -68,8 +68,8 @@ export default function ContactPage() {
     "@type": "Organization",
     name: "Nakshatra Namaha Creations",
     alternateName: "Contact Web & App Developers | Digital Services Mysore",
-    url: "https://nakshatranamahacreations.in/contact-us",
-    logo: "https://nakshatranamahacreations.in/images/image.png",
+    url: "https://www.nakshatranamahacreations.in/contact-us",
+    logo: "https://www.nakshatranamahacreations.in/images/image.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+919900566466",
@@ -89,8 +89,8 @@ export default function ContactPage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Nakshatra Namaha Creations",
-    image: "https://nakshatranamahacreations.in/images/image.png",
-    url: "https://nakshatranamahacreations.in/contact-us",
+    image: "https://www.nakshatranamahacreations.in/images/image.png",
+    url: "https://www.nakshatranamahacreations.in/contact-us",
     telephone: "+919900566466",
     address: {
       "@type": "PostalAddress",
@@ -138,7 +138,7 @@ export default function ContactPage() {
           name="keywords"
           content="Contact Web Developers Mysore, App Developers Contact, Website Quote Mysore, Tech Team Mysore, UI/UX Designers Contact, Digital Services Mysore"
         />
-        <link rel="canonical" href="https://nakshatranamahacreations.in/contact-us" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/contact-us" />
 
         {/* Open Graph */}
         <meta
@@ -151,7 +151,7 @@ export default function ContactPage() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/contact-us"
+          content="https://www.nakshatranamahacreations.in/contact-us"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -168,7 +168,7 @@ export default function ContactPage() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

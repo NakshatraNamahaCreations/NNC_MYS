@@ -23,14 +23,14 @@ export default function BlogsWellDesignedWebsite() {
       "@type": "Person",
       name: "Nakshatra Namaha Creations",
       url:
-        "https://nakshatranamahacreations.in/blog/well-designed-website-benefits",
+        "https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits",
     },
     publisher: {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       logo: {
         "@type": "ImageObject",
-        url: "https://nakshatranamahacreations.in/media/blogs/2.png",
+        url: "https://www.nakshatranamahacreations.in/media/blogs/2.png",
       },
     },
     datePublished: "2025-05-15",
@@ -38,7 +38,7 @@ export default function BlogsWellDesignedWebsite() {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://nakshatranamahacreations.in/blog/well-designed-website-benefits",
+        "https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits",
     },
   };
 
@@ -58,7 +58,7 @@ export default function BlogsWellDesignedWebsite() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          href="https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits"
         />
 
         {/* Open Graph */}
@@ -72,7 +72,7 @@ export default function BlogsWellDesignedWebsite() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blog/well-designed-website-benefits"
+          content="https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -89,7 +89,7 @@ export default function BlogsWellDesignedWebsite() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

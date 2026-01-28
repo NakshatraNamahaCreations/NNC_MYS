@@ -161,7 +161,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/social-media-marketing"
+              href="https://www.nakshatranamahacreations.in/service/social-media-marketing"
             />
            <meta name="keywords" content="Social Media Marketing Services, Social Media Marketing Company, Social Media Marketing Agency, Social Media Management Services, SMM Services, Social Media Advertising, Social Media Marketing Experts"/>
 

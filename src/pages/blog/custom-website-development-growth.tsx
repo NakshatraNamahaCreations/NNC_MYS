@@ -27,7 +27,7 @@ export default function Blogs2() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blog/custom-website-development-growth"
+          href="https://www.nakshatranamahacreations.in/blog/custom-website-development-growth"
         />
 
         {/* Open Graph / Facebook */}
@@ -41,7 +41,7 @@ export default function Blogs2() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blog/custom-website-development-growth"
+          content="https://www.nakshatranamahacreations.in/blog/custom-website-development-growth"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -58,7 +58,7 @@ export default function Blogs2() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
@@ -74,21 +74,21 @@ export default function Blogs2() {
           "author": {
             "@type": "Person",
             "name": "Nakshatra Namaha Creations",
-            "url": "https://nakshatranamahacreations.in/blog/custom-website-development-growth"
+            "url": "https://www.nakshatranamahacreations.in/blog/custom-website-development-growth"
           },
           "publisher": {
             "@type": "Organization",
             "name": "Nakshatra Namaha Creations",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://nakshatranamahacreations.in/media/blogs/2.png"
+              "url": "https://www.nakshatranamahacreations.in/media/blogs/2.png"
             }
           },
           "datePublished": "2025-05-15",
           "dateModified": "2025-05-15",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://nakshatranamahacreations.in/blog/custom-website-development-growth"
+            "@id": "https://www.nakshatranamahacreations.in/blog/custom-website-development-growth"
           }
         }
         `}

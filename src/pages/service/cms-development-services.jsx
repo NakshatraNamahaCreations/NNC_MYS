@@ -165,7 +165,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/cms-development-services"
+              href="https://www.nakshatranamahacreations.in/service/cms-development-services"
             />
            <meta name="keywords" content="custom cms development, custom cms solutions, cms development services, seamless content delivery, content management system development, cms web development, enterprise cms solutions, headless cms development, custom website cms, cms integration services, scalable cms platform, bespoke cms development, custom content management system, cms design and development, content workflow automation" />
 

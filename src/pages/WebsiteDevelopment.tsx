@@ -48,7 +48,7 @@ export default function WebsiteDevelopment() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/website-developers-mysorere"
+          href="https://www.nakshatranamahacreations.in/website-developers-mysorere"
         />
 
         {/* Open Graph */}
@@ -59,7 +59,7 @@ export default function WebsiteDevelopment() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/website-developers-mysorere"
+          content="https://www.nakshatranamahacreations.in/website-developers-mysorere"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -71,7 +71,7 @@ export default function WebsiteDevelopment() {
           name="twitter:description"
           content="Get custom websites built in Mysore with expert developers focused on responsive design, fast performance, SEO, and business-ready functionality."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

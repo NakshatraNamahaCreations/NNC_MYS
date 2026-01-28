@@ -173,10 +173,10 @@ const router = useRouter();
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://nakshatranamahacreations.in/#organization",
+        "@id": "https://www.nakshatranamahacreations.in/#organization",
         name: "Nakshatra Namaha Creations",
-        url: "https://nakshatranamahacreations.in",
-        logo: "https://nakshatranamahacreations.in/images/image.png",
+        url: "https://www.nakshatranamahacreations.in",
+        logo: "https://www.nakshatranamahacreations.in/images/image.png",
         sameAs: [
           "https://www.facebook.com/Nakshatranamahacreations/",
           "https://www.instagram.com/nnc.digitalbengaluru/",
@@ -184,9 +184,9 @@ const router = useRouter();
       },
       {
         "@type": "LocalBusiness",
-        "@id": "https://nakshatranamahacreations.in/#localbusiness",
+        "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
         name: "Nakshatra Namaha Creations",
-        image: "https://nakshatranamahacreations.in/images/image.png",
+        image: "https://www.nakshatranamahacreations.in/images/image.png",
         address: {
           "@type": "PostalAddress",
           streetAddress:
@@ -196,7 +196,7 @@ const router = useRouter();
           postalCode: "570008",
           addressCountry: "IN",
         },
-        url: "https://nakshatranamahacreations.in",
+        url: "https://www.nakshatranamahacreations.in",
         telephone: "+91-9900566466",
         email: "info@nakshatranamahacreations.in",
         areaServed: "Mysuru",
@@ -206,13 +206,13 @@ const router = useRouter();
         "@type": "Service",
         serviceType: "Mobile App Development",
         provider: {
-          "@id": "https://nakshatranamahacreations.in/#localbusiness",
+          "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
         },
         areaServed: { "@type": "Place", name: "Mysuru" },
         availableChannel: {
           "@type": "ServiceChannel",
           serviceUrl:
-            "https://nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore",
+            "https://www.nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore",
           availableLanguage: "English",
         },
         description:
@@ -229,12 +229,12 @@ const router = useRouter();
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://nakshatranamahacreations.in" },
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nakshatranamahacreations.in" },
           {
             "@type": "ListItem",
             position: 2,
             name: "Mobile App Development Mysore",
-            item: "https://nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore",
+            item: "https://www.nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore",
           },
         ],
       },
@@ -252,7 +252,7 @@ const router = useRouter();
        <meta name="keywords" content="mobile app development company in mysore, app developers in mysore, mobile application development mysore, android app development mysore, ios app development mysore, best mobile app developers in mysore, top app development company in mysore, custom mobile app development mysore, mobile app development services mysore, hybrid app development mysore, react native app development mysore, flutter app development mysore, enterprise mobile app development mysore, startup app development mysore, app development agency in mysore, mobile app designers in mysore, app development cost in mysore, mobile app maintenance services mysore, ecommerce app development mysore, local app developers in mysore" />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore"
         />
         {/* Open Graph */}
         <meta property="og:title" content="Best Mobile App Development Company in Mysore" />
@@ -262,7 +262,7 @@ const router = useRouter();
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/mobile-app-development-company-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -273,7 +273,7 @@ const router = useRouter();
           name="twitter:description"
           content="Build feature-rich Android, iOS, and cross-platform apps in Mysore with skilled developers focused on performance, user experience, and business growth."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

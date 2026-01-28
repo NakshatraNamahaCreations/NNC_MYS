@@ -68,48 +68,48 @@ const websiteDevelopmentSchema = {
   "@graph": [
     {
       "@type": "BreadcrumbList",
-      "@id": "https://nakshatranamahacreations.in/website-development-company#breadcrumb",
+      "@id": "https://www.nakshatranamahacreations.in/website-development-company#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://nakshatranamahacreations.in/"
+          "item": "https://www.nakshatranamahacreations.in/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Professional Website Development Company | Business Websites",
-          "item": "https://nakshatranamahacreations.in/website-development-company"
+          "item": "https://www.nakshatranamahacreations.in/website-development-company"
         }
       ]
     },
 
     {
       "@type": "LocalBusiness",
-      "@id": "https://nakshatranamahacreations.in/website-development-company#localbusiness",
+      "@id": "https://www.nakshatranamahacreations.in/website-development-company#localbusiness",
       "name": "Professional Website Development Company | Business Websites",
-      "url": "https://nakshatranamahacreations.in/website-development-company",
+      "url": "https://www.nakshatranamahacreations.in/website-development-company",
       "description":
         "Professional website development services designed to build fast, secure, and scalable business websites. Get expert solutions for long-term growth."
     },
 
     {
       "@type": "Service",
-      "@id": "https://nakshatranamahacreations.in/website-development-company#service",
+      "@id": "https://www.nakshatranamahacreations.in/website-development-company#service",
       "name": "Professional Website Development Company | Business Websites",
-      "url": "https://nakshatranamahacreations.in/website-development-company",
+      "url": "https://www.nakshatranamahacreations.in/website-development-company",
       "description":
         "Professional website development services designed to build fast, secure, and scalable business websites. Get expert solutions for long-term growth.",
       "provider": {
         "@type": "LocalBusiness",
-        "@id": "https://nakshatranamahacreations.in/website-development-company#localbusiness"
+        "@id": "https://www.nakshatranamahacreations.in/website-development-company#localbusiness"
       }
     },
 
     {
       "@type": "FAQPage",
-      "@id": "https://nakshatranamahacreations.in/website-development-company#faq",
+      "@id": "https://www.nakshatranamahacreations.in/website-development-company#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -200,7 +200,7 @@ const websiteDevelopmentSchema = {
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/website-development-company"
+              href="https://www.nakshatranamahacreations.in/service/website-development-company"
             />
             <meta name="keywords" content="Website development company, Website development services, Professional website developers, Business website development, Custom website development, Web design and development, Website redesign services, Website maintenance services, SEO-friendly website development, Affordable website development company" />
 
@@ -216,11 +216,11 @@ const websiteDevelopmentSchema = {
       />
       <meta
         property="og:url"
-        content="https://nakshatranamahacreations.in/service/website-development-company"
+        content="https://www.nakshatranamahacreations.in/service/website-development-company"
       />
       <meta
         property="og:image"
-        content="https://nakshatranamahacreations.in/og-image.jpg"
+        content="https://www.nakshatranamahacreations.in/og-image.jpg"
       />
       <meta property="og:site_name" content="Nakshatra Namaha Creations" />
 
@@ -236,7 +236,7 @@ const websiteDevelopmentSchema = {
       />
       <meta
         name="twitter:image"
-        content="https://nakshatranamahacreations.in/og-image.jpg"
+        content="https://www.nakshatranamahacreations.in/og-image.jpg"
       />
 
 

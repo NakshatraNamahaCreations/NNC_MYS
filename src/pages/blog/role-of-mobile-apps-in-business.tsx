@@ -21,14 +21,14 @@ export default function RoleOfMobileAppsInBusiness() {
     author: {
       "@type": "Person",
       name: "Nakshatra Namaha Creations",
-      url: "https://nakshatranamahacreations.in/blog/well-designed-website-benefits",
+      url: "https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits",
     },
     publisher: {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       logo: {
         "@type": "ImageObject",
-        url: "https://nakshatranamahacreations.in/media/blogs/2.png",
+        url: "https://www.nakshatranamahacreations.in/media/blogs/2.png",
       },
     },
     datePublished: "2025-05-15",
@@ -36,7 +36,7 @@ export default function RoleOfMobileAppsInBusiness() {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://nakshatranamahacreations.in/blog/well-designed-website-benefits",
+        "https://www.nakshatranamahacreations.in/blog/well-designed-website-benefits",
     },
   };
 
@@ -55,7 +55,7 @@ export default function RoleOfMobileAppsInBusiness() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blogs/role-of-mobile-apps-in-business"
+          href="https://www.nakshatranamahacreations.in/blogs/role-of-mobile-apps-in-business"
         />
 
         {/* Open Graph / Facebook */}
@@ -69,7 +69,7 @@ export default function RoleOfMobileAppsInBusiness() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blogs/role-of-mobile-apps-in-business"
+          content="https://www.nakshatranamahacreations.in/blogs/role-of-mobile-apps-in-business"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -86,7 +86,7 @@ export default function RoleOfMobileAppsInBusiness() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

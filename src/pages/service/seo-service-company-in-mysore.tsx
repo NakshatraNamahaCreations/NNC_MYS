@@ -233,7 +233,7 @@ export default function SeoDevelopment() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/seo-service-company-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/seo-service-company-in-mysore"
         />
 
         {/* Open Graph */}
@@ -249,7 +249,7 @@ export default function SeoDevelopment() {
 
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/seo-service-company-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/seo-service-company-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -266,7 +266,7 @@ export default function SeoDevelopment() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
 
@@ -275,10 +275,10 @@ export default function SeoDevelopment() {
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "@id": "https://nakshatranamahacreations.in/#organization",
+          "@id": "https://www.nakshatranamahacreations.in/#organization",
           "name": "Nakshatra Namaha Creations",
-          "url": "https://nakshatranamahacreations.in",
-          "logo": "https://nakshatranamahacreations.in/images/image.png",
+          "url": "https://www.nakshatranamahacreations.in",
+          "logo": "https://www.nakshatranamahacreations.in/images/image.png",
           "sameAs": [
             "https://www.facebook.com/Nakshatranamahacreations/",
             "https://www.instagram.com/nnc.digitalbengaluru/"
@@ -289,9 +289,9 @@ export default function SeoDevelopment() {
         {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://nakshatranamahacreations.in/#localbusiness",
+          "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
           "name": "Nakshatra Namaha Creations",
-          "image": "https://nakshatranamahacreations.in/images/image.png",
+          "image": "https://www.nakshatranamahacreations.in/images/image.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "SUSWANI TOWERS, Akkamahadevi Rd, JP Nagar 2nd Stage, C-Block",
@@ -300,7 +300,7 @@ export default function SeoDevelopment() {
             "postalCode": "570008",
             "addressCountry": "IN"
           },
-          "url": "https://nakshatranamahacreations.in",
+          "url": "https://www.nakshatranamahacreations.in",
           "telephone": "+91-9900566466",
           "email": "info@nakshatranamahacreations.in",
           "areaServed": "Mysuru",
@@ -313,12 +313,12 @@ export default function SeoDevelopment() {
           "@type": "Service",
           "serviceType": "SEO Services",
           "provider": {
-            "@id": "https://nakshatranamahacreations.in/#localbusiness"
+            "@id": "https://www.nakshatranamahacreations.in/#localbusiness"
           },
           "areaServed": { "@type": "Place", "name": "Mysuru" },
           "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceUrl": "https://nakshatranamahacreations.in/service/seo-service-company-in-mysore",
+            "serviceUrl": "https://www.nakshatranamahacreations.in/service/seo-service-company-in-mysore",
             "availableLanguage": "English"
           },
           "description": "Improve your website’s Google ranking with expert SEO services in Mysore—covering on-page, off-page, local SEO, audits, and keyword optimization strategies."
@@ -342,9 +342,9 @@ export default function SeoDevelopment() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nakshatranamahacreations.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nakshatranamahacreations.in/service" },
-            { "@type": "ListItem", "position": 3, "name": "SEO Service Company", "item": "https://nakshatranamahacreations.in/service/seo-service-company-in-mysore" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nakshatranamahacreations.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nakshatranamahacreations.in/service" },
+            { "@type": "ListItem", "position": 3, "name": "SEO Service Company", "item": "https://www.nakshatranamahacreations.in/service/seo-service-company-in-mysore" }
           ]
         }`}</script>
       </Head>

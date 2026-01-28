@@ -160,7 +160,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/mobile-app-development-company"
+              href="https://www.nakshatranamahacreations.in/service/mobile-app-development-company"
             />
             <meta name="keywords" content="mobile app development company, app development services, mobile app developers, android app development, ios app development, hybrid app development, custom mobile app development, mobile application development company, cross platform app development, react native app development, flutter app development, enterprise mobile apps, mobile app design company, app development agency, mobile app consulting services, top mobile app developers, professional app development company" />
 

@@ -26,7 +26,7 @@ export default function Blogs3() {
 
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
+          href="https://www.nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
         />
 
         {/* Open Graph / Facebook */}
@@ -40,7 +40,7 @@ export default function Blogs3() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
+          content="https://www.nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -57,7 +57,7 @@ export default function Blogs3() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
@@ -73,21 +73,21 @@ export default function Blogs3() {
           "author": {
             "@type": "Person",
             "name": "Nakshatra Namaha Creations",
-            "url": "https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
+            "url": "https://www.nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
           },
           "publisher": {
             "@type": "Organization",
             "name": "Nakshatra Namaha Creations",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://nakshatranamahacreations.in/media/blogs/2.png"
+              "url": "https://www.nakshatranamahacreations.in/media/blogs/2.png"
             }
           },
           "datePublished": "2025-05-15",
           "dateModified": "2025-05-15",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
+            "@id": "https://www.nakshatranamahacreations.in/blog/how-website-speed-optimization-impacts-conversion"
           }
         }
         `}

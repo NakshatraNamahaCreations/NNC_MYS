@@ -175,7 +175,7 @@ export default function SeoDevelopment() {
           name="description"
           content="Discover expert services in website development, mobile app creation, UI/UX design, digital marketing, and video production for growing businesses in Mysore."
         />
-        <link rel="canonical" href="https://nakshatranamahacreations.in/service" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/service" />
       </Head>
 
       <MyBreadcrumb crumbs={Service6Breadcrumbs} />

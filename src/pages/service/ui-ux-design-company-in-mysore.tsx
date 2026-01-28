@@ -216,7 +216,7 @@ export default function UIUXDevelopment() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore"
         />
 
         {/* Open Graph */}
@@ -230,7 +230,7 @@ export default function UIUXDevelopment() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -249,7 +249,7 @@ export default function UIUXDevelopment() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
 
@@ -260,10 +260,10 @@ export default function UIUXDevelopment() {
             __html: `{
           "@context": "https://schema.org",
           "@type": "Organization",
-          "@id": "https://nakshatranamahacreations.in/#organization",
+          "@id": "https://www.nakshatranamahacreations.in/#organization",
           "name": "Nakshatra Namaha Creations",
-          "url": "https://nakshatranamahacreations.in",
-          "logo": "https://nakshatranamahacreations.in/images/image.png",
+          "url": "https://www.nakshatranamahacreations.in",
+          "logo": "https://www.nakshatranamahacreations.in/images/image.png",
           "sameAs": [
             "https://www.facebook.com/Nakshatranamahacreations/",
             "https://www.instagram.com/nnc.digitalbengaluru/"
@@ -277,9 +277,9 @@ export default function UIUXDevelopment() {
             __html: `{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://nakshatranamahacreations.in/#localbusiness",
+          "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
           "name": "Nakshatra Namaha Creations",
-          "image": "https://nakshatranamahacreations.in/images/image.png",
+          "image": "https://www.nakshatranamahacreations.in/images/image.png",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "SUSWANI TOWERS, Akkamahadevi Rd, JP Nagar 2nd Stage, C-Block",
@@ -288,7 +288,7 @@ export default function UIUXDevelopment() {
             "postalCode": "570008",
             "addressCountry": "IN"
           },
-          "url": "https://nakshatranamahacreations.in",
+          "url": "https://www.nakshatranamahacreations.in",
           "telephone": "+91-9900566466",
           "email": "info@nakshatranamahacreations.in",
           "areaServed": "Mysuru",
@@ -303,11 +303,11 @@ export default function UIUXDevelopment() {
           "@context": "https://schema.org",
           "@type": "Service",
           "serviceType": "UI/UX Design Services",
-          "provider": { "@id": "https://nakshatranamahacreations.in/#localbusiness" },
+          "provider": { "@id": "https://www.nakshatranamahacreations.in/#localbusiness" },
           "areaServed": { "@type": "Place", "name": "Mysuru" },
           "availableChannel": {
             "@type": "ServiceChannel",
-            "serviceUrl": "https://nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore",
+            "serviceUrl": "https://www.nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore",
             "availableLanguage": "English"
           },
           "description": "Enhance your digital experience with top UI/UX designers in Mysore—crafting user-friendly, responsive, and visually appealing interfaces for web and mobile."
@@ -337,9 +337,9 @@ export default function UIUXDevelopment() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nakshatranamahacreations.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nakshatranamahacreations.in/service" },
-            { "@type": "ListItem", "position": 3, "name": "UI/UX Design", "item": "https://nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.nakshatranamahacreations.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.nakshatranamahacreations.in/service" },
+            { "@type": "ListItem", "position": 3, "name": "UI/UX Design", "item": "https://www.nakshatranamahacreations.in/service/ui-ux-design-company-in-mysore" }
           ]
         }`,
           }}

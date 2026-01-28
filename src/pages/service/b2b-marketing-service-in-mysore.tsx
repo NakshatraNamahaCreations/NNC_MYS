@@ -187,7 +187,7 @@ export default function B2BMarketPage() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore"
         />
 
         {/* Open Graph */}
@@ -198,7 +198,7 @@ export default function B2BMarketPage() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -211,7 +211,7 @@ export default function B2BMarketPage() {
           name="twitter:description"
           content="Drive qualified leads and grow your business with expert B2B marketing services in Mysore including LinkedIn outreach, email campaigns, and content strategies."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 
@@ -220,10 +220,10 @@ export default function B2BMarketPage() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "@id": "https://nakshatranamahacreations.in/#organization",
+          "@id": "https://www.nakshatranamahacreations.in/#organization",
           name: "Nakshatra Namaha Creations",
-          url: "https://nakshatranamahacreations.in",
-          logo: "https://nakshatranamahacreations.in/images/image.png",
+          url: "https://www.nakshatranamahacreations.in",
+          logo: "https://www.nakshatranamahacreations.in/images/image.png",
           sameAs: [
             "https://www.facebook.com/Nakshatranamahacreations/",
             "https://www.instagram.com/nnc.digitalbengaluru/",
@@ -235,9 +235,9 @@ export default function B2BMarketPage() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          "@id": "https://nakshatranamahacreations.in/#localbusiness",
+          "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
           name: "Nakshatra Namaha Creations",
-          image: "https://nakshatranamahacreations.in/images/image.png",
+          image: "https://www.nakshatranamahacreations.in/images/image.png",
           address: {
             "@type": "PostalAddress",
             streetAddress:
@@ -247,7 +247,7 @@ export default function B2BMarketPage() {
             postalCode: "570008",
             addressCountry: "IN",
           },
-          url: "https://nakshatranamahacreations.in",
+          url: "https://www.nakshatranamahacreations.in",
           telephone: "+91-9900566466",
           email: "info@nakshatranamahacreations.in",
           areaServed: "Mysuru",
@@ -261,13 +261,13 @@ export default function B2BMarketPage() {
           "@type": "Service",
           serviceType: "B2B Marketing Services",
           provider: {
-            "@id": "https://nakshatranamahacreations.in/#localbusiness",
+            "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
           },
           areaServed: { "@type": "Place", name: "Mysuru" },
           availableChannel: {
             "@type": "ServiceChannel",
             serviceUrl:
-              "https://nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore",
+              "https://www.nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore",
             availableLanguage: "English",
           },
           description:
@@ -292,9 +292,9 @@ export default function B2BMarketPage() {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://nakshatranamahacreations.in/" },
-            { "@type": "ListItem", position: 2, name: "Services", item: "https://nakshatranamahacreations.in/service" },
-            { "@type": "ListItem", position: 3, name: "B2B Marketing Services", item: "https://nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nakshatranamahacreations.in/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://www.nakshatranamahacreations.in/service" },
+            { "@type": "ListItem", position: 3, name: "B2B Marketing Services", item: "https://www.nakshatranamahacreations.in/service/b2b-marketing-service-in-mysore" },
           ],
         })}
       </Script>

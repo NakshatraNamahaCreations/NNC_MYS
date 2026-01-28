@@ -20,14 +20,14 @@ export default function WhyMobileOptimizedWebsitesAreCrucial() {
     author: {
       "@type": "Person",
       name: "Nakshatra Namaha Creations",
-      url: "https://nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial",
+      url: "https://www.nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial",
     },
     publisher: {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       logo: {
         "@type": "ImageObject",
-        url: "https://nakshatranamahacreations.in/media/blogs/2.png",
+        url: "https://www.nakshatranamahacreations.in/media/blogs/2.png",
       },
     },
     datePublished: "2025-05-15",
@@ -35,7 +35,7 @@ export default function WhyMobileOptimizedWebsitesAreCrucial() {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial",
+        "https://www.nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial",
     },
   };
 
@@ -54,7 +54,7 @@ export default function WhyMobileOptimizedWebsitesAreCrucial() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial"
+          href="https://www.nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial"
         />
 
         {/* Open Graph / Facebook */}
@@ -68,7 +68,7 @@ export default function WhyMobileOptimizedWebsitesAreCrucial() {
         />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial"
+          content="https://www.nakshatranamahacreations.in/blogs/why-mobile-optimized-websites-are-crucial"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -85,7 +85,7 @@ export default function WhyMobileOptimizedWebsitesAreCrucial() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/blogs/2.png"
+          content="https://www.nakshatranamahacreations.in/media/blogs/2.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>

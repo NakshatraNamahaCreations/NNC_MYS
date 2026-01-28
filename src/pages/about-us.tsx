@@ -116,7 +116,7 @@ const processSteps = [
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://nakshatranamahacreations.in/about-us" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/about-us" />
         <title>Mobile App Development Services in Mysore</title>
         <meta
           name="description"
@@ -131,7 +131,7 @@ const processSteps = [
           property="og:description"
           content="Get professional web development, mobile app solutions, and UI/UX design services in Mysore. Build fast, responsive, and user-focused digital experiences."
         />
-        <meta property="og:url" content="https://nakshatranamahacreations.in/about-us" />
+        <meta property="og:url" content="https://www.nakshatranamahacreations.in/about-us" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
         <meta name="twitter:card" content="summary" />
@@ -140,7 +140,7 @@ const processSteps = [
           name="twitter:description"
           content="Get professional web development, mobile app solutions, and UI/UX design services in Mysore. Build fast, responsive, and user-focused digital experiences."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/logo.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/logo.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

@@ -45,21 +45,21 @@ export default function Blogs() {
     author: {
       "@type": "Person",
       name: "Nakshatra Namaha Creations",
-      url: "https://nakshatranamahacreations.in/blogs",
+      url: "https://www.nakshatranamahacreations.in/blogs",
     },
     publisher: {
       "@type": "Organization",
       name: "Nakshatra Namaha Creations",
       logo: {
         "@type": "ImageObject",
-        url: "https://nakshatranamahacreations.in/media/blogs/2.png",
+        url: "https://www.nakshatranamahacreations.in/media/blogs/2.png",
       },
     },
     datePublished: "2025-05-15",
     dateModified: "2025-05-15",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://nakshatranamahacreations.in/blogs",
+      "@id": "https://www.nakshatranamahacreations.in/blogs",
     },
   };
 const HERO_TITLE = "EXPLORE THE NAKSHATRA NAMAHA CREATIONS BLOG";
@@ -69,7 +69,7 @@ const HERO_SUBTITLE =
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://nakshatranamahacreations.in/blogs" />
+        <link rel="canonical" href="https://www.nakshatranamahacreations.in/blogs" />
         <title>How a Well-Designed Website Can Help Businesses Stand Out</title>
         <meta
           name="description"
@@ -84,7 +84,7 @@ const HERO_SUBTITLE =
           property="og:description"
           content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
         />
-        <meta property="og:url" content="https://nakshatranamahacreations.in/blogs" />
+        <meta property="og:url" content="https://www.nakshatranamahacreations.in/blogs" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
         <meta name="twitter:card" content="summary" />
@@ -93,7 +93,7 @@ const HERO_SUBTITLE =
           name="twitter:description"
           content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
         />
-        <meta name="twitter:image" content="https://nakshatranamahacreations.in/media/blogs/2.png" />
+        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/blogs/2.png" />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
 

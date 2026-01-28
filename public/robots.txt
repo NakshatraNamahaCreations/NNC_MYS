@@ -1,6 +1,6 @@
 User-agent:*
 Disallow:
-Sitemap: https://nakshatranamahacreations.in/sitemap.xml
+Sitemap: https://www.nakshatranamahacreations.in/sitemap.xml
 
 
 Disallow: /?_gl

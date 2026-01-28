@@ -165,7 +165,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/google-ads-management-services"
+              href="https://www.nakshatranamahacreations.in/service/google-ads-management-services"
             />
            <meta name="keywords" content="google ads management, ppc management services, google ads agency, google ads experts, ppc specialists, google ads optimization, adwords management, ppc services, paid advertising services, google ads campaign management, google ads consultant, google ads marketing, roi focused ppc, google ads for lead generation, sem services" />
 

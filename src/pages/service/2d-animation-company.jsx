@@ -166,7 +166,7 @@ const cards = [
             />
             <link
               rel="canonical"
-              href="https://nakshatranamahacreations.in/service/2d-animation-company"
+              href="https://www.nakshatranamahacreations.in/service/2d-animation-company"
             />
             <meta name="keywords" content="2d animation company, 2d animation studio, animation production services, 2d explainer videos, cartoon animation services, character animation company, motion graphics studio, whiteboard animation services, corporate animation videos, product animation services, marketing animation company, educational animation videos, animated ads production, professional animators, animation agency" />
 

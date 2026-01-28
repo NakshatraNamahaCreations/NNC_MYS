@@ -190,10 +190,10 @@ export default function EcommercePage() {
   const orgLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://nakshatranamahacreations.in/#organization",
+    "@id": "https://www.nakshatranamahacreations.in/#organization",
     name: "Nakshatra Namaha Creations",
-    url: "https://nakshatranamahacreations.in",
-    logo: "https://nakshatranamahacreations.in/images/image.png",
+    url: "https://www.nakshatranamahacreations.in",
+    logo: "https://www.nakshatranamahacreations.in/images/image.png",
     sameAs: [
       "https://www.facebook.com/Nakshatranamahacreations/",
       "https://www.instagram.com/nnc.digitalbengaluru/",
@@ -203,9 +203,9 @@ export default function EcommercePage() {
   const businessLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://nakshatranamahacreations.in/#localbusiness",
+    "@id": "https://www.nakshatranamahacreations.in/#localbusiness",
     name: "Nakshatra Namaha Creations",
-    image: "https://nakshatranamahacreations.in/images/image.png",
+    image: "https://www.nakshatranamahacreations.in/images/image.png",
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -215,7 +215,7 @@ export default function EcommercePage() {
       postalCode: "570008",
       addressCountry: "IN",
     },
-    url: "https://nakshatranamahacreations.in",
+    url: "https://www.nakshatranamahacreations.in",
     telephone: "+91-9900566466",
     email: "info@nakshatranamahacreations.in",
     areaServed: "Mysuru",
@@ -226,12 +226,12 @@ export default function EcommercePage() {
     "@context": "https://schema.org",
     "@type": "Service",
     serviceType: "Ecommerce Website Development",
-    provider: { "@id": "https://nakshatranamahacreations.in/#localbusiness" },
+    provider: { "@id": "https://www.nakshatranamahacreations.in/#localbusiness" },
     areaServed: { "@type": "Place", name: "Mysuru" },
     availableChannel: {
       "@type": "ServiceChannel",
       serviceUrl:
-        "https://nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore",
+        "https://www.nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore",
       availableLanguage: "English",
     },
     description:
@@ -256,13 +256,13 @@ export default function EcommercePage() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://nakshatranamahacreations.in",
+        item: "https://www.nakshatranamahacreations.in",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Ecommerce Development Mysore",
-        item: "https://nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore",
+        item: "https://www.nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore",
       },
     ],
   };
@@ -281,7 +281,7 @@ export default function EcommercePage() {
         />
         <link
           rel="canonical"
-          href="https://nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore"
+          href="https://www.nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore"
         />
         {/* Open Graph */}
         <meta
@@ -295,7 +295,7 @@ export default function EcommercePage() {
         <meta name="keywords" content="ecommerce website development company in mysore, ecommerce developers in mysore, ecommerce website design mysore, ecommerce development services mysore, online store development mysore, shopify development mysore, woocommerce development mysore, magento development mysore, custom ecommerce website mysore, best ecommerce developers in mysore, ecommerce website agency in mysore, ecommerce web design company in mysore, ecommerce app development mysore, multivendor ecommerce website development mysore, b2b ecommerce development mysore, b2c ecommerce development mysore, ecommerce website maintenance mysore, ecommerce seo services mysore, ecommerce shopping cart development mysore, top ecommerce development company in mysore" />
         <meta
           property="og:url"
-          content="https://nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore"
+          content="https://www.nakshatranamahacreations.in/service/ecommerce-website-development-company-in-mysore"
         />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nakshatra Namaha Creations" />
@@ -311,7 +311,7 @@ export default function EcommercePage() {
         />
         <meta
           name="twitter:image"
-          content="https://nakshatranamahacreations.in/media/logo.png"
+          content="https://www.nakshatranamahacreations.in/media/logo.png"
         />
         <meta name="twitter:site" content="@nncbengaluru" />
       </Head>
