@@ -2,7 +2,6 @@
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 
 // your CSS imports
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,73 +23,30 @@ declare global {
   }
 }
 
-function sendPageView(url: string) {
-  if (typeof window !== "undefined" && typeof window.gtag === "function") {
-    window.gtag("config", "G-KP1NN4CK4R", {
-      page_path: url,
-    });
-  }
-}
-
 export default function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
 
   useEffect(() => {
-    // bootstrap JS (client-only)
+    // Bootstrap JS (client only)
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
-
-    // pageview tracking on route change
-    const handleRouteChange = (url: string) => sendPageView(url);
-    router.events.on("routeChangeComplete", handleRouteChange);
-
-    // initial page load
-    if (typeof window !== "undefined") {
-      sendPageView(window.location.pathname + window.location.search);
-    }
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events]);
+  }, []);
 
   return (
     <>
-      {/* Google Tag Manager */}
-      <Script id="gtm-base" strategy="afterInteractive">
-        {`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-KRN4FTRP');
-        `}
-      </Script>
-
-      {/* Google Analytics (direct gtag.js) */}
+      {/* Google Ads Global Site Tag */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=G-KP1NN4CK4R"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-11459366701"
       />
 
-      <Script id="ga-init" strategy="afterInteractive">
+      <Script id="google-ads-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', 'G-KP1NN4CK4R', { send_page_view: false });
+          gtag('config', 'AW-11459366701');
         `}
       </Script>
-
-      {/* GTM noscript fallback (placed near top of body tree) */}
-      <noscript>
-        <iframe
-          src="https://www.googletagmanager.com/ns.html?id=GTM-KRN4FTRP"
-          height="0"
-          width="0"
-          style={{ display: "none", visibility: "hidden" }}
-        />
-      </noscript>
 
       <Header />
       <Component {...pageProps} />
