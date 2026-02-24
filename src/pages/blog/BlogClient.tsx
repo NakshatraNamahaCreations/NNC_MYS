@@ -18,6 +18,7 @@ const CITY = "Mysore";
 interface ApiBlog {
   _id?: string;
   title?: string;
+  slug?: string;   // ✅ ADD THIS
   bannerImage?: string;
   description?: string;
   services?: string[];
@@ -56,7 +57,6 @@ const pickDate = (b: ApiBlog) =>
 
 const normalizeApi = (blog: ApiBlog): BlogCardData => {
   const title = blog.title ?? "Untitled";
-  const slug = slugify(title);
   const rawBanner = blog.bannerImage;
 
   const banner =
@@ -67,12 +67,17 @@ const normalizeApi = (blog: ApiBlog): BlogCardData => {
       : "/media/blogs/placeholder.png";
 
   return {
-    id: String(blog._id ?? slug),
+    id: String(blog._id ?? blog.slug),
     title,
-    description: (blog.description || "").replace(/<[^>]+>/g, "").slice(0, 150),
+    description: (blog.description || "")
+      .replace(/<[^>]+>/g, "")
+      .slice(0, 150),
     date: pickDate(blog),
-    category: blog.services?.length ? blog.services.join(", ") : blog.category || "General",
-    link: `/blog/${slug}`,
+    category:
+      blog.services?.length
+        ? blog.services.join(", ")
+        : blog.category || "General",
+    link: `/blog/${blog.slug}`,   // ✅ USE BACKEND SLUG
     banner,
   };
 };

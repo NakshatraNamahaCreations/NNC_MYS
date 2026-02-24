@@ -22,9 +22,7 @@ type BlogProps = {
   };
 };
 
-const BlogDetailsClient: React.FC<BlogProps> = ({
-  blog,
-}) => {
+const BlogDetailsClient: React.FC<BlogProps> = ({ blog }) => {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   const toggle = (i: number) =>
@@ -33,22 +31,12 @@ const BlogDetailsClient: React.FC<BlogProps> = ({
   return (
     <main className={styles["blog-wrap"]}>
       {/* Breadcrumb */}
-      <nav
-        aria-label="breadcrumb"
-        className={styles["blog-breadcrumbs"]}
-      >
-        <a href="/" className={styles["blog-crumb"]}>
-          Home
-        </a>
+      <nav aria-label="breadcrumb" className={styles["blog-breadcrumbs"]}>
+        <a href="/" className={styles["blog-crumb"]}>Home</a>
         <span className={styles["blog-sep"]}> / </span>
-        <a href="/blog" className={styles["blog-crumb"]}>
-          Blog
-        </a>
+        <a href="/blog" className={styles["blog-crumb"]}>Blog</a>
         <span className={styles["blog-sep"]}> / </span>
-        <span
-          aria-current="page"
-          className={styles["blog-current"]}
-        >
+        <span aria-current="page" className={styles["blog-current"]}>
           {blog.title}
         </span>
       </nav>
@@ -60,9 +48,7 @@ const BlogDetailsClient: React.FC<BlogProps> = ({
           alt={blog.title}
           className={styles["blog-banner-img"]}
         />
-        <h1 className={styles["blog-banner-title"]}>
-          {blog.title}
-        </h1>
+        <h1 className={styles["blog-banner-title"]}>{blog.title}</h1>
       </div>
 
       {/* Layout */}
@@ -70,12 +56,10 @@ const BlogDetailsClient: React.FC<BlogProps> = ({
         <article className={styles["blog-content"]}>
           <div
             className={styles["blog-html"]}
-            dangerouslySetInnerHTML={{
-              __html: blog.descriptionHtml,
-            }}
+            dangerouslySetInnerHTML={{ __html: blog.descriptionHtml }}
           />
 
-          {blog.faqs.length > 0 && (
+          {Array.isArray(blog.faqs) && blog.faqs.length > 0 && (
             <section className={styles["blog-faq"]}>
               <h2 className={styles["blog-faq-title"]}>
                 Frequently Asked Questions
@@ -103,9 +87,7 @@ const BlogDetailsClient: React.FC<BlogProps> = ({
                       </button>
 
                       {open && (
-                        <div
-                          className={styles["blog-faq-a"]}
-                        >
+                        <div className={styles["blog-faq-a"]}>
                           {faq.answer}
                         </div>
                       )}

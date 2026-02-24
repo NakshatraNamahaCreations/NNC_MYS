@@ -5,7 +5,6 @@ import type { GetServerSideProps, NextPage } from "next";
 import BlogDetailsClient from "../../components/BlogDetailsClient";
 
 const API = "https://api.nakshatranamahacreations.in";
-const CITY = "Mysore";
 
 const stripHtml = (html: string = "") =>
   html.replace(/<[^>]*>/g, "");
@@ -28,7 +27,6 @@ type BlogPageData = {
 
 type BlogPageProps = {
   blog: BlogPageData | null;
-  error?: string | null;
 };
 
 export const getServerSideProps: GetServerSideProps<
@@ -37,34 +35,26 @@ export const getServerSideProps: GetServerSideProps<
   const routeSlug = String(ctx.params?.title || "");
 
   if (!routeSlug) {
-    return { props: { blog: null, error: "Invalid slug" } };
+    return { notFound: true };
   }
 
-  const canonical = `https://www.nakshatranamahacreations.in/blog/${routeSlug}`;
-
   try {
-    // ✅ Fetch directly by slug + city
     const res = await fetch(
-      `${API}/api/blogs/blog/slug/${routeSlug}?city=${CITY}`,
-      { cache: "no-store" }
+      `${API}/api/blogs/blog/slug/${routeSlug}`
     );
 
     if (!res.ok) {
-      return { props: { blog: null, error: "Blog not found" } };
+      return { notFound: true };
     }
 
     const json = await res.json();
     const found = json?.data;
 
-    if (!found || found.city !== CITY) {
-      return { props: { blog: null, error: "Blog not found" } };
+    if (!found) {
+      return { notFound: true };
     }
 
-    const title = found.title || "Blog";
-    const metaTitle = found.metaTitle || title;
-    const metaDescription =
-      found.metaDescription ||
-      stripHtml(found.description || "").slice(0, 160);
+    const canonical = `https://www.nakshatranamahacreations.in/blog/${routeSlug}`;
 
     const bannerUrl =
       found.bannerImage?.startsWith?.("http")
@@ -76,44 +66,29 @@ export const getServerSideProps: GetServerSideProps<
     return {
       props: {
         blog: {
-          title,
+          title: found.title || "Blog",
           descriptionHtml: found.description || "",
           bannerUrl,
-          metaTitle,
-          metaDescription,
+          metaTitle: found.metaTitle || found.title || "Blog",
+          metaDescription:
+            found.metaDescription ||
+            stripHtml(found.description || "").slice(0, 160),
           canonical,
           faqs: Array.isArray(found.faqs) ? found.faqs : [],
           slug: routeSlug,
         },
-        error: null,
       },
     };
-  } catch (error: any) {
-    return {
-      props: {
-        blog: null,
-        error: error?.message || "Fetch error",
-      },
-    };
+  } catch {
+    return { notFound: true };
   }
 };
 
-const BlogDetailsPage: NextPage<BlogPageProps> = ({
-  blog,
-  error,
-}) => {
-  if (!blog) {
-    return (
-      <main style={{ padding: 40, marginTop: 100 }}>
-        <h2>Blog not found.</h2>
-        {error && <p style={{ color: "crimson" }}>{error}</p>}
-      </main>
-    );
-  }
+const BlogDetailsPage: NextPage<BlogPageProps> = ({ blog }) => {
+  if (!blog) return null;
 
   return (
     <>
-      {/* ✅ SEO Section */}
       <Head>
         <title>{blog.metaTitle}</title>
         <meta name="description" content={blog.metaDescription} />
