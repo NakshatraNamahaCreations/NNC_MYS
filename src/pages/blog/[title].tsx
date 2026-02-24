@@ -1,91 +1,128 @@
-"use client";
+// src/pages/blog/[title].tsx
 
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import Head from "next/head";
-import BlogDetailsClient from "@/components/BlogDetailsClient";
+import type { GetServerSideProps, NextPage } from "next";
+import BlogDetailsClient from "../../components/BlogDetailsClient";
 
 const API = "https://api.nakshatranamahacreations.in";
+const CITY = "Mysore";
 
-const stripHtml = (html = "") => html.replace(/<[^>]*>/g, "");
+const stripHtml = (html: string = "") =>
+  html.replace(/<[^>]*>/g, "");
 
-export default function BlogDetailsPage() {
-  const params = useParams();
-  const slug = params?.title;
+type FaqItem = {
+  question: string;
+  answer: string;
+};
 
-  const [blog, setBlog] = useState(null);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
+type BlogPageData = {
+  title: string;
+  descriptionHtml: string;
+  bannerUrl: string;
+  metaTitle: string;
+  metaDescription: string;
+  canonical: string;
+  faqs: FaqItem[];
+  slug: string;
+};
 
-  useEffect(() => {
-    if (!slug) return;
+type BlogPageProps = {
+  blog: BlogPageData | null;
+  error?: string | null;
+};
 
-    const fetchBlog = async () => {
-      try {
-        const res = await fetch(
-          `${API}/api/blogs/blog/title/${slug}`
-        );
+export const getServerSideProps: GetServerSideProps<
+  BlogPageProps
+> = async (ctx) => {
+  const routeSlug = String(ctx.params?.title || "");
 
-        if (!res.ok) {
-          setError("Blog not found");
-          setLoading(false);
-          return;
-        }
+  if (!routeSlug) {
+    return { props: { blog: null, error: "Invalid slug" } };
+  }
 
-        const json = await res.json();
-        const found = json?.data;
+  const canonical = `https://www.nakshatranamahacreations.in/blog/${routeSlug}`;
 
-        if (!found) {
-          setError("Blog not found");
-          setLoading(false);
-          return;
-        }
+  try {
+    // ✅ Fetch directly by slug + city
+    const res = await fetch(
+      `${API}/api/blogs/blog/slug/${routeSlug}?city=${CITY}`,
+      { cache: "no-store" }
+    );
 
-        const bannerUrl =
-          found.bannerImage?.startsWith("http")
-            ? found.bannerImage
-            : `${API}/uploads/${found.bannerImage}`;
+    if (!res.ok) {
+      return { props: { blog: null, error: "Blog not found" } };
+    }
 
-        setBlog({
-          title: found.title,
+    const json = await res.json();
+    const found = json?.data;
+
+    if (!found || found.city !== CITY) {
+      return { props: { blog: null, error: "Blog not found" } };
+    }
+
+    const title = found.title || "Blog";
+    const metaTitle = found.metaTitle || title;
+    const metaDescription =
+      found.metaDescription ||
+      stripHtml(found.description || "").slice(0, 160);
+
+    const bannerUrl =
+      found.bannerImage?.startsWith?.("http")
+        ? found.bannerImage
+        : found.bannerImage
+        ? `${API}/uploads/${found.bannerImage}`
+        : "https://www.nakshatranamahacreations.in/media/blogs/placeholder.png";
+
+    return {
+      props: {
+        blog: {
+          title,
           descriptionHtml: found.description || "",
           bannerUrl,
-          metaTitle: found.metaTitle || found.title,
-          metaDescription:
-            found.metaDescription ||
-            stripHtml(found.description || "").slice(0, 160),
-          faqs: found.faqs || [],
-          slug,
-        });
-
-        setError(null);
-      } catch (err) {
-        setError("Fetch error");
-      } finally {
-        setLoading(false);
-      }
+          metaTitle,
+          metaDescription,
+          canonical,
+          faqs: Array.isArray(found.faqs) ? found.faqs : [],
+          slug: routeSlug,
+        },
+        error: null,
+      },
     };
+  } catch (error: any) {
+    return {
+      props: {
+        blog: null,
+        error: error?.message || "Fetch error",
+      },
+    };
+  }
+};
 
-    fetchBlog();
-  }, [slug]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error || !blog) return <p>{error || "Blog not found"}</p>;
-
-  const canonical = `https://www.nakshatranamahacreations.in/blog/${blog.slug}`;
+const BlogDetailsPage: NextPage<BlogPageProps> = ({
+  blog,
+  error,
+}) => {
+  if (!blog) {
+    return (
+      <main style={{ padding: 40, marginTop: 100 }}>
+        <h2>Blog not found.</h2>
+        {error && <p style={{ color: "crimson" }}>{error}</p>}
+      </main>
+    );
+  }
 
   return (
     <>
-      {/* ✅ SEO Head Section */}
+      {/* ✅ SEO Section */}
       <Head>
         <title>{blog.metaTitle}</title>
         <meta name="description" content={blog.metaDescription} />
-        <link rel="canonical" href={canonical} />
+        <link rel="canonical" href={blog.canonical} />
 
         <meta property="og:type" content="article" />
         <meta property="og:title" content={blog.metaTitle} />
         <meta property="og:description" content={blog.metaDescription} />
-        <meta property="og:url" content={canonical} />
+        <meta property="og:url" content={blog.canonical} />
         <meta property="og:image" content={blog.bannerUrl} />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -94,8 +131,9 @@ export default function BlogDetailsPage() {
         <meta name="twitter:image" content={blog.bannerUrl} />
       </Head>
 
-      {/* Blog Content */}
       <BlogDetailsClient blog={blog} />
     </>
   );
-}
+};
+
+export default BlogDetailsPage;
