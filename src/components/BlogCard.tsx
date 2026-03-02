@@ -55,7 +55,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ card }) => {
         }}
       >
         {/* Responsive Image */}
-        <div style={{ position: "relative", width: "100%", height: "200px" }}>
+        <div style={{ position: "relative", width: "100%", height: "230px" }}>
           <Image
             src={card.banner}
             alt={card.title || "Blog Banner"}
