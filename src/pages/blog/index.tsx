@@ -70,34 +70,41 @@ const HERO_SUBTITLE =
 
   return (
     <>
-      <Head>
-        <link rel="canonical" href="https://www.nakshatranamahacreations.in/blog" />
-        <title>How a Well-Designed Website Can Help Businesses Stand Out</title>
-        <meta
-          name="description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
-        />
-        <meta
-          name="keywords"
-          content="business website design, website user experience, brand identity online, responsive website, web design benefits, conversion-focused website"
-        />
-        <meta property="og:title" content="How a Well-Designed Website Can Help Businesses Stand Out" />
-        <meta
-          property="og:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
-        />
-        <meta property="og:url" content="https://www.nakshatranamahacreations.in/blog" />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Nakshatra Namaha Creations" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="How a Well-Designed Website Can Help Businesses Stand Out" />
-        <meta
-          name="twitter:description"
-          content="Discover how a thoughtfully designed website boosts visibility, enhances brand identity, improves user experience, and drives conversions."
-        />
-        <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/blog/2.png" />
-        <meta name="twitter:site" content="@nncbengaluru" />
-      </Head>
+    <Head>
+  <link rel="canonical" href="https://www.nakshatranamahacreations.in/blog" />
+  <title>Blog | Website Development, Digital Marketing & App Development Insights</title>
+
+  <meta
+    name="description"
+    content="Explore expert insights on website development, mobile apps, digital marketing, SEO, UI/UX design, and business growth at Nakshatra Namaha Creations."
+  />
+
+  <meta
+    name="keywords"
+    content="Nakshatra Namaha Creations blog, website development blog, mobile app development articles, digital marketing tips, SEO strategies, UI UX design insights, business growth blog"
+  />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="Blog | Website Development & Digital Marketing Insights" />
+  <meta
+    property="og:description"
+    content="Explore expert insights on website development, mobile apps, digital marketing, SEO, UI/UX design, and business growth at Nakshatra Namaha Creations."
+  />
+  <meta property="og:url" content="https://www.nakshatranamahacreations.in/blog" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Nakshatra Namaha Creations" />
+  <meta property="og:image" content="https://www.nakshatranamahacreations.in/media/blog/blog-banner.png" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog | Website Development & Digital Marketing Insights" />
+  <meta
+    name="twitter:description"
+    content="Explore expert insights on website development, mobile apps, digital marketing, SEO, UI/UX design, and business growth at Nakshatra Namaha Creations."
+  />
+  <meta name="twitter:image" content="https://www.nakshatranamahacreations.in/media/blog/blog-banner.png" />
+  <meta name="twitter:site" content="@nncbengaluru" />
+</Head>
 
       {/* JSON-LD */}
       <Script id="blogs-jsonld" type="application/ld+json" strategy="afterInteractive">
