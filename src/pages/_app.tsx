@@ -35,7 +35,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       {/* Google Ads Global Site Tag */}
       <Script
         strategy="afterInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=AW-11459366701"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16753423286"
       />
 
       <Script id="google-ads-init" strategy="afterInteractive">
@@ -44,7 +44,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', 'AW-11459366701');
+          gtag('config', 'AW-16753423286');
         `}
       </Script>
 
